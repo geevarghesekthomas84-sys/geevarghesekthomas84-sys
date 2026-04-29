@@ -1,21 +1,23 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,50:0a0a0a,100:00ff41&height=200&section=header&text=Gg&fontSize=80&fontColor=00ff41&animation=twinkling&fontAlignY=35&desc=Hacker%20%7C%20Red%20Team%20%7C%20Pentester%20%7C%20Security%20Researcher&descSize=16&descAlignY=60&descAlign=50&stroke=00ff41&strokeWidth=1" width="100%"/>
-</p>
+<div align="center">
+  <img src="assets/banner.png" alt="GG Profile Banner" width="100%">
+</div>
 
-<p align="center">
+<br>
+
+<div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=800&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=100&lines=%24+sudo+hack+the+planet;%24+nmap+-sV+-sC+-A+target;%24+msfconsole+--exploit+--payload" alt="Typing SVG" />
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/OFFENSIVE_SECURITY-00ff41?style=for-the-badge&logo=hackthebox&logoColor=000000"/></a>
   <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/RED_TEAM-ff0040?style=for-the-badge&logo=target&logoColor=white"/></a>
   <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/BUG_BOUNTY-9b59b6?style=for-the-badge&logo=bugcrowd&logoColor=white"/></a>
   <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/EXPLOIT_DEV-ff6600?style=for-the-badge&logo=buffer&logoColor=white"/></a>
-</p>
+</div>
 
 ---
 
-## :skull: whoami
+### 💀 whoami
 
 ```bash
 ┌──(gg@kali)-[~]
@@ -43,23 +45,9 @@ linkedin     = "in/geevarghese-k-thomas"
 status       = "Open to Red Team / Pentest roles"
 ```
 
-```bash
-┌──(gg@kali)-[~]
-└─$ cat skills.json | jq '.offensive'
-{
-  "network":    ["Network Pentesting", "AD Exploitation", "Lateral Movement"],
-  "web":        ["OWASP Top 10", "SQLi", "XSS", "SSRF", "Auth Bypass"],
-  "wireless":   ["Evil Twin", "WPA Cracking", "Rogue AP"],
-  "social_eng": ["Phishing Campaigns", "Pretexting", "Captive Portals"],
-  "post_exploit": ["Privilege Escalation", "Persistence", "Data Exfiltration"],
-  "defense":    ["SIEM (Wazuh/Splunk)", "Incident Response", "Threat Hunting",
-                 "MITRE ATT&CK", "Digital Forensics", "Log Analysis"]
-}
-```
-
 ---
 
-## :crossed_swords: Arsenal
+### ⚔️ Arsenal
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,js,nodejs,bash,powershell,html,css,linux,docker,aws,git,github,vscode&perline=13&theme=dark" />
@@ -86,131 +74,68 @@ status       = "Open to Red Team / Pentest roles"
 
 ---
 
-## :dart: Featured Exploits & Projects
+### 🎯 Featured Exploits & Projects
 
 <table>
 <tr>
 <td width="50%">
-
-### :shield: [Insider Threat Breach Response](https://github.com/geevarghesekthomas84-sys/Insider-Threat-Breach-Response)
-Enterprise-grade Blue Team investigation simulating a real insider data breach. Full NIST IR lifecycle with MITRE ATT&CK mapping, SIEM analysis, forensics, and SOC operations.
-
-`Blue Team` `DFIR` `SIEM` `MITRE ATT&CK`
-
+  <h4 align="center">🛡️ <a href="https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab">Insider Threat Detection Lab</a></h4>
+  <p align="center">Enterprise-grade Blue Team investigation simulating a real insider data breach. Full NIST IR lifecycle with MITRE ATT&CK mapping, SIEM analysis, forensics, and SOC operations.</p>
+  <p align="center"><code>Blue Team</code> <code>DFIR</code> <code>SIEM</code> <code>MITRE ATT&CK</code></p>
 </td>
 <td width="50%">
-
-### :ghost: [GhostKit](https://github.com/geevarghesekthomas84-sys/GhostKit)
-Drop-and-run cybersecurity suite on a USB stick. AI-powered network recon (Nmap), automated vuln scanning (Nuclei), packet sniffing (Wireshark), and an offline AI hacking assistant.
-
-`Python` `Offensive Security` `USB Toolkit`
-
+  <h4 align="center">☠️ <a href="https://github.com/geevarghesekthomas84-sys/reverse-shell-generator">Reverse Shell Generator</a></h4>
+  <p align="center">Sleek web-based payload generator with 25+ reverse shell variants. Bash, Python, PowerShell, PHP, Ruby, Netcat. One-click copy. Dark hacker UI.</p>
+  <p align="center"><code>Web Tool</code> <code>Payloads</code> <code>Pentesting</code> <code>Live Demo</code></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-
-### :robot: [Portable Offline LLM](https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM)
-Air-gapped AI assistant running entirely from a USB drive. No install, no internet, no admin needed. Perfect for classified environments and field ops.
-
-`LLM` `Air-Gapped` `Zero Trust` `OPSEC`
-
+  <h4 align="center">💥 <a href="https://github.com/geevarghesekthomas84-sys/awesome-red-team">Awesome Red Team</a></h4>
+  <p align="center">Curated collection of 200+ offensive security tools, frameworks, and resources. Organized by MITRE ATT&CK kill chain phases. Your one-stop red team bookmark.</p>
+  <p align="center"><code>Awesome List</code> <code>Red Team</code> <code>OSINT</code> <code>C2</code></p>
 </td>
 <td width="50%">
-
-### :mag: [PortSight](https://github.com/geevarghesekthomas84-sys/PortSight)
-Multithreaded TCP port scanner with service fingerprinting and diff-based scan comparison. Fast, accurate, and built for recon.
-
-`Python` `Recon` `Port Scanner` `Pentesting`
-
+  <h4 align="center">👻 <a href="https://github.com/geevarghesekthomas84-sys/GhostKit">GhostKit</a></h4>
+  <p align="center">Drop-and-run cybersecurity suite on a USB stick. AI-powered network recon (Nmap), automated vuln scanning (Nuclei), packet sniffing (Wireshark), and an offline AI hacking assistant.</p>
+  <p align="center"><code>Python</code> <code>Offensive Security</code> <code>USB Toolkit</code></p>
 </td>
 </tr>
 <tr>
 <td width="50%">
-
-### :file_folder: [LocalLens](https://github.com/geevarghesekthomas84-sys/LocalLens)
-High-speed local file search engine with FTS5 indexing and worker threads. Finds anything on a filesystem in milliseconds.
-
-`JavaScript` `Node.js` `SQLite` `DFIR`
-
+  <h4 align="center">🎣 <a href="https://github.com/geevarghesekthomas84-sys/Flipper-HighFi-Login-Portals">Flipper HighFi Portals</a></h4>
+  <p align="center">Pixel-perfect captive portal clones for Flipper Zero. Apple, Google, Facebook, Amazon -- research-grade phishing templates for authorized security testing.</p>
+  <p align="center"><code>Flipper Zero</code> <code>Social Engineering</code> <code>Red Team</code></p>
 </td>
 <td width="50%">
-
-### :fishing_pole_and_fish: [Flipper HighFi Portals](https://github.com/geevarghesekthomas84-sys/Flipper-HighFi-Login-Portals)
-Pixel-perfect captive portal clones for Flipper Zero. Apple, Google, Facebook, Amazon -- research-grade phishing templates for authorized security testing.
-
-`Flipper Zero` `Social Engineering` `Red Team`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### :boom: [Awesome Red Team](https://github.com/geevarghesekthomas84-sys/awesome-red-team)
-Curated collection of 200+ offensive security tools, frameworks, and resources. Organized by MITRE ATT&CK kill chain phases. Your one-stop red team bookmark.
-
-`Awesome List` `Red Team` `OSINT` `C2`
-
-</td>
-<td width="50%">
-
-### :skull_and_crossbones: [Reverse Shell Generator](https://github.com/geevarghesekthomas84-sys/reverse-shell-generator)
-Sleek web-based payload generator with 25+ reverse shell variants. Bash, Python, PowerShell, PHP, Ruby, Netcat. One-click copy. Dark hacker UI.
-
-`Web Tool` `Payloads` `Pentesting` `Live Demo`
-
+  <h4 align="center">🤖 <a href="https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM">Portable Offline LLM</a></h4>
+  <p align="center">Air-gapped AI assistant running entirely from a USB drive. No install, no internet, no admin needed. Perfect for classified environments and field ops.</p>
+  <p align="center"><code>LLM</code> <code>Air-Gapped</code> <code>Zero Trust</code> <code>OPSEC</code></p>
 </td>
 </tr>
 </table>
 
 ---
 
-## :bar_chart: Stats
+### 📊 Threat Intelligence (Stats)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=geevarghesekthomas84-sys&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=ff0040&text_color=c9d1d9&ring_color=00ff41" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=geevarghesekthomas84-sys&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=ff0040&text_color=c9d1d9&ring_color=00ff41" width="49%" />
   <img src="https://github-readme-streak-stats.herokuapp.com?user=geevarghesekthomas84-sys&theme=dark&hide_border=true&background=0d1117&ring=00ff41&fire=ff0040&currStreakLabel=00ff41&sideLabels=c9d1d9&dates=555555&stroke=00ff41" width="49%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=geevarghesekthomas84-sys&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9" width="40%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=geevarghesekthomas84-sys&bg_color=0d1117&color=00ff41&line=ff0040&point=00ff41&area=true&area_color=00ff4120&hide_border=true&custom_title=Gg%27s%20Hack%20Log" width="100%" />
 </p>
 
 ---
 
-## :trophy: Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=geevarghesekthomas84-sys&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=10" />
-</p>
-
----
-
-## :chart_with_upwards_trend: Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=geevarghesekthomas84-sys&bg_color=0d1117&color=00ff41&line=ff0040&point=00ff41&area=true&area_color=00ff4120&hide_border=true&custom_title=Gg%27s%20Hack%20Log" width="98%" />
-</p>
-
----
-
-<p align="center">
+<div align="center">
   <img src="https://komarev.com/ghpvc/?username=geevarghesekthomas84-sys&color=00ff41&style=for-the-badge&label=TARGETS+SCANNED" />
-</p>
+</div>
 
-<p align="center">
+<br>
 
-```
- ██████╗  ██████╗     ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗
-██╔════╝ ██╔════╝     ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝
-██║  ███╗██║  ███╗    ███████║███████║██║     █████╔╝ ███████╗
-██║   ██║██║   ██║    ██╔══██║██╔══██║██║     ██╔═██╗ ╚════██║
-╚██████╔╝╚██████╔╝    ██║  ██║██║  ██║╚██████╗██║  ██╗███████║
- ╚═════╝  ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
-```
-
-</p>
-
-<p align="center">
+<div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:001a00,100:00ff41&height=120&section=footer" width="100%"/>
-</p>
+</div>
