@@ -31,20 +31,20 @@ Highly specialized offensive security researcher focusing on advanced persistent
     </tr>
     <tr>
       <td align="center">
-        <img src="https://skillicons.dev/icons?i=kali,windows,linux" /><br><br>
-        Cobalt Strike<br>Metasploit<br>Burp Suite
+        <img src="https://skillicons.dev/icons?i=kali,windows,linux,apple" /><br><br>
+        Cobalt Strike / Sliver<br>BloodHound / BloodHound.ad<br>Metasploit / Burp Suite<br>Impacket / Responder<br>Nmap / Wireshark<br>Proxmark3 / Flipper Zero
       </td>
       <td align="center">
-        <img src="https://skillicons.dev/icons?i=python,bash,powershell" /><br><br>
-        Python<br>C/C++<br>Assembly
+        <img src="https://skillicons.dev/icons?i=python,bash,powershell,cpp,go,rust,js" /><br><br>
+        Python / Go / Rust<br>C / C++ / Assembly<br>Bash / PowerShell<br>JS / Node.js<br>SQL / Git
       </td>
       <td align="center">
-        <img src="https://skillicons.dev/icons?i=aws,docker,nginx" /><br><br>
-        Active Directory<br>Cloud<br>Network
+        <img src="https://skillicons.dev/icons?i=aws,azure,gcp,docker,kubernetes,terraform,ansible,nginx" /><br><br>
+        Active Directory (AD/AAD)<br>AWS / Azure / GCP<br>Docker / Kubernetes<br>Terraform / Ansible<br>Network Security / VPN
       </td>
       <td align="center">
-        <img src="https://skillicons.dev/icons?i=elasticsearch,grafana,github" /><br><br>
-        Wazuh / Splunk<br>Sysmon<br>ELK Stack
+        <img src="https://skillicons.dev/icons?i=elasticsearch,grafana,github,mongodb,sqlite" /><br><br>
+        Wazuh / Splunk / ELK<br>Sysmon / Windows Event Logs<br>Volatility / Autopsy<br>Suricata / Snort / Zeek<br>Threat Hunting / UEBA
       </td>
     </tr>
   </table>
