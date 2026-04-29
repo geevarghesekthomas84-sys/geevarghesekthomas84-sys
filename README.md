@@ -143,6 +143,24 @@ Pixel-perfect captive portal clones for Flipper Zero. Apple, Google, Facebook, A
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+### :boom: [Awesome Red Team](https://github.com/geevarghesekthomas84-sys/awesome-red-team)
+Curated collection of 200+ offensive security tools, frameworks, and resources. Organized by MITRE ATT&CK kill chain phases. Your one-stop red team bookmark.
+
+`Awesome List` `Red Team` `OSINT` `C2`
+
+</td>
+<td width="50%">
+
+### :skull_and_crossbones: [Reverse Shell Generator](https://github.com/geevarghesekthomas84-sys/reverse-shell-generator)
+Sleek web-based payload generator with 25+ reverse shell variants. Bash, Python, PowerShell, PHP, Ruby, Netcat. One-click copy. Dark hacker UI.
+
+`Web Tool` `Payloads` `Pentesting` `Live Demo`
+
+</td>
+</tr>
 </table>
 
 ---
