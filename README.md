@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4ff,100:7c3aed&height=220&section=header&text=Gg%20%F0%9F%9B%A1%EF%B8%8F&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Cybersecurity%20Researcher%20%7C%20Blue%20Team%20%7C%20Pentester%20%7C%20Developer&descSize=18&descAlignY=55&descAlign=50" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4ff,100:7c3aed&height=220&section=header&text=Gg&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Cybersecurity%20Researcher%20|%20Blue%20Team%20|%20Pentester%20|%20Developer&descSize=18&descAlignY=55&descAlign=50" width="100%"/>
 </p>
 
 <p align="center">
@@ -9,19 +9,19 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=%F0%9F%94%90+Breaking+things+to+make+them+stronger;%F0%9F%9B%A1%EF%B8%8F+Blue+Team+%7C+Red+Team+%7C+Purple+Team;%F0%9F%92%80+Offensive+Security+%2B+Defensive+Engineering" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=Breaking+things+to+make+them+stronger;Blue+Team+%7C+Red+Team+%7C+Purple+Team;Offensive+Security+%2B+Defensive+Engineering" alt="Typing SVG" />
 </p>
 
 ---
 
-## ðŸ§‘â€ðŸ’» About Me
+## :technologist: About Me
 
 ```python
 class CyberSecurityResearcher:
     def __init__(self):
         self.name        = "Gg"
         self.role        = "Cybersecurity Researcher & Developer"
-        self.location    = "Kerala, India ðŸ‡®ðŸ‡³"
+        self.location    = "Kerala, India"
         self.focus       = ["Blue Team Operations", "Penetration Testing", 
                            "Incident Response", "DFIR", "Tool Development"]
         self.currently   = "Building offensive & defensive security tools"
@@ -43,7 +43,7 @@ class CyberSecurityResearcher:
 
 ---
 
-## ðŸ› ï¸ Tech Arsenal
+## :hammer_and_wrench: Tech Arsenal
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,js,nodejs,bash,powershell,html,css,linux,docker,aws,git,github,vscode&perline=13" />
@@ -64,13 +64,13 @@ class CyberSecurityResearcher:
 
 ---
 
-## ðŸ”¥ Featured Projects
+## :fire: Featured Projects
 
 <table>
 <tr>
 <td width="50%">
 
-### ðŸ›¡ï¸ [Insider Threat Breach Response](https://github.com/geevarghesekthomas84-sys/Insider-Threat-Breach-Response)
+### :shield: [Insider Threat Breach Response](https://github.com/geevarghesekthomas84-sys/Insider-Threat-Breach-Response)
 Blue Team SOC + DFIR investigation project simulating a real-world insider data breach in a financial org. Features MITRE ATT&CK mapping, SIEM analysis, forensic investigation, and incident handling.
 
 `Blue Team` `DFIR` `SIEM` `Incident Response`
@@ -78,8 +78,8 @@ Blue Team SOC + DFIR investigation project simulating a real-world insider data 
 </td>
 <td width="50%">
 
-### ðŸ‘» [GhostKit](https://github.com/geevarghesekthomas84-sys/GhostKit)
-Portable cybersecurity suite for USB deployment â€” AI-assisted network auditing (Nmap), web vulnerability scanning (Nuclei), packet analysis (Wireshark), and offline AI Security Assistant.
+### :ghost: [GhostKit](https://github.com/geevarghesekthomas84-sys/GhostKit)
+Portable cybersecurity suite for USB deployment -- AI-assisted network auditing (Nmap), web vulnerability scanning (Nuclei), packet analysis (Wireshark), and offline AI Security Assistant.
 
 `Python` `Offensive Security` `Portable` `AI`
 
@@ -88,15 +88,15 @@ Portable cybersecurity suite for USB deployment â€” AI-assisted network aud
 <tr>
 <td width="50%">
 
-### ðŸ¤– [Portable Offline LLM](https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM)
-Run a fully private, offline AI assistant from a USB flash drive â€” no installation, no internet, no admin rights required. Perfect for air-gapped environments.
+### :robot: [Portable Offline LLM](https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM)
+Run a fully private, offline AI assistant from a USB flash drive -- no installation, no internet, no admin rights required. Perfect for air-gapped environments.
 
 `LLM` `Privacy` `Portable` `Offline AI`
 
 </td>
 <td width="50%">
 
-### ðŸ” [PortSight](https://github.com/geevarghesekthomas84-sys/PortSight)
+### :mag: [PortSight](https://github.com/geevarghesekthomas84-sys/PortSight)
 High-performance, multithreaded TCP port scanner with service detection and differential scan comparison. Built for speed and precision.
 
 `Python` `Networking` `Scanner` `Pentesting`
@@ -106,7 +106,7 @@ High-performance, multithreaded TCP port scanner with service detection and diff
 <tr>
 <td width="50%">
 
-### ðŸ“‚ [LocalLens](https://github.com/geevarghesekthomas84-sys/LocalLens)
+### :file_folder: [LocalLens](https://github.com/geevarghesekthomas84-sys/LocalLens)
 High-performance local file search engine built with Node.js, SQLite FTS5, and Worker Threads. Lightning-fast full-text search across your filesystem.
 
 `JavaScript` `Node.js` `SQLite` `Search`
@@ -114,7 +114,7 @@ High-performance local file search engine built with Node.js, SQLite FTS5, and W
 </td>
 <td width="50%">
 
-### ðŸŽ£ [Flipper HighFi Login Portals](https://github.com/geevarghesekthomas84-sys/Flipper-HighFi-Login-Portals)
+### :fishing_pole_and_fish: [Flipper HighFi Login Portals](https://github.com/geevarghesekthomas84-sys/Flipper-HighFi-Login-Portals)
 High-fidelity captive portal UI research templates for Flipper Zero and web security labs. Features Apple, Google, Facebook & Amazon login mockups.
 
 `HTML/CSS` `Flipper Zero` `Security Research`
@@ -125,7 +125,7 @@ High-fidelity captive portal UI research templates for Flipper Zero and web secu
 
 ---
 
-## ðŸ“Š GitHub Stats
+## :bar_chart: GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=geevarghesekthomas84-sys&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4ff&icon_color=7c3aed&text_color=c9d1d9&ring_color=00d4ff" width="49%" />
@@ -138,7 +138,7 @@ High-fidelity captive portal UI research templates for Flipper Zero and web secu
 
 ---
 
-## ðŸ† GitHub Trophies
+## :trophy: GitHub Trophies
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=geevarghesekthomas84-sys&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=10" />
@@ -146,7 +146,7 @@ High-fidelity captive portal UI research templates for Flipper Zero and web secu
 
 ---
 
-## ðŸ“ˆ Contribution Graph
+## :chart_with_upwards_trend: Contribution Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=geevarghesekthomas84-sys&bg_color=0d1117&color=00d4ff&line=7c3aed&point=ff6b35&area=true&area_color=7c3aed&hide_border=true" width="98%" />
@@ -154,7 +154,7 @@ High-fidelity captive portal UI research templates for Flipper Zero and web secu
 
 ---
 
-## ðŸ Contribution Snake
+## :snake: Contribution Snake
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/output/github-snake-dark.svg" alt="Snake animation" />
