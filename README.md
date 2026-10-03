@@ -24,6 +24,7 @@
 > [**SPAF**](https://github.com/geevarghesekthomas84-sys/spaf).
 >
 > ```authorized testing only``` &nbsp;— tools and research for red teams, bug bounty, and defenders.
+> All vulnerability research follows **coordinated / responsible disclosure**.
 
 <br>
 
