@@ -57,6 +57,13 @@ Highly specialized offensive security researcher focusing on advanced persistent
 <div align="center">
   <table width="100%">
     <tr>
+      <td colspan="2" valign="top">
+        <h3 align="center">🎯 <a href="https://github.com/geevarghesekthomas84-sys/spaf">SPAF — Smart Pentesting Automation Framework</a> <sub>⭐ Flagship</sub></h3>
+        <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> AI-Orchestrated Offensive Security | <b>Release:</b> v1.14.0 · <a href="https://pypi.org/project/spaf/">PyPI</a></p>
+        <p align="center">Point it at a target and it runs the engagement — the AI plans recon, SPAF runs the tools, and you get findings plus a written assessment. Staged pipeline (discovery → validation → remediation → report), drivable from CLI · HTTP API · MCP · dashboard. Engines: Gemini · Claude · Ollama · LM Studio · Shodan. <i>Authorized testing only.</i></p>
+      </td>
+    </tr>
+    <tr>
       <td width="50%" valign="top">
         <h3 align="center">🛡️ <a href="https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab">Insider Threat SOC Lab</a></h3>
         <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> Enterprise Defense</p>
