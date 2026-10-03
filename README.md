@@ -1,14 +1,13 @@
 <!-- ════════════════════════ HERO (custom animated SVG) ════════════════════════ -->
 <div align="center">
 
-<img width="100%" alt="Geevarghese K Thomas — Offensive Security Researcher" src="https://raw.githubusercontent.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/claude/nifty-brown-oc7rh9/assets/hero.svg" />
+<img width="100%" alt="Geevarghese K Thomas — Offensive Security Researcher" src="https://raw.githubusercontent.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/main/assets/hero.svg" />
 
 <p></p>
 
 [![Role](https://img.shields.io/badge/Role-Red_Team_Ops-0a0e12?style=for-the-badge&logo=target&logoColor=E0A82E)](#)
 [![Focus](https://img.shields.io/badge/Focus-APT_Simulation-0a0e12?style=for-the-badge&logo=hackthebox&logoColor=E0A82E)](#)
 [![Location](https://img.shields.io/badge/Kerala,_IN-0a0e12?style=for-the-badge&logo=googlemaps&logoColor=E0A82E)](#)
-[![Views](https://komarev.com/ghpvc/?username=geevarghesekthomas84-sys&style=for-the-badge&color=E0A82E&labelColor=0a0e12&label=RECON+HITS)](#)
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3600&pause=900&color=E0A82E&center=true&vCenter=true&width=640&height=46&lines=Executing+Red+Team+Operations...;Developing+Offensive+Security+Tools...;Automating+the+Kill+Chain+with+AI...;Breaching+Perimeters." alt="Typing SVG" />
 
@@ -122,15 +121,23 @@
 
 <br>
 
-<!-- ════════════════════ FOOTER ════════════════════ -->
+<!-- ════════════════════ CONNECT ════════════════════ -->
+### &nbsp;❯&nbsp; CONNECT
+
 <div align="center">
 
-<i>"I don't break things. I find ways in."</i>
+<a href="https://www.linkedin.com/in/geevarghese-k-thomas/"><img src="https://img.shields.io/badge/LinkedIn-0a0e12?style=for-the-badge&logo=linkedin&logoColor=E0A82E"/></a>
+<a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/GitHub-0a0e12?style=for-the-badge&logo=github&logoColor=E0A82E"/></a>
+<a href="https://pypi.org/project/spaf/"><img src="https://img.shields.io/badge/SPAF_on_PyPI-0a0e12?style=for-the-badge&logo=pypi&logoColor=E0A82E"/></a>
+<a href="https://github.com/geevarghesekthomas84-sys?tab=followers"><img src="https://img.shields.io/badge/Secure_Contact-0a0e12?style=for-the-badge&logo=protonmail&logoColor=E0A82E"/></a>
 
-<br><br>
+</div>
 
-<a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/Contact-Encrypted-0a0e12?style=for-the-badge&logo=protonmail&logoColor=E0A82E"/></a>
+<br>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0705,50:0a0e12,100:06080b&height=110&section=footer&animation=fadeIn" alt="footer" />
+<!-- ════════════════════ FOOTER (custom animated SVG) ════════════════════ -->
+<div align="center">
+
+<img width="100%" alt="I don't break things. I find ways in." src="https://raw.githubusercontent.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/main/assets/footer.svg" />
 
 </div>
