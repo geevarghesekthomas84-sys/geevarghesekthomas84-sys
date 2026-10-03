@@ -127,6 +127,7 @@
 
 <div align="center">
 
+<a href="https://www.linkedin.com/in/geevarghese-k-thomas/"><img src="https://img.shields.io/badge/LinkedIn-0a0e12?style=for-the-badge&logo=linkedin&logoColor=E0A82E"/></a>
 <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/GitHub-0a0e12?style=for-the-badge&logo=github&logoColor=E0A82E"/></a>
 <a href="https://pypi.org/project/spaf/"><img src="https://img.shields.io/badge/SPAF_on_PyPI-0a0e12?style=for-the-badge&logo=pypi&logoColor=E0A82E"/></a>
 <a href="https://github.com/geevarghesekthomas84-sys?tab=followers"><img src="https://img.shields.io/badge/Secure_Contact-0a0e12?style=for-the-badge&logo=protonmail&logoColor=E0A82E"/></a>
