@@ -1,33 +1,43 @@
+<!-- ════════════════════════ HERO (custom animated SVG) ════════════════════════ -->
 <div align="center">
 
-# ❖ GEEVARGHESE K THOMAS (GG) ❖
-**Offensive Security Researcher & Tool Developer**
+<img width="100%" alt="Geevarghese K Thomas — Offensive Security Researcher" src="https://raw.githubusercontent.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/claude/nifty-brown-oc7rh9/assets/hero.svg" />
 
-[![Status](https://img.shields.io/badge/Status-Operating-black?style=for-the-badge&logo=kalilinux&logoColor=00ff41)](#)
-[![Clearance](https://img.shields.io/badge/Role-Red_Team_Ops-black?style=for-the-badge&logo=target&logoColor=ff0000)](#)
-[![Location](https://img.shields.io/badge/Location-Kerala,_IN-black?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
+<p></p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=4000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=Executing+Red+Team+Operations...;Developing+Offensive+Security+Tools...;Analyzing+Blue+Team+Defenses...;Breaching+Perimeters..." alt="Typing SVG" />
+[![Role](https://img.shields.io/badge/Role-Red_Team_Ops-0a0e12?style=for-the-badge&logo=target&logoColor=E0A82E)](#)
+[![Focus](https://img.shields.io/badge/Focus-APT_Simulation-0a0e12?style=for-the-badge&logo=hackthebox&logoColor=E0A82E)](#)
+[![Location](https://img.shields.io/badge/Kerala,_IN-0a0e12?style=for-the-badge&logo=googlemaps&logoColor=E0A82E)](#)
+[![Views](https://komarev.com/ghpvc/?username=geevarghesekthomas84-sys&style=for-the-badge&color=E0A82E&labelColor=0a0e12&label=RECON+HITS)](#)
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3600&pause=900&color=E0A82E&center=true&vCenter=true&width=640&height=46&lines=Executing+Red+Team+Operations...;Developing+Offensive+Security+Tools...;Automating+the+Kill+Chain+with+AI...;Breaching+Perimeters." alt="Typing SVG" />
 
 </div>
 
-<br><br>
+<br>
 
-## ▓▒░ EXECUTIVE SUMMARY ░▒▓
+<!-- ════════════════════ EXECUTIVE SUMMARY ════════════════════ -->
+### &nbsp;❯&nbsp; EXECUTIVE&nbsp;SUMMARY
 
-Highly specialized offensive security researcher focusing on advanced persistent threat (APT) simulation, exploit development, and evasion techniques. Architect of enterprise-grade security tools and comprehensive training environments.
+> Highly specialized **offensive security researcher** focused on advanced persistent threat (APT)
+> simulation, exploit development, and evasion techniques. Architect of enterprise-grade security
+> tooling and training environments — now pushing **AI-orchestrated offensive security** with
+> [**SPAF**](https://github.com/geevarghesekthomas84-sys/spaf).
+>
+> ```authorized testing only``` &nbsp;— tools and research for red teams, bug bounty, and defenders.
 
 <br>
 
-## ▓▒░ ARSENAL & CAPABILITIES ░▒▓
+<!-- ════════════════════ ARSENAL ════════════════════ -->
+### &nbsp;❯&nbsp; ARSENAL&nbsp;&&nbsp;CAPABILITIES
 
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="25%"><b>Offensive Ops</b></td>
-      <td align="center" width="25%"><b>Development</b></td>
-      <td align="center" width="25%"><b>Infrastructure</b></td>
-      <td align="center" width="25%"><b>Blue/DFIR</b></td>
+      <td align="center" width="25%"><b>⚔️&nbsp; Offensive Ops</b></td>
+      <td align="center" width="25%"><b>🧬&nbsp; Development</b></td>
+      <td align="center" width="25%"><b>🏗️&nbsp; Infrastructure</b></td>
+      <td align="center" width="25%"><b>🛡️&nbsp; Blue / DFIR</b></td>
     </tr>
     <tr>
       <td align="center">
@@ -52,31 +62,44 @@ Highly specialized offensive security researcher focusing on advanced persistent
 
 <br>
 
-## ▓▒░ RECENT DEPLOYMENTS ░▒▓
+<!-- ════════════════════ RECENT DEPLOYMENTS ════════════════════ -->
+### &nbsp;❯&nbsp; RECENT&nbsp;DEPLOYMENTS
 
 <div align="center">
   <table width="100%">
     <tr>
+      <td colspan="2" valign="top">
+        <h3 align="center">🎯 <a href="https://github.com/geevarghesekthomas84-sys/spaf">SPAF — Smart Pentesting Automation Framework</a> &nbsp;<sub>★ FLAGSHIP</sub></h3>
+        <p align="center">
+          <img alt="pypi" src="https://img.shields.io/pypi/v/spaf?style=flat-square&label=pypi&labelColor=0a0e12&color=E0A82E">
+          <img alt="release" src="https://img.shields.io/badge/release-v1.14.0-E0A82E?style=flat-square&labelColor=0a0e12">
+          <img alt="class" src="https://img.shields.io/badge/AI--Orchestrated_Offensive_Security-ff3b3b?style=flat-square&labelColor=0a0e12">
+          <img alt="status" src="https://img.shields.io/badge/%F0%9F%9F%A2_Active-0a0e12?style=flat-square">
+        </p>
+        <p align="center">Point it at a target and it runs the engagement — the AI plans recon, SPAF runs the tools on your box, and you get findings plus a written assessment. Staged pipeline (<b>discovery → validation → remediation → report</b>), drivable from <b>CLI · HTTP API · MCP · dashboard</b>. Engines: Gemini · Claude · Ollama · LM Studio · Shodan.</p>
+      </td>
+    </tr>
+    <tr>
       <td width="50%" valign="top">
         <h3 align="center">🛡️ <a href="https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab">Insider Threat SOC Lab</a></h3>
-        <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> Enterprise Defense</p>
+        <p align="center"><b>Status:</b> 🟢 Active &nbsp;|&nbsp; <b>Class:</b> Enterprise Defense</p>
         <p align="center">Full-stack Blue Team environment simulating a privileged data breach. Complete with 50+ custom rules mapped to MITRE ATT&CK.</p>
       </td>
       <td width="50%" valign="top">
         <h3 align="center">💀 <a href="https://github.com/geevarghesekthomas84-sys/reverse-shell-generator">Reverse Shell Generator</a></h3>
-        <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> Offensive Tooling</p>
+        <p align="center"><b>Status:</b> 🟢 Active &nbsp;|&nbsp; <b>Class:</b> Offensive Tooling</p>
         <p align="center">Sleek, web-based payload generator featuring 25+ reverse shell variants. Wrapped in a premium hacker UI for rapid deployment.</p>
       </td>
     </tr>
     <tr>
       <td width="50%" valign="top">
         <h3 align="center">💥 <a href="https://github.com/geevarghesekthomas84-sys/awesome-red-team">Awesome Red Team</a></h3>
-        <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> Knowledge Base</p>
+        <p align="center"><b>Status:</b> 🟢 Active &nbsp;|&nbsp; <b>Class:</b> Knowledge Base</p>
         <p align="center">The ultimate curated collection of offensive security tools, C2 frameworks, and execution techniques.</p>
       </td>
       <td width="50%" valign="top">
         <h3 align="center">👻 <a href="https://github.com/geevarghesekthomas84-sys/GhostKit">GhostKit USB Suite</a></h3>
-        <p align="center"><b>Status:</b> 🟢 Active | <b>Class:</b> Field Operations</p>
+        <p align="center"><b>Status:</b> 🟢 Active &nbsp;|&nbsp; <b>Class:</b> Field Operations</p>
         <p align="center">Drop-and-run offensive toolkit. Automated recon via Nmap/Nuclei combined with an offline AI hacking assistant.</p>
       </td>
     </tr>
@@ -85,20 +108,29 @@ Highly specialized offensive security researcher focusing on advanced persistent
 
 <br>
 
-## ▓▒░ TELEMETRY ░▒▓
+<!-- ════════════════════ TELEMETRY ════════════════════ -->
+### &nbsp;❯&nbsp; TELEMETRY
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=geevarghesekthomas84-sys&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=geevarghesekthomas84-sys&theme=radical&hide_border=true&background=0d1117" width="49%" />
-  
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=geevarghesekthomas84-sys&show_icons=true&hide_border=true&bg_color=0d1117&title_color=E0A82E&icon_color=ff3b3b&text_color=9AA6B2&count_private=true&include_all_commits=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=geevarghesekthomas84-sys&hide_border=true&background=0d1117&ring=E0A82E&fire=ff3b3b&currStreakLabel=E0A82E&sideLabels=9AA6B2&dates=9AA6B2&stroke=1b2733&sideNums=E0A82E&currStreakNum=9AA6B2" />
+
   <br><br>
-  
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=geevarghesekthomas84-sys&bg_color=0d1117&color=ff0040&line=ff0040&point=ffffff&area=true&area_color=ff004020&hide_border=true" width="98%" />
+
+  <img width="44%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=geevarghesekthomas84-sys&layout=compact&hide_border=true&bg_color=0d1117&title_color=E0A82E&text_color=9AA6B2&langs_count=10" />
 </div>
+
+<br>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<div align="center">
+
+<i>"I don't break things. I find ways in."</i>
 
 <br><br>
 
-<div align="center">
-  <i>"I don't break things. I find ways in."</i><br><br>
-  <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/Contact-Encrypted-black?style=for-the-badge&logo=protonmail&logoColor=white"/></a>
+<a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/Contact-Encrypted-0a0e12?style=for-the-badge&logo=protonmail&logoColor=E0A82E"/></a>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0705,50:0a0e12,100:06080b&height=110&section=footer&animation=fadeIn" alt="footer" />
+
 </div>
