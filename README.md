@@ -21,7 +21,7 @@
 > Highly specialized **offensive security researcher** focused on advanced persistent threat (APT)
 > simulation, exploit development, and evasion techniques. Architect of enterprise-grade security
 > tooling and training environments — now pushing **AI-orchestrated offensive security** with
-> [**SPAF**](https://github.com/geevarghesekthomas84-sys/spaf).
+> [**RedPilot**](https://github.com/geevarghesekthomas84-sys/redpilot).
 >
 > ```authorized testing only``` &nbsp;— tools and research for red teams, bug bounty, and defenders.
 > All vulnerability research follows **coordinated / responsible disclosure**.
@@ -69,14 +69,14 @@
   <table width="100%">
     <tr>
       <td colspan="2" valign="top">
-        <h3 align="center">🎯 <a href="https://github.com/geevarghesekthomas84-sys/spaf">SPAF — Smart Pentesting Automation Framework</a> &nbsp;<sub>★ FLAGSHIP</sub></h3>
+        <h3 align="center">🚀 <a href="https://github.com/geevarghesekthomas84-sys/redpilot">RedPilot — AI-orchestrated offensive security</a> &nbsp;<sub>★ FLAGSHIP</sub></h3>
         <p align="center">
-          <img alt="pypi" src="https://img.shields.io/pypi/v/spaf?style=flat-square&label=pypi&labelColor=0a0e12&color=E0A82E">
-          <img alt="release" src="https://img.shields.io/badge/release-v1.14.0-E0A82E?style=flat-square&labelColor=0a0e12">
+          <img alt="pypi" src="https://img.shields.io/pypi/v/redpilot?style=flat-square&label=pypi&labelColor=0a0e12&color=E0A82E">
+          <img alt="release" src="https://img.shields.io/badge/release-v2.0.0-E0A82E?style=flat-square&labelColor=0a0e12">
           <img alt="class" src="https://img.shields.io/badge/AI--Orchestrated_Offensive_Security-ff3b3b?style=flat-square&labelColor=0a0e12">
           <img alt="status" src="https://img.shields.io/badge/%F0%9F%9F%A2_Active-0a0e12?style=flat-square">
         </p>
-        <p align="center">Point it at a target and it runs the engagement — the AI plans recon, SPAF runs the tools on your box, and you get findings plus a written assessment. Staged pipeline (<b>discovery → validation → remediation → report</b>), drivable from <b>CLI · HTTP API · MCP · dashboard</b>. Engines: Gemini · Claude · Ollama · LM Studio · Shodan.</p>
+        <p align="center">Point it at a target and it runs the engagement — the AI plans recon, RedPilot runs the tools on your box, and you get findings plus a written assessment. Staged pipeline (<b>discovery → validation → remediation → report</b>), drivable from <b>CLI · HTTP API · MCP · dashboard</b>. Engines: Gemini · Claude · Ollama · LM Studio · Shodan.</p>
       </td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@
 
 <a href="https://www.linkedin.com/in/geevarghese-k-thomas/"><img src="https://img.shields.io/badge/LinkedIn-0a0e12?style=for-the-badge&logo=linkedin&logoColor=E0A82E"/></a>
 <a href="https://github.com/geevarghesekthomas84-sys"><img src="https://img.shields.io/badge/GitHub-0a0e12?style=for-the-badge&logo=github&logoColor=E0A82E"/></a>
-<a href="https://pypi.org/project/spaf/"><img src="https://img.shields.io/badge/SPAF_on_PyPI-0a0e12?style=for-the-badge&logo=pypi&logoColor=E0A82E"/></a>
+<a href="https://pypi.org/project/redpilot/"><img src="https://img.shields.io/badge/RedPilot_on_PyPI-0a0e12?style=for-the-badge&logo=pypi&logoColor=E0A82E"/></a>
 <a href="https://github.com/geevarghesekthomas84-sys?tab=followers"><img src="https://img.shields.io/badge/Secure_Contact-0a0e12?style=for-the-badge&logo=protonmail&logoColor=E0A82E"/></a>
 
 </div>
