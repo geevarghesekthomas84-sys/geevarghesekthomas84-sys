@@ -43,11 +43,8 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .tags span{font:11px 'DM Mono',monospace;border:1px solid var(--line);padding:9px 11px;color:#c7d1c9;transition:border-color .2s,color .2s}
 .tags span:hover{border-color:var(--lime);color:var(--lime)}
 .profile-card{align-self:end;border-top:1px solid var(--line);padding-top:14px}
-.profile-card .img-wrap{position:relative;overflow:hidden;border-radius:3px}
-.profile-card .img-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(circle,#000 1px,transparent 1px);background-size:4px 4px;mix-blend-mode:multiply;opacity:.55;pointer-events:none;transition:opacity .4s}
-.profile-card .img-wrap:hover::after{opacity:.25}
-.profile-card img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center 15%;filter:grayscale(1) contrast(1.1);border-radius:3px;display:block;transition:filter .4s}
-.profile-card img:hover{filter:grayscale(0) contrast(1)}
+.profile-card img{width:100%;object-fit:cover;border-radius:3px;display:block;transition:opacity .4s}
+.profile-card img:hover{opacity:.85}
 .profile-card div{display:flex;justify-content:space-between;margin-top:9px}
 .profile-card small{color:var(--muted);font-size:10px}
 
