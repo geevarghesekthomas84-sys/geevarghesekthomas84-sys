@@ -17,10 +17,12 @@ a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.round-arrow,.back-
 @keyframes preload{to{width:100%}}
 
 /* ── CUSTOM CURSOR ── */
-.cursor-dot{position:fixed;width:6px;height:6px;background:var(--lime);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(200,255,74,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
-body.cursor-hover .cursor-dot{width:12px;height:12px;background:rgba(200,255,74,.6)}
-body.cursor-hover .cursor-ring{width:50px;height:50px;border-color:var(--lime)}
+.cursor-cross{position:fixed;width:20px;height:20px;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+.cursor-cross::before,.cursor-cross::after{content:'';position:absolute;background:#fff;border-radius:1px}
+.cursor-cross::before{width:1px;height:100%;left:50%;top:0;transform:translateX(-50%)}
+.cursor-cross::after{width:100%;height:1px;top:50%;left:0;transform:translateY(-50%)}
+body.cursor-hover .cursor-cross{width:32px;height:32px}
+body.cursor-hover .cursor-cross::before,body.cursor-hover .cursor-cross::after{background:var(--lime)}
 
 /* ── NAV ── */
 .nav{height:88px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 7vw;position:relative;z-index:5}
@@ -34,7 +36,6 @@ nav a:hover{color:var(--ink)}
 
 /* ── HERO ── */
 .hero{min-height:100vh;position:relative;overflow:hidden;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:60px 7vw}
-#particles{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-portrait{position:relative;z-index:2;display:flex;justify-content:center;perspective:800px}
 .hero-portrait img{width:100%;max-width:520px;display:block;transition:transform .2s ease-out}
 .hero-portrait .glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,74,.15) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .3s;transform:translate(-50%,-50%);z-index:3}
@@ -137,7 +138,7 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 
 /* ── MOBILE ── */
 @media(max-width:760px){
-.cursor-dot,.cursor-ring{display:none}
+.cursor-cross{display:none}
 body,a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.back-top{cursor:auto}
 .nav{padding:0 5vw}
 .nav nav{display:none}

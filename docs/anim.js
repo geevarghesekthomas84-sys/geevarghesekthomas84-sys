@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(pre){setTimeout(()=>pre.classList.add('done'),1400)}
 
   // ── CUSTOM CURSOR ──
-  const dot=document.querySelector('.cursor-dot');
-  const ring=document.querySelector('.cursor-ring');
-  if(dot&&ring){
-    let mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
-    (function moveRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(moveRing)})();
+  const cross=document.querySelector('.cursor-cross');
+  if(cross){
+    document.addEventListener('mousemove',e=>{cross.style.left=e.clientX+'px';cross.style.top=e.clientY+'px'});
     document.querySelectorAll('a,button,.pill,.btn-primary,.btn-outline,.project,.grid-link article').forEach(el=>{
       el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
       el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
@@ -25,17 +22,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     setTimeout(()=>{
       const iv=setInterval(()=>{tw.textContent=text.slice(0,++i);if(i>=text.length)clearInterval(iv)},80);
     },800);
-  }
-
-  // ── PARTICLES ──
-  const canvas=document.getElementById('particles');
-  if(canvas){
-    const ctx=canvas.getContext('2d');
-    let W,H;
-    function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
-    resize();window.addEventListener('resize',resize);
-    const dots=Array.from({length:50},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.5,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,o:Math.random()*.3+.1}));
-    (function draw(){ctx.clearRect(0,0,W,H);dots.forEach(d=>{d.x+=d.vx;d.y+=d.vy;if(d.x<0)d.x=W;if(d.x>W)d.x=0;if(d.y<0)d.y=H;if(d.y>H)d.y=0;ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,Math.PI*2);ctx.fillStyle='rgba(200,255,74,'+d.o+')';ctx.fill()});requestAnimationFrame(draw)})();
   }
 
   // ── SCROLL REVEAL ──
