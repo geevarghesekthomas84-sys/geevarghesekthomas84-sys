@@ -67,12 +67,12 @@ nav a:hover{color:var(--ink)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── STATS ── */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);padding:0}
-.stat{padding:55px 7vw;border-right:1px solid var(--line);text-align:center}
-.stat:last-child{border-right:none}
-.stat-num{display:block;font-size:clamp(36px,4.5vw,64px);font-weight:800;letter-spacing:-.04em;color:var(--lime)}
-.stat-num::after{content:'+';font-size:.6em}
-.stat-label{display:block;font:11px 'DM Mono',monospace;color:var(--muted);margin-top:8px;letter-spacing:.06em}
+.stats{display:flex;justify-content:center;gap:clamp(30px,5vw,80px);padding:70px 7vw;border-bottom:1px solid var(--line)}
+.stat{text-align:left;position:relative;padding-left:20px}
+.stat::before{content:'';position:absolute;left:0;top:4px;width:2px;height:40px;background:var(--lime);border-radius:1px}
+.stat-num{display:block;font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.stat-num::after{content:'+';font-size:.55em;color:var(--lime);margin-left:2px}
+.stat-label{display:block;font:11px 'DM Mono',monospace;color:var(--muted);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
 
 /* ── ABOUT ── */
 .about,.work,.contact{padding:clamp(65px,10vw,145px) 7vw}
@@ -148,9 +148,8 @@ body,a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.back-top{curs
 .hero-text{order:2;padding-left:0;text-align:center}
 .intro{margin:0 auto}
 .hero-cta{justify-content:center}
-.stats{grid-template-columns:1fr 1fr}
-.stat{padding:35px 5vw}
-.stat:nth-child(2){border-right:none}
+.stats{flex-wrap:wrap;gap:28px 40px;padding:50px 5vw}
+.stat::before{height:30px}
 .about,.work,.contact{padding-left:5vw;padding-right:5vw}
 .split,.contact{display:block}
 .section-label{margin-bottom:36px}
