@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -109,6 +109,11 @@
       </div>
     </section>
 
+    <section class="grow reveal" aria-label="Seedling growing animation">
+      <canvas id="grow" role="img" aria-label="Character-art seedling growing out of soil"></canvas>
+      <p class="grow-cap">// still growing &mdash; click to replay</p>
+    </section>
+
     <section class="statement reveal" style="padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2">
       <p style="font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0">"I don't break things.<br><em style="font-family:Georgia,serif;font-weight:400;font-style:italic;color:#111">I find ways in.</em>"</p>
     </section>
@@ -124,5 +129,7 @@
   <a class="back-top" href="#top" aria-label="Back to top">↑</a>
 
   <script src="anim.js?v=13"></script>
+  <script src="grow-data.js?v=1"></script>
+  <script src="grow.js?v=1"></script>
 </body>
 </html>

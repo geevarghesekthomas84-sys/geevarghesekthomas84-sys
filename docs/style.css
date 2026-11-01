@@ -109,6 +109,11 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .grid-link article{cursor:none}
 .grid-link:hover article{background:#171d19}
 
+/* ── GROW ── */
+.grow{padding:clamp(60px,9vw,120px) 7vw 0;border-bottom:1px solid var(--line);text-align:center;position:relative;z-index:2}
+.grow canvas{display:block;margin:0 auto;max-width:100%;cursor:none}
+.grow-cap{font:11px 'DM Mono',monospace;color:var(--muted);letter-spacing:.08em;padding:22px 0 30px}
+
 /* ── STATEMENT ── */
 .statement{padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2}
 .statement p{font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0}
@@ -139,6 +144,8 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 /* ── MOBILE ── */
 @media(max-width:760px){
 .cursor-cross{display:none}
+.grow{padding:50px 5vw 0}
+.grow canvas{cursor:auto}
 body,a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.back-top{cursor:auto}
 .nav{padding:0 5vw}
 .nav nav{display:none}
