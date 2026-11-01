@@ -77,6 +77,23 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .contact-links span{color:var(--lime)}
 footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font:10px 'DM Mono',monospace}
 
+.hero .eyebrow,.hero-kicker,.hero h1,.hero-bottom,.hero-art{opacity:0;animation:fadeUp .8s ease forwards}
+.hero .eyebrow{animation-delay:.1s}
+.hero-kicker{animation-delay:.25s}
+.hero h1{animation-delay:.4s}
+.hero-bottom{animation-delay:.6s}
+.hero-art{animation:fadeIn 1.2s ease .5s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:.4}}
+
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-stagger>*{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal-stagger>*.visible{opacity:1;transform:translateY(0)}
+
+.code-window code::after{content:'_';animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
 @media(max-width:760px){
 .nav{padding:0 5vw}
 .nav nav{display:none}

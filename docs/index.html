@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <link rel="stylesheet" href="wolf.css?v=2" />
 </head>
 <body>
@@ -32,19 +32,19 @@
       <div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="ring r1"></div><div class="ring r2"></div><span>01 / GG</span></div>
     </section>
 
-    <section id="about" class="about split">
+    <section id="about" class="about split reveal">
       <p class="section-label">01 — PROFILE</p>
       <div><h2>Security is a craft.<br>Curiosity is my <em>engine.</em></h2>
       <p class="bodycopy">I'm GG — an offensive security researcher specializing in APT simulation, exploit development, and evasion techniques. I architect enterprise-grade security tooling and push the boundary of AI-orchestrated offensive operations. My work spans red team ops, Android on-device AI, and building zero-dependency cybersecurity tools that ship as single files.</p>
-      <div class="tags"><span>Red Team Ops</span><span>APT Simulation</span><span>AI + Offensive Security</span><span>Exploit Development</span><span>Android AI</span><span>Python / Kotlin / Go / Rust</span><span>Cloud Security</span><span>DFIR</span></div></div>
+      <div class="tags reveal-stagger"><span>Red Team Ops</span><span>APT Simulation</span><span>AI + Offensive Security</span><span>Exploit Development</span><span>Android AI</span><span>Python / Kotlin / Go / Rust</span><span>Cloud Security</span><span>DFIR</span></div></div>
       <aside class="profile-card"><img src="https://avatars.githubusercontent.com/u/228019183?v=4" alt="Geevarghese K Thomas" /><div><strong>GG</strong><small>Red Team Operator</small></div></aside>
     </section>
 
     <section id="work" class="work">
-      <div class="work-head"><p class="section-label">02 — SELECTED WORK</p><h2>Built to breach.<br>Made to <em>secure.</em></h2></div>
-      <a class="project featured" href="https://github.com/geevarghesekthomas84-sys/redpilot" target="_blank" rel="noreferrer"><div><p class="num">01</p><h3>RedPilot<br><small style="font-size:14px;color:var(--lime);font-weight:400">AI-Orchestrated Offensive Security</small></h3><p>Point it at a target and it runs the engagement — the AI plans recon, RedPilot runs the tools on your box, and you get findings plus a written assessment. Staged pipeline: discovery, validation, remediation, report. Drivable from CLI, HTTP API, MCP, and dashboard.</p><span class="link">View on PyPI &amp; GitHub ↗</span></div><div class="code-window"><b>terminal</b><code>$ redpilot scan --target example.com<br><span>[*] AI planning recon phase...</span><br>[+] 3 critical findings<br><span>report generated_</span></code></div></a>
-      <a class="project featured" href="https://github.com/geevarghesekthomas84-sys/Gria-AI" target="_blank" rel="noreferrer" style="margin-top:2px"><div><p class="num">02</p><h3>Gria-AI<br><small style="font-size:14px;color:var(--lime);font-weight:400">On-Device Android AI Assistant</small></h3><p>100% private Android AI chat app delivering ChatGPT-grade conversations powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry. Built with Kotlin, Jetpack Compose, and MediaPipe.</p><span class="link">View repository ↗</span></div><div class="code-window"><b>gria-ai</b><code>⚡ gemma-2b-it-gpu-int4<br><span>39.9 tok/s · on-device</span><br>🔒 biometric vault active<br><span>ready_</span></code></div></a>
-      <div class="project-grid">
+      <div class="work-head reveal"><p class="section-label">02 — SELECTED WORK</p><h2>Built to breach.<br>Made to <em>secure.</em></h2></div>
+      <a class="project featured reveal" href="https://github.com/geevarghesekthomas84-sys/redpilot" target="_blank" rel="noreferrer"><div><p class="num">01</p><h3>RedPilot<br><small style="font-size:14px;color:var(--lime);font-weight:400">AI-Orchestrated Offensive Security</small></h3><p>Point it at a target and it runs the engagement — the AI plans recon, RedPilot runs the tools on your box, and you get findings plus a written assessment. Staged pipeline: discovery, validation, remediation, report. Drivable from CLI, HTTP API, MCP, and dashboard.</p><span class="link">View on PyPI &amp; GitHub ↗</span></div><div class="code-window"><b>terminal</b><code>$ redpilot scan --target example.com<br><span>[*] AI planning recon phase...</span><br>[+] 3 critical findings<br><span>report generated</span></code></div></a>
+      <a class="project featured reveal" href="https://github.com/geevarghesekthomas84-sys/Gria-AI" target="_blank" rel="noreferrer" style="margin-top:2px"><div><p class="num">02</p><h3>Gria-AI<br><small style="font-size:14px;color:var(--lime);font-weight:400">On-Device Android AI Assistant</small></h3><p>100% private Android AI chat app delivering ChatGPT-grade conversations powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry. Built with Kotlin, Jetpack Compose, and MediaPipe.</p><span class="link">View repository ↗</span></div><div class="code-window"><b>gria-ai</b><code>⚡ gemma-2b-it-gpu-int4<br><span>39.9 tok/s · on-device</span><br>🔒 biometric vault active<br><span>ready</span></code></div></a>
+      <div class="project-grid reveal-stagger">
         <article><p class="num">03</p><h3>CyberForge</h3><p>1100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring — all in one Python file.</p></article>
         <article><p class="num">04</p><h3>Recon Blade</h3><p>All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.</p></article>
         <article><p class="num">05</p><h3>Insider Threat<br>SOC Lab</h3><p>Full-stack Blue Team environment simulating a privileged data breach. 50+ custom detection rules mapped to MITRE ATT&CK for real SOC training.</p></article>
@@ -52,15 +52,16 @@
       </div>
     </section>
 
-    <section class="statement" style="padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2">
+    <section class="statement reveal" style="padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2">
       <p style="font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0">"I don't break things.<br><em style="font-family:Georgia,serif;font-weight:400;font-style:italic;color:#111">I find ways in.</em>"</p>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
       <p class="section-label">03 — CONTACT</p><h2>Let's make the web<br><em>more resilient.</em></h2>
-      <div class="contact-links"><a href="https://www.linkedin.com/in/geevarghese-k-thomas" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="https://pypi.org/project/redpilot/" target="_blank" rel="noreferrer">RedPilot on PyPI <span>↗</span></a></div>
+      <div class="contact-links reveal-stagger"><a href="https://www.linkedin.com/in/geevarghese-k-thomas" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="https://pypi.org/project/redpilot/" target="_blank" rel="noreferrer">RedPilot on PyPI <span>↗</span></a></div>
     </section>
   </main>
   <footer><span>© 2026 Geevarghese K Thomas</span><span>GG / SECURITY PORTFOLIO</span></footer>
+  <script src="anim.js"></script>
 </body>
 </html>
