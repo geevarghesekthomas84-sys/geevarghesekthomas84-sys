@@ -12,4 +12,24 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://itgg.space/projects/redpilot.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/gria-ai.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/cyberforge.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/ghostkit.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>

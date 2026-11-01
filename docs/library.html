@@ -149,11 +149,11 @@
 
 <script>
 const P=[
-  {n:"RedPilot",u:"https://github.com/geevarghesekthomas84-sys/redpilot",d:"AI-orchestrated offensive security framework. Automated recon, CVE mapping, exploit POC generation & remediation. CLI, API, MCP, and dashboard.",l:"Python",c:"Red Team",t:["ai","pentesting","cli","mcp"],f:1},
-  {n:"Gria-AI",u:"https://github.com/geevarghesekthomas84-sys/Gria-AI",d:"100% private Android AI chat app powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry.",l:"Kotlin",c:"AI",t:["android","llm","privacy"],f:2},
-  {n:"CyberForge",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py",d:"1,100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring.",l:"Python",c:"Tools",t:["hash","forensics","single-file"],f:3},
+  {n:"RedPilot",u:"https://github.com/geevarghesekthomas84-sys/redpilot",p:"/projects/redpilot.html",d:"AI-orchestrated offensive security framework. Automated recon, CVE mapping, exploit POC generation & remediation. CLI, API, MCP, and dashboard.",l:"Python",c:"Red Team",t:["ai","pentesting","cli","mcp"],f:1},
+  {n:"Gria-AI",u:"https://github.com/geevarghesekthomas84-sys/Gria-AI",p:"/projects/gria-ai.html",d:"100% private Android AI chat app powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry.",l:"Kotlin",c:"AI",t:["android","llm","privacy"],f:2},
+  {n:"CyberForge",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py",p:"/projects/cyberforge.html",d:"1,100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring.",l:"Python",c:"Tools",t:["hash","forensics","single-file"],f:3},
   {n:"Recon Blade",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py",d:"All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.",l:"Python",c:"Red Team",t:["recon","scanning","osint"],f:4},
-  {n:"GhostKit",u:"https://github.com/geevarghesekthomas84-sys/GhostKit",d:"Portable cybersecurity suite for USB deployment — AI-assisted network auditing, web vulnerability scanning, packet analysis, and an offline AI Security Assistant.",l:"Python",c:"Red Team",t:["nmap","nuclei","usb","portable"],f:5},
+  {n:"GhostKit",u:"https://github.com/geevarghesekthomas84-sys/GhostKit",p:"/projects/ghostkit.html",d:"Portable cybersecurity suite for USB deployment — AI-assisted network auditing, web vulnerability scanning, packet analysis, and an offline AI Security Assistant.",l:"Python",c:"Red Team",t:["nmap","nuclei","usb","portable"],f:5},
   {n:"Insider Threat Lab",u:"https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab",d:"Comprehensive Blue Team lab for detecting insider threat breaches using Wazuh, Splunk, and ELK. 50+ custom detection rules mapped to MITRE ATT&CK.",l:"PowerShell",c:"Blue Team",t:["siem","wazuh","splunk"],f:6},
   {n:"Aegis",u:"https://github.com/geevarghesekthomas84-sys/Aegis",d:"Fully autonomous, locally hosted AI assistant for hospitals. Privacy-first architecture — patient data never leaves local infrastructure. Triage, scheduling, conversational intake.",l:"TypeScript",c:"AI",t:["healthcare","llm","privacy"],f:7},
   {n:"Dynamic Island",u:"https://github.com/geevarghesekthomas84-sys/dynamic-island-cross",d:"A Dynamic Island for your desktop: now playing, notifications, volume and charging in a floating pill. Tauri, Rust and React for Windows, macOS and Linux.",l:"TypeScript",c:"Tools",t:["tauri","rust","react","desktop"],f:8},
@@ -211,7 +211,8 @@ function render(){
   grid.innerHTML=list.map((p,i)=>{
     const col=catColors[p.c]||'orange';
     const initials=p.n.split(' ').map(w=>w[0]).join('').slice(0,2);
-    return `<a class="card" href="${p.u}" target="_blank" rel="noreferrer" style="animation-delay:${i*40}ms">
+    const href=p.p||p.u;const ext=p.p?'':' target="_blank" rel="noreferrer"';
+    return `<a class="card" href="${href}"${ext} style="animation-delay:${i*40}ms">
       <div class="card-head">
         <div class="card-icon ${col}">${initials}</div>
         <div>
