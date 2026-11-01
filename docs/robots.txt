@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itgg.space/sitemap.xml
