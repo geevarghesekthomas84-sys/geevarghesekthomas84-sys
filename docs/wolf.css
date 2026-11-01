@@ -1,0 +1,11 @@
+.hero { isolation: isolate; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #101312 0%, #101312 35%, rgba(16,19,18,.85) 58%, rgba(16,19,18,.07) 100%), url('cyber-wolf.png') center right / cover no-repeat;
+  opacity: .95;
+  z-index: -1;
+}
+.hero-art { opacity: .4; mix-blend-mode: screen; }
+@media (max-width: 760px) { .hero::before { background-position: 62% center; opacity: .65; } .hero-art { opacity: .3; } }
