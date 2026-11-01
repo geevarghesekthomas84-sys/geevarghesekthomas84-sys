@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=17" />
+  <link rel="stylesheet" href="style.css?v=18" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -111,9 +111,23 @@
       </div>
     </section>
 
-    <section class="grow reveal" aria-label="Wolf build animation">
-      <canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas>
-      <p class="grow-cap">// the wolf watches &mdash; click to replay</p>
+    <section class="grow reveal" aria-label="Character art gallery">
+      <div class="grow-grid">
+        <figure>
+          <canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas>
+          <figcaption>// the wolf watches &mdash; click to replay</figcaption>
+        </figure>
+        <div class="grow-col">
+          <figure>
+            <canvas id="globe" role="img" aria-label="Rotating character-art globe with connections between cities"></canvas>
+            <figcaption>// live threat map</figcaption>
+          </figure>
+          <figure>
+            <canvas id="radar" role="img" aria-label="Character-art radar sweeping and detecting blips"></canvas>
+            <figcaption>// scanning...</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
     <section class="statement reveal" style="padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2">
@@ -135,5 +149,6 @@
   <script src="grow.js?v=2"></script>
   <script src="portrait-data.js?v=1"></script>
   <script src="portrait.js?v=1"></script>
+  <script src="art.js?v=3"></script>
 </body>
 </html>
