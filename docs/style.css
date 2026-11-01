@@ -2,10 +2,27 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scrollbar-width:none}
 html::-webkit-scrollbar{display:none}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif;cursor:none}
+a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.round-arrow,.back-top{cursor:none}
 
 .noise{position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");z-index:1}
 
+/* ── PRELOADER ── */
+#preloader{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+.pre-logo{font-size:48px;font-weight:800;letter-spacing:-3px;color:var(--ink);margin-bottom:30px}
+.pre-logo span{color:var(--lime)}
+.pre-bar{width:160px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.pre-fill{width:0;height:100%;background:var(--lime);animation:preload 1.2s ease forwards}
+@keyframes preload{to{width:100%}}
+
+/* ── CUSTOM CURSOR ── */
+.cursor-dot{position:fixed;width:6px;height:6px;background:var(--lime);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(200,255,74,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
+body.cursor-hover .cursor-dot{width:12px;height:12px;background:rgba(200,255,74,.6)}
+body.cursor-hover .cursor-ring{width:50px;height:50px;border-color:var(--lime)}
+
+/* ── NAV ── */
 .nav{height:88px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 7vw;position:relative;z-index:5}
 .brand{color:var(--ink);font-size:25px;text-decoration:none;font-weight:800;letter-spacing:-2px}
 .brand span{color:var(--lime)}
@@ -17,7 +34,8 @@ nav a:hover{color:var(--ink)}
 
 /* ── HERO ── */
 .hero{min-height:100vh;position:relative;overflow:hidden;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:60px 7vw}
-.hero-portrait{position:relative;z-index:2;display:flex;justify-content:center}
+#particles{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-portrait{position:relative;z-index:2;display:flex;justify-content:center;perspective:800px}
 .hero-portrait img{width:100%;max-width:520px;display:block;transition:transform .2s ease-out}
 .hero-portrait .glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,74,.15) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .3s;transform:translate(-50%,-50%);z-index:3}
 .hero-portrait:hover .glow{opacity:1}
@@ -25,7 +43,8 @@ nav a:hover{color:var(--ink)}
 .eyebrow,.section-label,.num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted)}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block;margin-right:8px;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,255,74,.4)}50%{opacity:.8;box-shadow:0 0 0 6px rgba(200,255,74,0)}}
-.hero-kicker{font-family:'DM Mono',monospace;color:var(--muted);margin:28px 0 0;font-size:16px}
+.hero-kicker{font-family:'DM Mono',monospace;color:var(--muted);margin:28px 0 0;font-size:16px;min-height:24px}
+.typewriter::after{content:'|';animation:blink 1s step-end infinite;color:var(--lime)}
 .hero h1{font-size:clamp(80px,11vw,150px);line-height:.88;letter-spacing:-.08em;margin:6px 0 28px}
 .hero h1 em,h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime)}
 .intro{max-width:440px;line-height:1.7;color:var(--muted);font-size:15px}
@@ -45,6 +64,14 @@ nav a:hover{color:var(--ink)}
 .hero-cta{animation-delay:.75s}
 .hero-portrait{opacity:0;animation:fadeUp 1s ease .1s forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── STATS ── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);padding:0}
+.stat{padding:55px 7vw;border-right:1px solid var(--line);text-align:center}
+.stat:last-child{border-right:none}
+.stat-num{display:block;font-size:clamp(36px,4.5vw,64px);font-weight:800;letter-spacing:-.04em;color:var(--lime)}
+.stat-num::after{content:'+';font-size:.6em}
+.stat-label{display:block;font:11px 'DM Mono',monospace;color:var(--muted);margin-top:8px;letter-spacing:.06em}
 
 /* ── ABOUT ── */
 .about,.work,.contact{padding:clamp(65px,10vw,145px) 7vw}
@@ -78,7 +105,7 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .project-grid article:hover{background:#171d19}
 .project-grid h3{margin:50px 0 15px;font-size:27px}
 .grid-link{text-decoration:none;color:inherit;display:contents}
-.grid-link article{cursor:pointer}
+.grid-link article{cursor:none}
 .grid-link:hover article{background:#171d19}
 
 /* ── STATEMENT ── */
@@ -95,6 +122,11 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .contact-links span{color:var(--lime)}
 footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font:10px 'DM Mono',monospace}
 
+/* ── BACK TO TOP ── */
+.back-top{position:fixed;bottom:30px;right:30px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--lime);font-size:18px;display:grid;place-items:center;text-decoration:none;z-index:90;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s,border-color .2s,background .2s;pointer-events:none}
+.back-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-top:hover{border-color:var(--lime);background:rgba(200,255,74,.08)}
+
 /* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -105,6 +137,8 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 
 /* ── MOBILE ── */
 @media(max-width:760px){
+.cursor-dot,.cursor-ring{display:none}
+body,a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.back-top{cursor:auto}
 .nav{padding:0 5vw}
 .nav nav{display:none}
 .hero{grid-template-columns:1fr;min-height:auto;padding:50px 5vw 60px}
@@ -113,6 +147,9 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 .hero-text{order:2;padding-left:0;text-align:center}
 .intro{margin:0 auto}
 .hero-cta{justify-content:center}
+.stats{grid-template-columns:1fr 1fr}
+.stat{padding:35px 5vw}
+.stat:nth-child(2){border-right:none}
 .about,.work,.contact{padding-left:5vw;padding-right:5vw}
 .split,.contact{display:block}
 .section-label{margin-bottom:36px}
@@ -129,4 +166,5 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 .statement{padding:80px 5vw}
 .statement p{font-size:clamp(32px,8vw,60px)}
 footer{gap:16px;flex-direction:column}
+.back-top{bottom:20px;right:20px}
 }
