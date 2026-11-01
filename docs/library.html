@@ -15,187 +15,231 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#202124;--surface:#303134;--ink:#bdc1c6;--white:#e8eaed;--url-green:#9aa0a6;--link:#8ab4f8;--link-visited:#c58af9;--lime:#c8ff4a;--line:#3c4043;--search-bg:#303134}
+    :root{--bg:#101312;--ink:#e8eee9;--muted:#9ba39d;--dim:#6b746d;--line:#252a27;--lime:#c8ff4a;--card:#171c19;--card-h:#1e2421;--red:#ff6b6b;--blue:#6bc5ff;--purple:#c78aff;--orange:#ffb06b}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;scrollbar-width:none}
     html::-webkit-scrollbar{display:none}
-    body{background:var(--bg);color:var(--ink);font-family:arial,sans-serif;font-size:14px;line-height:1.58}
+    body{background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif}
 
-    /* SEARCH HEADER */
-    .search-header{background:var(--bg);border-bottom:1px solid var(--line);padding:20px 0 0;position:sticky;top:0;z-index:10}
-    .search-top{display:flex;align-items:center;gap:24px;padding:0 clamp(16px,7vw,160px);margin-bottom:20px}
-    .logo{color:var(--white);font-family:Manrope,sans-serif;font-size:26px;font-weight:800;letter-spacing:-2px;text-decoration:none;flex-shrink:0}
-    .logo span{color:var(--lime)}
-    .search-box{display:flex;align-items:center;background:var(--search-bg);border:1px solid var(--line);border-radius:24px;padding:0 16px;flex:1;max-width:692px;transition:border-color .2s,box-shadow .2s}
-    .search-box:focus-within{border-color:var(--link);box-shadow:0 1px 6px rgba(32,33,36,.28)}
-    .search-icon{width:20px;height:20px;color:#9aa0a6;flex-shrink:0}
-    .search-box input{flex:1;background:none;border:none;outline:none;color:var(--white);font:16px arial,sans-serif;padding:12px 12px}
-    .search-box input::placeholder{color:#9aa0a6}
-    .search-clear{background:none;border:none;color:#9aa0a6;font-size:20px;cursor:pointer;padding:4px;display:none;line-height:1}
-    .search-clear.show{display:block}
-    .search-clear:hover{color:var(--white)}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");z-index:0}
 
-    /* TABS BAR */
-    .tabs-bar{display:flex;align-items:center;gap:4px;padding:0 clamp(16px,7vw,160px);padding-left:calc(clamp(16px,7vw,160px) + 50px)}
-    .tab{font-size:13px;color:#969ba1;background:none;border:none;border-bottom:3px solid transparent;padding:8px 16px;cursor:pointer;transition:color .15s,border-color .15s;text-transform:capitalize;letter-spacing:.02em}
-    .tab:hover{color:var(--white)}
-    .tab.active{color:var(--link);border-bottom-color:var(--link)}
+    /* NAV */
+    .nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,80px);position:relative;z-index:5}
+    .brand{color:var(--ink);font-size:24px;text-decoration:none;font-weight:800;letter-spacing:-2px}
+    .brand span{color:var(--lime)}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-links a.active{color:var(--lime)}
+    .gh-link{border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:11px;color:var(--ink);text-decoration:none;transition:border-color .2s,background .2s}
+    .gh-link:hover{border-color:var(--lime);background:rgba(200,255,74,.05)}
 
-    /* RESULTS */
-    .results-wrap{max-width:692px;padding:18px clamp(16px,7vw,160px) 80px;padding-left:calc(clamp(16px,7vw,160px) + 50px)}
-    .result-info{color:#9aa0a6;font-size:12px;padding:4px 0 12px}
+    /* HERO */
+    .hero{padding:clamp(40px,6vw,80px) clamp(20px,5vw,80px) 0;position:relative;z-index:2}
+    .hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+    .hero h1{font-size:clamp(32px,4.5vw,56px);font-weight:800;letter-spacing:-.05em;line-height:1}
+    .hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--lime)}
+    .hero-count{font:12px 'DM Mono',monospace;color:var(--dim);letter-spacing:.05em}
+    .hero-count b{color:var(--lime)}
 
-    /* SINGLE RESULT — Google style */
-    .result{margin-bottom:28px}
-    .result-site{display:flex;align-items:center;gap:10px;margin-bottom:4px}
-    .result-favicon{width:26px;height:26px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--lime);flex-shrink:0;border:1px solid var(--line)}
-    .result-url-wrap{display:flex;flex-direction:column;min-width:0}
-    .result-site-name{font-size:14px;color:var(--white);line-height:1.3}
-    .result-url{font-size:12px;color:var(--url-green);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:500px;line-height:1.3}
-    .result-title{font-size:20px;color:var(--link);text-decoration:none;display:block;line-height:1.3;margin-bottom:4px;font-weight:400}
-    .result a.result-title:visited{color:var(--link-visited)}
-    .result:hover .result-title{text-decoration:underline}
-    .result-desc{color:var(--ink);font-size:14px;line-height:1.58;max-width:600px}
-    .result-desc .hl{color:var(--white);font-weight:700}
-    .result-tags{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-    .result-tag{font-size:11px;color:#9aa0a6;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+    /* SEARCH */
+    .search-bar{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 20px;max-width:480px;transition:border-color .2s,box-shadow .2s}
+    .search-bar:focus-within{border-color:rgba(200,255,74,.4);box-shadow:0 0 0 3px rgba(200,255,74,.06)}
+    .search-bar svg{width:16px;height:16px;color:var(--dim);flex-shrink:0}
+    .search-bar input{flex:1;background:none;border:none;outline:none;color:var(--ink);font:14px Manrope,sans-serif;padding:14px 0}
+    .search-bar input::placeholder{color:var(--dim)}
+    .clear-btn{background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer;display:none;padding:0 0 0 8px;line-height:1}
+    .clear-btn.show{display:block}
+    .clear-btn:hover{color:var(--ink)}
 
-    /* EMPTY STATE */
-    .empty{text-align:center;padding:60px 20px;color:#9aa0a6}
-    .empty p{font-size:14px;margin-top:8px}
+    /* FILTERS */
+    .filters{display:flex;gap:8px;flex-wrap:wrap;padding:0 clamp(20px,5vw,80px);margin-top:24px;position:relative;z-index:2}
+    .filter{font:12px 'DM Mono',monospace;color:var(--dim);background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 16px;cursor:pointer;transition:all .2s;letter-spacing:.02em}
+    .filter:hover{color:var(--muted);border-color:#3a403c;background:var(--card)}
+    .filter.active{color:var(--bg);background:var(--lime);border-color:var(--lime);font-weight:500}
+    .filter .n{opacity:.5;margin-left:4px;font-size:11px}
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;padding:28px clamp(20px,5vw,80px) 100px;position:relative;z-index:2}
+
+    /* CARD */
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .25s,background .25s,transform .25s,box-shadow .25s}
+    .card:hover{border-color:#3a403c;background:var(--card-h);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+
+    .card-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+    .card-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:14px 'DM Mono',monospace;font-weight:500;flex-shrink:0;letter-spacing:-.02em}
+    .card-icon.red{background:rgba(255,107,107,.1);color:var(--red);border:1px solid rgba(255,107,107,.15)}
+    .card-icon.blue{background:rgba(107,197,255,.1);color:var(--blue);border:1px solid rgba(107,197,255,.15)}
+    .card-icon.purple{background:rgba(199,138,255,.1);color:var(--purple);border:1px solid rgba(199,138,255,.15)}
+    .card-icon.orange{background:rgba(255,176,107,.1);color:var(--orange);border:1px solid rgba(255,176,107,.15)}
+    .card-name{font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+    .card-cat{font:10px 'DM Mono',monospace;color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+    .card-desc{color:var(--muted);font-size:13.5px;line-height:1.65;flex:1;margin-bottom:18px}
+    .card-desc .hl{color:var(--lime);font-weight:600}
+
+    .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+    .card-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+    .tag{font:10px 'DM Mono',monospace;color:var(--dim);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:5px;padding:4px 8px;letter-spacing:.02em}
+    .card-lang{font:11px 'DM Mono',monospace;color:var(--lime);opacity:.7;flex-shrink:0;display:flex;align-items:center;gap:5px}
+    .card-lang::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--lime);opacity:.6}
+    .card-arrow{color:var(--dim);font-size:16px;transition:color .2s,transform .2s}
+    .card:hover .card-arrow{color:var(--lime);transform:translateX(2px)}
+
+    /* EMPTY */
+    .empty{grid-column:1/-1;text-align:center;padding:80px 20px}
+    .empty-q{color:var(--ink);font-size:16px;font-weight:600;margin-bottom:6px}
+    .empty-sub{color:var(--dim);font-size:13px}
 
     /* FOOTER */
-    .gfoot{background:var(--surface);border-top:1px solid var(--line);padding:16px clamp(16px,7vw,160px);display:flex;justify-content:space-between;color:#9aa0a6;font-size:12px;position:relative;z-index:2}
+    footer{border-top:1px solid var(--line);padding:20px clamp(20px,5vw,80px);display:flex;justify-content:space-between;color:var(--dim);font:10px 'DM Mono',monospace;position:relative;z-index:2}
+
+    /* ANIMATION */
+    .card{opacity:0;transform:translateY(20px);animation:cardIn .5s ease forwards}
+    @keyframes cardIn{to{opacity:1;transform:translateY(0)}}
 
     @media(max-width:760px){
-      .search-top{padding:0 16px;gap:12px}
-      .tabs-bar{padding:0 16px}
-      .results-wrap{padding:18px 16px 80px}
-      .logo{font-size:22px}
-      .search-box input{font-size:14px;padding:10px 8px}
-      .result-title{font-size:18px}
-      .result-url{max-width:240px}
-      .gfoot{padding:16px;flex-direction:column;gap:8px}
+      .nav{padding:0 16px}
+      .nav-links a:not(.active){display:none}
+      .hero{padding:30px 16px 0}
+      .filters{padding:0 16px;margin-top:20px}
+      .grid{grid-template-columns:1fr;padding:20px 16px 80px;gap:12px}
+      .gh-link{display:none}
+      footer{padding:20px 16px;flex-direction:column;gap:8px}
+    }
+    @media(min-width:1400px){
+      .grid{grid-template-columns:repeat(3,1fr)}
     }
   </style>
 </head>
 <body>
+  <div class="noise"></div>
 
-  <div class="search-header">
-    <div class="search-top">
-      <a class="logo" href="index.html"><span>G</span>G.</a>
-      <div class="search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-        <input type="text" id="search" placeholder="Search GG's projects..." autocomplete="off" />
-        <button class="search-clear" id="clearBtn" aria-label="Clear search">&times;</button>
-      </div>
+  <header class="nav">
+    <a class="brand" href="index.html"><span>G</span>G.</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a class="active" href="library.html">Library</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="gh-link" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
     </div>
-    <div class="tabs-bar" id="tabs"></div>
-  </div>
+  </header>
 
   <main>
-    <div class="results-wrap">
-      <div class="result-info" id="resultInfo"></div>
-      <div id="results"></div>
+    <div class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>Project <em>Library</em></h1>
+          <p class="hero-count" id="heroCount"></p>
+        </div>
+        <div class="search-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="search" placeholder="Search projects..." autocomplete="off" />
+          <button class="clear-btn" id="clearBtn">&times;</button>
+        </div>
+      </div>
     </div>
+
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
   </main>
 
-  <footer class="gfoot"><span>© 2026 Geevarghese K Thomas</span><span>GG / PROJECT LIBRARY</span></footer>
+  <footer><span>© 2026 Geevarghese K Thomas</span><span>GG / PROJECT LIBRARY</span></footer>
 
-  <script>
-  const projects=[
-    {name:"RedPilot",slug:"redpilot",url:"https://github.com/geevarghesekthomas84-sys/redpilot",desc:"AI-orchestrated offensive security framework. Automated recon, CVE mapping, exploit POC generation & remediation. CLI, API, MCP, and dashboard. Powered by Gemini, Claude, Ollama & LM Studio.",lang:"Python",cat:"Red Team",tags:["python","ai","pentesting","red-team"],featured:1},
-    {name:"Gria-AI",slug:"Gria-AI",url:"https://github.com/geevarghesekthomas84-sys/Gria-AI",desc:"100% private Android AI chat app delivering ChatGPT-grade conversations powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry.",lang:"Kotlin",cat:"AI",tags:["kotlin","android","llm","privacy"],featured:2},
-    {name:"CyberForge",slug:"cyberforge.py",url:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py",desc:"1,100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring — one Python file.",lang:"Python",cat:"Tools",tags:["python","hash","forensics","single-file"],featured:3},
-    {name:"Recon Blade",slug:"recon_blade.py",url:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py",desc:"All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.",lang:"Python",cat:"Red Team",tags:["python","recon","scanning","osint"],featured:4},
-    {name:"GhostKit",slug:"GhostKit",url:"https://github.com/geevarghesekthomas84-sys/GhostKit",desc:"Portable cybersecurity suite for USB deployment — AI-assisted network auditing (Nmap), web vulnerability scanning (Nuclei), packet analysis (Wireshark), and an offline AI Security Assistant.",lang:"Python",cat:"Red Team",tags:["python","nmap","nuclei","usb","portable"],featured:5},
-    {name:"Insider Threat Detection Lab",slug:"insider-threat-detection-lab",url:"https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab",desc:"Comprehensive Blue Team lab for detecting and responding to insider threat breaches using Wazuh, Splunk, and ELK. 50+ custom detection rules mapped to MITRE ATT&CK.",lang:"PowerShell",cat:"Blue Team",tags:["siem","wazuh","splunk","mitre-attack"],featured:6},
-    {name:"Aegis",slug:"Aegis",url:"https://github.com/geevarghesekthomas84-sys/Aegis",desc:"Fully autonomous, locally hosted AI assistant for hospitals. Privacy-first architecture — patient data never leaves local infrastructure. Handles triage, appointment scheduling, and conversational intake.",lang:"TypeScript",cat:"AI",tags:["typescript","healthcare","llm","privacy"],featured:7},
-    {name:"Dynamic Island Cross",slug:"dynamic-island-cross",url:"https://github.com/geevarghesekthomas84-sys/dynamic-island-cross",desc:"A Dynamic Island for your desktop: now playing, notifications, volume and charging in a floating pill. Built with Tauri, Rust and React for Windows, macOS and Linux.",lang:"TypeScript",cat:"Tools",tags:["tauri","rust","react","desktop"],featured:8},
-    {name:"PortSight",slug:"PortSight",url:"https://github.com/geevarghesekthomas84-sys/PortSight",desc:"High-performance, multithreaded TCP port scanner with service detection and differential scan comparison.",lang:"Python",cat:"Red Team",tags:["python","networking","scanner"],featured:9},
-    {name:"Portable Offline LLM",slug:"Portable-Offline-LLM",url:"https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM",desc:"Run a fully private, offline AI assistant from a USB flash drive — no installation, no internet, no admin rights required.",lang:"Batch",cat:"AI",tags:["llamafile","portable","usb","offline"],featured:10},
-    {name:"Insider Threat Breach Response",slug:"Insider-Threat-Breach-Response",url:"https://github.com/geevarghesekthomas84-sys/Insider-Threat-Breach-Response",desc:"Professional SOC + DFIR project simulating a real-world enterprise insider data breach investigation in a financial organization.",lang:"Docs",cat:"Blue Team",tags:["soc","dfir","incident-response","mitre-attack"],featured:11},
-    {name:"Reverse Shell Generator",slug:"reverse-shell-generator",url:"https://github.com/geevarghesekthomas84-sys/reverse-shell-generator",desc:"Web-based reverse shell payload generator. Supports Bash, Python, PowerShell, PHP, Ruby, Perl, Netcat. One-click copy. Dark hacker UI.",lang:"HTML",cat:"Red Team",tags:["html","payloads","pentesting"],featured:12},
-    {name:"LocalLens",slug:"LocalLens",url:"https://github.com/geevarghesekthomas84-sys/LocalLens",desc:"High-performance local file search engine built with Node.js, SQLite FTS5, and Worker Threads.",lang:"JavaScript",cat:"Tools",tags:["nodejs","sqlite","search","fts5"],featured:13},
-    {name:"PHP Security Posture",slug:"php-security-posture",url:"https://github.com/geevarghesekthomas84-sys/php-security-posture",desc:"Defensive PHP security posture auditing and CVE verification lab.",lang:"Python",cat:"Blue Team",tags:["python","php","audit","cve"],featured:14},
-    {name:"Awesome Red Team",slug:"awesome-red-team",url:"https://github.com/geevarghesekthomas84-sys/awesome-red-team",desc:"Curated collection of awesome Red Team / Offensive Security resources, tools, techniques, and references.",lang:"Markdown",cat:"Red Team",tags:["awesome-list","resources","offensive-security"],featured:15},
-    {name:"ApexBank",slug:"apexbank",url:"https://github.com/geevarghesekthomas84-sys/apexbank",desc:"Full-stack digital banking platform with real-time fraud detection, multi-currency accounts, and glassmorphism UI.",lang:"TypeScript",cat:"Tools",tags:["typescript","banking","fraud-detection"],featured:16},
-    {name:"SlashFrame",slug:"image-style-skill",url:"https://github.com/geevarghesekthomas84-sys/image-style-skill",desc:"403 slash commands that turn a short idea into a finished AI image prompt. Works with Claude, ChatGPT, Gemini, Midjourney, Flux, ComfyUI and more.",lang:"Python",cat:"AI",tags:["python","ai-art","prompts","claude"],featured:17},
-    {name:"Android AI Engineering",slug:"android-ai-engineering-system",url:"https://github.com/geevarghesekthomas84-sys/android-ai-engineering-system",desc:"14 AI engineering skills for Android development — UI/UX, frontend, testing, security, backend, DevOps, AI integration. Includes fullstack example app.",lang:"Kotlin",cat:"AI",tags:["kotlin","android","engineering","jetpack-compose"],featured:18}
-  ];
+<script>
+const P=[
+  {n:"RedPilot",u:"https://github.com/geevarghesekthomas84-sys/redpilot",d:"AI-orchestrated offensive security framework. Automated recon, CVE mapping, exploit POC generation & remediation. CLI, API, MCP, and dashboard.",l:"Python",c:"Red Team",t:["ai","pentesting","cli","mcp"],f:1},
+  {n:"Gria-AI",u:"https://github.com/geevarghesekthomas84-sys/Gria-AI",d:"100% private Android AI chat app powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry.",l:"Kotlin",c:"AI",t:["android","llm","privacy"],f:2},
+  {n:"CyberForge",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py",d:"1,100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring.",l:"Python",c:"Tools",t:["hash","forensics","single-file"],f:3},
+  {n:"Recon Blade",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py",d:"All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.",l:"Python",c:"Red Team",t:["recon","scanning","osint"],f:4},
+  {n:"GhostKit",u:"https://github.com/geevarghesekthomas84-sys/GhostKit",d:"Portable cybersecurity suite for USB deployment — AI-assisted network auditing, web vulnerability scanning, packet analysis, and an offline AI Security Assistant.",l:"Python",c:"Red Team",t:["nmap","nuclei","usb","portable"],f:5},
+  {n:"Insider Threat Lab",u:"https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab",d:"Comprehensive Blue Team lab for detecting insider threat breaches using Wazuh, Splunk, and ELK. 50+ custom detection rules mapped to MITRE ATT&CK.",l:"PowerShell",c:"Blue Team",t:["siem","wazuh","splunk"],f:6},
+  {n:"Aegis",u:"https://github.com/geevarghesekthomas84-sys/Aegis",d:"Fully autonomous, locally hosted AI assistant for hospitals. Privacy-first architecture — patient data never leaves local infrastructure. Triage, scheduling, conversational intake.",l:"TypeScript",c:"AI",t:["healthcare","llm","privacy"],f:7},
+  {n:"Dynamic Island",u:"https://github.com/geevarghesekthomas84-sys/dynamic-island-cross",d:"A Dynamic Island for your desktop: now playing, notifications, volume and charging in a floating pill. Tauri, Rust and React for Windows, macOS and Linux.",l:"TypeScript",c:"Tools",t:["tauri","rust","react","desktop"],f:8},
+  {n:"PortSight",u:"https://github.com/geevarghesekthomas84-sys/PortSight",d:"High-performance, multithreaded TCP port scanner with service detection and differential scan comparison.",l:"Python",c:"Red Team",t:["networking","scanner","threads"],f:9},
+  {n:"Portable Offline LLM",u:"https://github.com/geevarghesekthomas84-sys/Portable-Offline-LLM",d:"Run a fully private, offline AI assistant from a USB flash drive — no installation, no internet, no admin rights required.",l:"Batch",c:"AI",t:["llamafile","usb","offline"],f:10},
+  {n:"Breach Response",u:"https://github.com/geevarghesekthomas84-sys/Insider-Threat-Breach-Response",d:"Professional SOC + DFIR project simulating a real-world enterprise insider data breach investigation in a financial organization.",l:"Docs",c:"Blue Team",t:["soc","dfir","incident-response"],f:11},
+  {n:"Reverse Shell Gen",u:"https://github.com/geevarghesekthomas84-sys/reverse-shell-generator",d:"Web-based reverse shell payload generator. Supports Bash, Python, PowerShell, PHP, Ruby, Perl, Netcat. One-click copy with dark hacker UI.",l:"HTML",c:"Red Team",t:["payloads","pentesting","web"],f:12},
+  {n:"LocalLens",u:"https://github.com/geevarghesekthomas84-sys/LocalLens",d:"High-performance local file search engine built with Node.js, SQLite FTS5, and Worker Threads.",l:"JavaScript",c:"Tools",t:["nodejs","sqlite","search"],f:13},
+  {n:"PHP Security Posture",u:"https://github.com/geevarghesekthomas84-sys/php-security-posture",d:"Defensive PHP security posture auditing and CVE verification lab.",l:"Python",c:"Blue Team",t:["php","audit","cve"],f:14},
+  {n:"Awesome Red Team",u:"https://github.com/geevarghesekthomas84-sys/awesome-red-team",d:"Curated collection of awesome Red Team / Offensive Security resources, tools, techniques, and references.",l:"Markdown",c:"Red Team",t:["awesome-list","resources"],f:15},
+  {n:"ApexBank",u:"https://github.com/geevarghesekthomas84-sys/apexbank",d:"Full-stack digital banking platform with real-time fraud detection, multi-currency accounts, and glassmorphism UI.",l:"TypeScript",c:"Tools",t:["banking","fraud-detection","fullstack"],f:16},
+  {n:"SlashFrame",u:"https://github.com/geevarghesekthomas84-sys/image-style-skill",d:"403 slash commands that turn a short idea into a finished AI image prompt. Works with Claude, ChatGPT, Gemini, Midjourney, Flux, and more.",l:"Python",c:"AI",t:["ai-art","prompts","claude"],f:17},
+  {n:"Android AI Engineering",u:"https://github.com/geevarghesekthomas84-sys/android-ai-engineering-system",d:"14 AI engineering skills for Android development — UI/UX, frontend, testing, security, backend, DevOps, and AI integration.",l:"Kotlin",c:"AI",t:["android","engineering","compose"],f:18}
+];
 
-  const cats=["All","Red Team","Blue Team","AI","Tools"];
-  let activeCat="All";
-  const tabsEl=document.getElementById('tabs');
-  const resultsEl=document.getElementById('results');
-  const searchEl=document.getElementById('search');
-  const clearBtn=document.getElementById('clearBtn');
-  const resultInfo=document.getElementById('resultInfo');
+const catColors={"Red Team":"red","Blue Team":"blue","AI":"purple","Tools":"orange"};
+const cats=["All","Red Team","Blue Team","AI","Tools"];
+let active="All";
 
-  function buildTabs(){
-    tabsEl.innerHTML='';
-    cats.forEach(c=>{
-      const btn=document.createElement('button');
-      btn.className='tab'+(activeCat===c?' active':'');
-      btn.textContent=c;
-      btn.onclick=()=>{activeCat=c;buildTabs();render()};
-      tabsEl.appendChild(btn);
-    });
+const grid=document.getElementById('grid');
+const filtersEl=document.getElementById('filters');
+const searchEl=document.getElementById('search');
+const clearBtn=document.getElementById('clearBtn');
+const heroCount=document.getElementById('heroCount');
+
+function buildFilters(){
+  filtersEl.innerHTML='';
+  cats.forEach(c=>{
+    const count=c==='All'?P.length:P.filter(p=>p.c===c).length;
+    const b=document.createElement('button');
+    b.className='filter'+(active===c?' active':'');
+    b.innerHTML=c+'<span class="n">'+count+'</span>';
+    b.onclick=()=>{active=c;buildFilters();render()};
+    filtersEl.appendChild(b);
+  });
+}
+
+function render(){
+  const q=searchEl.value.toLowerCase().trim();
+  let list=P.filter(p=>{
+    if(active!=='All'&&p.c!==active)return false;
+    if(!q)return true;
+    return p.n.toLowerCase().includes(q)||p.d.toLowerCase().includes(q)||p.l.toLowerCase().includes(q)||p.c.toLowerCase().includes(q)||p.t.some(t=>t.includes(q));
+  });
+  list.sort((a,b)=>a.f-b.f);
+
+  heroCount.innerHTML='Showing <b>'+list.length+'</b> of '+P.length+' open source projects';
+  clearBtn.classList.toggle('show',q.length>0);
+
+  if(!list.length){
+    grid.innerHTML='<div class="empty"><p class="empty-q">No projects found</p><p class="empty-sub">Try a different search term or filter.</p></div>';
+    return;
   }
 
-  function render(){
-    const q=searchEl.value.toLowerCase().trim();
-    let filtered=projects.filter(p=>{
-      const catMatch=activeCat==='All'||p.cat===activeCat;
-      const searchMatch=!q||p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)||p.lang.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)||p.tags.some(t=>t.includes(q));
-      return catMatch&&searchMatch;
-    });
-
-    filtered.sort((a,b)=>a.featured-b.featured);
-
-    const total=activeCat==='All'?projects.length:projects.filter(p=>p.cat===activeCat).length;
-    resultInfo.textContent=q
-      ? 'About '+filtered.length+' results'
-      : filtered.length+' projects';
-    clearBtn.classList.toggle('show',q.length>0);
-
-    if(!filtered.length){
-      resultsEl.innerHTML='<div class="empty"><p>Your search — <strong style="color:var(--white)">'+esc(searchEl.value)+'</strong> — did not match any projects.</p></div>';
-      return;
-    }
-
-    resultsEl.innerHTML=filtered.map(p=>{
-      const displayUrl=p.url.replace('https://','');
-      const initials=p.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
-      return `
-      <div class="result">
-        <div class="result-site">
-          <div class="result-favicon">${initials}</div>
-          <div class="result-url-wrap">
-            <div class="result-site-name">geevarghesekthomas84-sys</div>
-            <div class="result-url">${displayUrl}</div>
-          </div>
+  grid.innerHTML=list.map((p,i)=>{
+    const col=catColors[p.c]||'orange';
+    const initials=p.n.split(' ').map(w=>w[0]).join('').slice(0,2);
+    return `<a class="card" href="${p.u}" target="_blank" rel="noreferrer" style="animation-delay:${i*40}ms">
+      <div class="card-head">
+        <div class="card-icon ${col}">${initials}</div>
+        <div>
+          <div class="card-name">${hl(p.n,q)}</div>
+          <div class="card-cat">${p.c}</div>
         </div>
-        <a class="result-title" href="${p.url}" target="_blank" rel="noreferrer">${hl(p.name,q)} — ${hl(p.desc.split('.')[0],q)}</a>
-        <div class="result-desc">${hl(p.desc,q)}</div>
-        <div class="result-tags">${p.tags.map(t=>'<span class="result-tag">'+t+'</span>').join('')}<span class="result-tag" style="color:var(--lime)">${p.lang}</span></div>
-      </div>`;
-    }).join('');
-  }
+      </div>
+      <div class="card-desc">${hl(p.d,q)}</div>
+      <div class="card-foot">
+        <div class="card-tags">${p.t.slice(0,3).map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
+        <span class="card-lang">${p.l}</span>
+        <span class="card-arrow">→</span>
+      </div>
+    </a>`;
+  }).join('');
+}
 
-  function hl(text,q){
-    if(!q)return text;
-    const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
-    return text.replace(re,'<span class="hl">$1</span>');
-  }
+function hl(text,q){
+  if(!q)return text;
+  const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+  return text.replace(re,'<span class="hl">$1</span>');
+}
 
-  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+searchEl.addEventListener('input',render);
+clearBtn.addEventListener('click',()=>{searchEl.value='';render();searchEl.focus()});
 
-  searchEl.addEventListener('input',render);
-  clearBtn.addEventListener('click',()=>{searchEl.value='';render();searchEl.focus()});
-
-  buildTabs();
-  render();
-  </script>
+buildFilters();
+render();
+</script>
 </body>
 </html>
