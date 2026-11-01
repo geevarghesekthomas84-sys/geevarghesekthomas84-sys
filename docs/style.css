@@ -64,6 +64,9 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .project-grid article{padding:35px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
 .project-grid article:hover{background:#171d19}
 .project-grid h3{margin:50px 0 15px;font-size:27px}
+.grid-link{text-decoration:none;color:inherit;display:contents}
+.grid-link article{cursor:pointer}
+.grid-link:hover article{background:#171d19}
 
 .statement{padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2}
 .statement p{font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0}
