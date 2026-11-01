@@ -15,26 +15,39 @@ nav a:hover{color:var(--ink)}
 .pill{border:1px solid var(--line);border-radius:999px;padding:12px 17px;color:var(--ink);text-decoration:none;font-size:12px;transition:border-color .2s,background .2s}
 .pill:hover{border-color:var(--lime);background:rgba(200,255,74,.06)}
 
-.hero,.about,.work,.contact{padding:clamp(65px,10vw,145px) 7vw}
-.hero{min-height:100vh;position:relative;overflow:hidden;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
-.hero-portrait{position:relative;z-index:2;overflow:hidden}
-.hero-portrait img{width:100%;max-width:560px;display:block}
-.hero-text{position:relative;z-index:2}
+/* ── HERO ── */
+.hero{min-height:100vh;position:relative;overflow:hidden;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:60px 7vw}
+.hero-portrait{position:relative;z-index:2;display:flex;justify-content:center}
+.hero-portrait img{width:100%;max-width:520px;display:block;transition:transform .2s ease-out}
+.hero-portrait .glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,74,.15) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .3s;transform:translate(-50%,-50%);z-index:3}
+.hero-portrait:hover .glow{opacity:1}
+.hero-text{position:relative;z-index:2;padding-left:clamp(20px,3vw,60px)}
 .eyebrow,.section-label,.num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted)}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block;margin-right:8px;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(200,255,74,.4)}50%{opacity:.8;box-shadow:0 0 0 6px rgba(200,255,74,0)}}
-.hero-kicker{font-family:'DM Mono',monospace;color:var(--muted);margin:24px 0 0;font-size:16px}
-.hero h1{font-size:clamp(72px,10vw,140px);line-height:.88;letter-spacing:-.08em;margin:8px 0 30px;position:relative;z-index:2}
+.hero-kicker{font-family:'DM Mono',monospace;color:var(--muted);margin:28px 0 0;font-size:16px}
+.hero h1{font-size:clamp(80px,11vw,150px);line-height:.88;letter-spacing:-.08em;margin:6px 0 28px}
 .hero h1 em,h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime)}
 .intro{max-width:440px;line-height:1.7;color:var(--muted);font-size:15px}
 .intro strong{color:var(--ink)}
-
 .hero-cta{display:flex;gap:16px;margin-top:36px}
 .btn-primary{background:var(--lime);color:#111;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;padding:15px 28px;border-radius:999px;text-decoration:none;transition:box-shadow .2s,transform .2s}
 .btn-primary:hover{box-shadow:0 0 30px rgba(200,255,74,.3);transform:translateY(-1px)}
 .btn-outline{border:1px solid var(--line);color:var(--ink);font-family:'DM Mono',monospace;font-size:13px;padding:15px 28px;border-radius:999px;text-decoration:none;transition:border-color .2s,background .2s}
 .btn-outline:hover{border-color:var(--lime);background:rgba(200,255,74,.06)}
 
+/* ── HERO ANIMATIONS ── */
+.hero .eyebrow,.hero-kicker,.hero h1,.hero .intro,.hero-cta{opacity:0;animation:fadeUp .8s ease forwards}
+.hero .eyebrow{animation-delay:.15s}
+.hero-kicker{animation-delay:.3s}
+.hero h1{animation-delay:.45s}
+.hero .intro{animation-delay:.6s}
+.hero-cta{animation-delay:.75s}
+.hero-portrait{opacity:0;animation:fadeUp 1s ease .1s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── ABOUT ── */
+.about,.work,.contact{padding:clamp(65px,10vw,145px) 7vw}
 .split{display:grid;grid-template-columns:1fr 2.2fr .7fr;gap:45px;border-bottom:1px solid var(--line)}
 h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin:0 0 35px}
 .bodycopy{max-width:580px;color:var(--muted);font-size:16px;line-height:1.85}
@@ -47,6 +60,7 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .profile-card div{display:flex;justify-content:space-between;margin-top:9px}
 .profile-card small{color:var(--muted);font-size:10px}
 
+/* ── WORK ── */
 .work{border-bottom:1px solid var(--line)}
 .work-head{display:flex;justify-content:space-between;gap:60px;margin-bottom:70px}
 .work-head h2{margin:0}
@@ -67,10 +81,12 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .grid-link article{cursor:pointer}
 .grid-link:hover article{background:#171d19}
 
+/* ── STATEMENT ── */
 .statement{padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2}
 .statement p{font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0}
 .statement em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:#111}
 
+/* ── CONTACT ── */
 .contact{display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:start}
 .contact h2{margin:0}
 .contact-links{grid-column:2;display:flex;gap:15px;flex-wrap:wrap}
@@ -79,43 +95,25 @@ h2{font-size:clamp(36px,5.2vw,74px);line-height:.98;letter-spacing:-.06em;margin
 .contact-links span{color:var(--lime)}
 footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font:10px 'DM Mono',monospace}
 
-.hero .eyebrow,.hero-kicker,.hero h1,.hero-cta,.intro{opacity:0;animation:fadeUp .8s ease forwards}
-.hero .eyebrow{animation-delay:.1s}
-.hero-kicker{animation-delay:.2s}
-.hero h1{animation-delay:.35s}
-.hero .intro{animation-delay:.5s}
-.hero-cta{animation-delay:.65s}
-.hero-portrait{opacity:0;animation:portraitReveal 1s cubic-bezier(.4,0,.2,1) .2s forwards;perspective:800px}
-.hero-portrait img{transition:transform .15s ease-out,filter .3s ease;will-change:transform}
-.hero-portrait:hover img{filter:brightness(1.08)}
-.hero-portrait .glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,74,.18) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .3s ease;transform:translate(-50%,-50%);z-index:3}
-.hero-portrait:hover .glow{opacity:1}
-@keyframes portraitReveal{
-0%{opacity:0;clip-path:inset(100% 0 0 0)}
-50%{opacity:1;clip-path:inset(30% 0 0 0)}
-100%{opacity:1;clip-path:inset(0)}
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
+/* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-stagger>*{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .reveal-stagger>*.visible{opacity:1;transform:translateY(0)}
-
 .code-window code::after{content:'_';animation:blink 1s step-end infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
+/* ── MOBILE ── */
 @media(max-width:760px){
 .nav{padding:0 5vw}
 .nav nav{display:none}
-.hero,.about,.work,.contact{padding-left:5vw;padding-right:5vw}
-.hero{grid-template-columns:1fr;min-height:auto;padding-top:50px;padding-bottom:60px;text-align:center}
+.hero{grid-template-columns:1fr;min-height:auto;padding:50px 5vw 60px}
 .hero-portrait{order:1}
-.hero-portrait img{max-width:320px;margin:0 auto}
-.hero-text{order:2}
+.hero-portrait img{max-width:300px;margin:0 auto}
+.hero-text{order:2;padding-left:0;text-align:center}
 .intro{margin:0 auto}
 .hero-cta{justify-content:center}
+.about,.work,.contact{padding-left:5vw;padding-right:5vw}
 .split,.contact{display:block}
 .section-label{margin-bottom:36px}
 .profile-card{max-width:200px;margin-top:40px}
