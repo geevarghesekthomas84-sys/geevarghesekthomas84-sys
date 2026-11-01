@@ -41,6 +41,7 @@ nav a:hover{color:var(--ink)}
 .hero{min-height:100vh;position:relative;overflow:hidden;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:60px 7vw}
 .hero-portrait{position:relative;z-index:2;display:flex;justify-content:center;perspective:800px}
 .hero-portrait img{width:100%;max-width:520px;display:block;transition:transform .2s ease-out}
+.portrait-canvas{display:block;max-width:100%;transition:transform .2s ease-out;cursor:none}
 .hero-portrait .glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,74,.15) 0%,transparent 70%);pointer-events:none;opacity:0;transition:opacity .3s;transform:translate(-50%,-50%);z-index:3}
 .hero-portrait:hover .glow{opacity:1}
 .hero-text{position:relative;z-index:2;padding-left:clamp(20px,3vw,60px)}
@@ -156,6 +157,7 @@ body,a,button,.pill,.btn-primary,.btn-outline,.grid-link,.project,.back-top{curs
 .hero{grid-template-columns:1fr;min-height:auto;padding:50px 5vw 60px}
 .hero-portrait{order:1}
 .hero-portrait img{max-width:300px;margin:0 auto}
+.portrait-canvas{margin:0 auto;cursor:auto}
 .hero-text{order:2;padding-left:0;text-align:center}
 .intro{margin:0 auto}
 .hero-cta{justify-content:center}

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   function endIntro(){
     if(!pre||pre.classList.contains('done'))return;
     pre.classList.add('done');document.body.classList.add('ready');
+    document.dispatchEvent(new Event('intro-done'));
     try{sessionStorage.setItem('introSeen','1')}catch(e){}
   }
   if(pre){
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       pre.querySelector('.pre-skip').addEventListener('click',()=>{a.finish();endIntro()});
       setTimeout(endIntro,7000);
     }
-  } else document.body.classList.add('ready');
+  } else{document.body.classList.add('ready');document.dispatchEvent(new Event('intro-done'))}
 
   // ── CUSTOM CURSOR ──
   const cross=document.querySelector('.cursor-cross');
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   // ── PORTRAIT TILT ──
   const portrait=document.querySelector('.hero-portrait');
   if(portrait){
-    const img=portrait.querySelector('img');
+    const img=portrait.querySelector('.portrait-canvas')||portrait.querySelector('img');
     const glow=portrait.querySelector('.glow');
     portrait.addEventListener('mousemove',e=>{
       const r=portrait.getBoundingClientRect();
