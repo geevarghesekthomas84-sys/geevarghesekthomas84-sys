@@ -10,7 +10,7 @@
     const R=Math.min(COLS/2,rows/2*ASPECT)-0.5;
     let cw=1,chh=1,raf=0,visible=false;
     function size(){
-      const w=Math.min(cv.parentElement.clientWidth||340,360),dpr=window.devicePixelRatio||1;
+      const w=Math.min(cv.parentElement.clientWidth-36||290,290),dpr=window.devicePixelRatio||1;
       cw=w/COLS;chh=cw*ASPECT;
       cv.style.width=w+'px';cv.style.height=chh*rows+'px';
       cv.width=Math.round(w*dpr);cv.height=Math.round(chh*rows*dpr);

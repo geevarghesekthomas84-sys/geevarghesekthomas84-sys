@@ -59,11 +59,12 @@
 
   const sec=document.getElementById('grow');
   if(sec){
-    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth,640)});
+    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth-36,640)});
     let played=false;
     new IntersectionObserver((es,ob)=>{
       es.forEach(e=>{if(e.isIntersecting&&!played){played=true;a.play();ob.disconnect()}})
     },{threshold:0.35}).observe(sec);
     sec.addEventListener('click',a.play);
+    const rb=document.querySelector('.panel-replay');if(rb)rb.addEventListener('click',a.play);
   }
 })();

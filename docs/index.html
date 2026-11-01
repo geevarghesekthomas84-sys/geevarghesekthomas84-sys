@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=18" />
+  <link rel="stylesheet" href="style.css?v=20" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,21 +112,26 @@
     </section>
 
     <section class="grow reveal" aria-label="Character art gallery">
+      <div class="grow-head">
+        <p class="section-label">// SIGNAL</p>
+        <h2>Always <em>watching.</em></h2>
+      </div>
       <div class="grow-grid">
-        <figure>
-          <canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas>
-          <figcaption>// the wolf watches &mdash; click to replay</figcaption>
-        </figure>
-        <div class="grow-col">
-          <figure>
-            <canvas id="globe" role="img" aria-label="Rotating character-art globe with connections between cities"></canvas>
-            <figcaption>// live threat map</figcaption>
-          </figure>
-          <figure>
-            <canvas id="radar" role="img" aria-label="Character-art radar sweeping and detecting blips"></canvas>
-            <figcaption>// scanning...</figcaption>
-          </figure>
-        </div>
+        <article class="panel panel-wolf">
+          <header class="panel-bar"><i></i><i></i><i></i><span>wolf.ascii</span><button class="panel-replay" type="button">&#8635; replay</button></header>
+          <div class="panel-body"><canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas></div>
+          <footer class="panel-foot"><span>watch: <b>active</b></span><span>mode: <b>stealth</b></span></footer>
+        </article>
+        <article class="panel">
+          <header class="panel-bar"><i></i><i></i><i></i><span>threat-map.live</span></header>
+          <div class="panel-body"><canvas id="globe" role="img" aria-label="Rotating character-art globe with connections between cities"></canvas></div>
+          <footer class="panel-foot"><span>nodes: <b>12</b></span><span>links: <b>10</b></span><span>status: <b>live</b></span></footer>
+        </article>
+        <article class="panel">
+          <header class="panel-bar"><i></i><i></i><i></i><span>radar.scan</span></header>
+          <div class="panel-body"><canvas id="radar" role="img" aria-label="Character-art radar sweeping and detecting blips"></canvas></div>
+          <footer class="panel-foot"><span>contacts: <b>7</b></span><span>sweep: <b>360&deg;</b></span><span>status: <b>scanning</b></span></footer>
+        </article>
       </div>
     </section>
 
@@ -146,9 +151,9 @@
 
   <script src="anim.js?v=15"></script>
   <script src="grow-data.js?v=8"></script>
-  <script src="grow.js?v=2"></script>
+  <script src="grow.js?v=3"></script>
   <script src="portrait-data.js?v=1"></script>
   <script src="portrait.js?v=1"></script>
-  <script src="art.js?v=3"></script>
+  <script src="art.js?v=4"></script>
 </body>
 </html>
