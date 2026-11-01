@@ -9,7 +9,7 @@
   let cw=1,chh=1,start=null,raf=0,played=false;
 
   function size(){
-    const w=Math.min(cv.parentElement.clientWidth,760),dpr=window.devicePixelRatio||1;
+    const w=Math.min(cv.parentElement.clientWidth,640),dpr=window.devicePixelRatio||1;
     cw=w/G.cols;chh=cw*G.cellAspect;
     cv.style.width=w+'px';cv.style.height=chh*G.rows+'px';
     cv.width=Math.round(w*dpr);cv.height=Math.round(chh*G.rows*dpr);
