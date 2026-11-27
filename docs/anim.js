@@ -11,26 +11,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     try{sessionStorage.setItem('introSeen','1')}catch(e){}
   }
   if(pre){
-    const cv=document.getElementById('pre-wolf'),fill=pre.querySelector('.pre-fill'),num=document.getElementById('preNum');
+    const fill=pre.querySelector('.pre-fill'),num=document.getElementById('preNum');
     const setP=p=>{if(fill)fill.style.width=(p*100)+'%';if(num)num.textContent=('00'+Math.round(p*100)).slice(-3)};
     const skip=pre.querySelector('.pre-skip');
-    if(seen||!window.growChar||!cv){
-      if(cv)cv.style.display='none';
-      let t0=null;const D=seen?850:1400;
-      (function tick(now){if(t0===null)t0=now;const p=Math.min((now-t0)/D,1);setP(p);if(p<1)requestAnimationFrame(tick);else setTimeout(endIntro,150)})(performance.now());
-      if(skip)skip.addEventListener('click',endIntro);
-    }else{
-      const aspect=window.GROW.rows*window.GROW.cellAspect/window.GROW.cols;
-      const a=window.growChar(cv,{
-        dur:3400,
-        width:()=>Math.min(window.innerWidth*0.92,740,window.innerHeight*0.78/aspect),
-        onProgress:setP,
-        onDone:()=>setTimeout(endIntro,500)
-      });
-      a.play();
-      skip.addEventListener('click',()=>{a.finish();setP(1);endIntro()});
-      setTimeout(endIntro,8000);
-    }
+    let t0=null;const D=seen?850:2300;
+    (function tick(now){if(t0===null)t0=now;const p=Math.min((now-t0)/D,1);setP(p);if(p<1)requestAnimationFrame(tick);else setTimeout(endIntro,seen?150:350)})(performance.now());
+    if(skip)skip.addEventListener('click',()=>{setP(1);endIntro()});
   } else{document.body.classList.add('ready');document.dispatchEvent(new Event('intro-done'))}
 
   // ── CUSTOM CURSOR ──
