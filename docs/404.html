@@ -4,44 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Access Denied | GG</title>
+  <meta name="robots" content="noindex" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
+    :root{--bg:#0b0c0b;--ink:#f2f4f1;--muted:#a1a8a2;--line:#2a2f2b;--lime:#c8ff4a;--pink:#ff2e63;--display:Unbounded,'Arial Black',Impact,sans-serif;--hand:Caveat,'Comic Sans MS',cursive}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#101312;color:#e8eee9;font-family:'DM Mono',monospace;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
-    .terminal{background:#070908;border:1px solid #263027;border-radius:6px;width:100%;max-width:620px;overflow:hidden}
-    .terminal-bar{display:flex;gap:7px;padding:12px 16px;border-bottom:1px solid #263027}
-    .terminal-bar i{width:11px;height:11px;border-radius:50%}
-    .terminal-bar i:nth-child(1){background:#ff5f57}
-    .terminal-bar i:nth-child(2){background:#febc2e}
-    .terminal-bar i:nth-child(3){background:#28c840}
-    .terminal-body{padding:28px 24px;line-height:2;font-size:14px;color:#a0ac9f}
-    .terminal-body .prompt{color:#c8ff4a}
-    .terminal-body .err{color:#ff5f57}
-    .terminal-body .dim{color:#526058}
-    .code-big{font-family:Manrope,sans-serif;font-size:clamp(80px,15vw,140px);font-weight:800;letter-spacing:-.06em;color:#c8ff4a;text-align:center;margin:0 0 10px;line-height:1;opacity:.15}
-    .msg{text-align:center;margin-bottom:40px;color:#9ba39d;font-size:14px;font-family:'DM Mono',monospace}
-    .home-link{display:inline-block;border:1px solid #303632;border-radius:999px;padding:14px 28px;color:#e8eee9;text-decoration:none;font:13px 'DM Mono',monospace;transition:border-color .2s,background .2s;margin-top:30px}
-    .home-link:hover{border-color:#c8ff4a;background:rgba(200,255,74,.06)}
+    html{scrollbar-width:none}
+    html::-webkit-scrollbar{display:none}
+    body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");z-index:0}
+
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid var(--line);position:relative;z-index:2}
+    .brand{color:var(--ink);font:900 22px var(--display);text-decoration:none;letter-spacing:-2px}
+    .brand span{color:var(--lime)}
+    .nav nav{display:flex;gap:10px}
+    .nav nav a,.pill{font:500 11px 'DM Mono',monospace;color:var(--ink);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:border-color .2s,background .2s,color .2s}
+    .nav nav a:hover,.pill:hover{border-color:var(--lime);color:var(--lime);background:rgba(200,255,74,.06)}
+
+    main{flex:1;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 6vw 80px;overflow:hidden}
+    .title{position:relative;display:inline-block;padding:3vw 4vw}
+    h1{line-height:.86;margin:0}
+    .t-heavy{display:block;font:900 clamp(90px,24vw,330px)/.84 var(--display);letter-spacing:-.05em;color:#fff}
+    .t-script{display:block;white-space:nowrap;font:700 clamp(26px,7vw,100px)/1 var(--display);letter-spacing:-.03em;text-transform:uppercase;color:var(--bg);-webkit-text-stroke:4px #fff;paint-order:stroke fill;transform:skewX(-13deg);margin:-.04em 0 0 8%}
+    .swoosh{position:absolute;inset:-4% -2%;width:104%;height:108%;pointer-events:none;overflow:visible}
+    .swoosh ellipse{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.2s ease .3s forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .burst{position:absolute;fill:var(--pink);right:-2%;top:-4%;width:clamp(70px,10vw,140px);animation:spin 20s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .note{font:700 clamp(28px,4vw,54px) var(--hand);color:var(--lime);transform:rotate(-4deg);margin:30px 0 8px;display:inline-block}
+    .msg{color:var(--muted);font-size:14px;margin-bottom:44px;max-width:460px;line-height:1.7}
+
+    .vis{position:relative;width:100%;max-width:620px;margin:0 auto;padding:34px 0}
+    .vis-bg{position:absolute;inset:4% -3%;background:var(--lime);transform:rotate(3deg);border-radius:4px;overflow:hidden}
+    .vis-bg::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.28) 1.6px,transparent 1.8px);background-size:11px 11px}
+    .terminal{position:relative;background:#070908;border:2px solid #0b0c0b;border-radius:6px;text-align:left;transform:rotate(-2deg);box-shadow:10px 10px 0 rgba(0,0,0,.6);overflow:hidden}
+    .terminal-bar{display:flex;align-items:center;gap:7px;padding:11px 16px;border-bottom:1px solid #1d241f;font-size:11px;color:#526058}
+    .terminal-bar i{width:10px;height:10px;border-radius:50%;background:#2a322c}
+    .terminal-bar span{margin-left:8px}
+    .terminal-body{padding:26px 24px;line-height:2;font-size:13.5px;color:#a0ac9f}
+    .prompt{color:var(--lime)}
+    .err{color:var(--pink);font-weight:500}
+    .dim{color:#526058}
     .blink::after{content:'_';animation:b 1s step-end infinite}
     @keyframes b{0%,100%{opacity:1}50%{opacity:0}}
+
+    .home-link{display:inline-block;background:var(--lime);color:#0b0c0b;font:500 13px 'DM Mono',monospace;padding:16px 32px;border-radius:999px;text-decoration:none;margin-top:46px;transition:box-shadow .2s,transform .2s}
+    .home-link:hover{box-shadow:5px 5px 0 #fff;transform:translate(-2px,-2px)}
+    footer{padding:22px 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font:10px 'DM Mono',monospace;position:relative;z-index:2}
+    @media(prefers-reduced-motion:reduce){.burst{animation:none}.swoosh ellipse{animation:none;stroke-dashoffset:0}}
+    @media(max-width:760px){.nav nav{display:none}main{padding:40px 5vw 60px}footer{flex-direction:column;gap:8px}}
   </style>
 </head>
 <body>
-  <p class="code-big">404</p>
-  <p class="msg">This route doesn't exist. Maybe it was classified.</p>
-  <div class="terminal">
-    <div class="terminal-bar"><i></i><i></i><i></i></div>
-    <div class="terminal-body">
-      <span class="prompt">root@gg</span>:<span class="dim">~$</span> curl -s https://itgg.space/this-page<br>
-      <span class="err">ERROR 404: ACCESS DENIED</span><br>
-      <span class="dim">// target not found in directory</span><br>
-      <span class="dim">// perhaps it was never here</span><br><br>
-      <span class="prompt">root@gg</span>:<span class="dim">~$</span> <span class="blink">cd /home</span>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="GG home"><span>G</span>G.</a>
+    <nav><a href="/#about">About</a><a href="/#work">Work</a><a href="/library.html">Library</a><a href="/#contact">Contact</a></nav>
+    <a class="pill" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+  <main>
+    <div class="title">
+      <h1><span class="t-heavy">404</span><span class="t-script">Not found</span></h1>
+      <svg class="swoosh" viewBox="0 0 800 320" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="400" cy="165" rx="385" ry="118" transform="rotate(-7 400 165)"/></svg>
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 62.3,78.4 56.7,98.0 46.4,80.4 35.4,92.1 31.8,72.7 12.9,76.1 20.8,59.7 2.0,50.0 20.8,40.3 12.9,23.9 31.8,27.3 35.4,7.9 46.4,19.6 56.7,2.0 62.3,21.6 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
     </div>
-  </div>
-  <a class="home-link" href="/">← Return to base</a>
+    <p class="note">wrong turn!</p>
+    <p class="msg">This route doesn't exist. Maybe it was classified.</p>
+    <div class="vis">
+      <div class="vis-bg"></div>
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>terminal</span></div>
+        <div class="terminal-body">
+          <span class="prompt">root@gg</span>:<span class="dim">~$</span> curl -s https://itgg.space/this-page<br>
+          <span class="err">ERROR 404: ACCESS DENIED</span><br>
+          <span class="dim">// target not found in directory</span><br>
+          <span class="dim">// perhaps it was never here</span><br><br>
+          <span class="prompt">root@gg</span>:<span class="dim">~$</span> <span class="blink">cd /home</span>
+        </div>
+      </div>
+    </div>
+    <a class="home-link" href="/">← Return to base</a>
+  </main>
+  <footer><span>© 2026 Geevarghese K Thomas</span><span>GG / SECURITY PORTFOLIO</span></footer>
 </body>
 </html>
