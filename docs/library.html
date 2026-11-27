@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="GG's project library — 18 open source cybersecurity tools, AI systems, and offensive security frameworks by Geevarghese K Thomas." />
+  <meta name="description" content="GG's project library — 23 cybersecurity tools, AI systems, offensive security frameworks and interactive simulators by Geevarghese K Thomas." />
   <meta property="og:title" content="Project Library — GG" />
-  <meta property="og:description" content="18 open source cybersecurity tools, AI systems, and offensive security frameworks." />
+  <meta property="og:description" content="23 cybersecurity tools, AI systems, offensive security frameworks and interactive simulators." />
   <meta property="og:url" content="https://itgg.space/library.html" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://itgg.space/library.html" />
@@ -73,6 +73,7 @@
     .card-icon.red{background:rgba(255,107,107,.1);color:var(--red);border:1px solid rgba(255,107,107,.15)}
     .card-icon.blue{background:rgba(107,197,255,.1);color:var(--blue);border:1px solid rgba(107,197,255,.15)}
     .card-icon.purple{background:rgba(199,138,255,.1);color:var(--purple);border:1px solid rgba(199,138,255,.15)}
+    .card-icon.teal{background:rgba(107,255,214,.1);color:#6bffd6;border:1px solid rgba(107,255,214,.15)}
     .card-icon.orange{background:rgba(255,176,107,.1);color:var(--orange);border:1px solid rgba(255,176,107,.15)}
     .card-name{font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
     .card-cat{font:10px 'DM Mono',monospace;color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
@@ -82,6 +83,7 @@
 
     .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}
     .card-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+    .tag.live{color:var(--lime);border-color:rgba(200,255,74,.3)}
     .tag{font:10px 'DM Mono',monospace;color:var(--dim);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:5px;padding:4px 8px;letter-spacing:.02em}
     .card-lang{font:11px 'DM Mono',monospace;color:var(--lime);opacity:.7;flex-shrink:0;display:flex;align-items:center;gap:5px}
     .card-lang::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--lime);opacity:.6}
@@ -131,9 +133,9 @@
   <main>
     <div class="hero">
       <div class="hero-top">
-        <p class="eyebrow">01 — OPEN SOURCE</p>
+        <p class="eyebrow">01 — BUILDS</p>
         <h1>Project <em>Library</em></h1>
-        <p class="hero-sub">Cybersecurity tools, AI systems and offensive security frameworks. Search or filter by category.</p>
+        <p class="hero-sub">Cybersecurity tools, AI systems, offensive security frameworks and interactive simulators. Search or filter by category.</p>
         <div class="search-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
           <input type="text" id="search" placeholder="Search projects..." autocomplete="off" />
@@ -153,6 +155,11 @@
 const P=[
   {n:"RedPilot",u:"https://github.com/geevarghesekthomas84-sys/redpilot",p:"/projects/redpilot.html",d:"AI-orchestrated offensive security framework. Automated recon, CVE mapping, exploit POC generation & remediation. CLI, API, MCP, and dashboard.",l:"Python",c:"Red Team",t:["ai","pentesting","cli","mcp"],f:1},
   {n:"Gria-AI",u:"https://github.com/geevarghesekthomas84-sys/Gria-AI",p:"/projects/gria-ai.html",d:"100% private Android AI chat app powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry.",l:"Kotlin",c:"AI",t:["android","llm","privacy"],f:2},
+  {n:"NetPulse",u:"https://netpulse.itgg.space",d:"Interactive internet protocol visualizer and Packet Tracer-style network simulator in the browser. 39 protocols, an IOS-style CLI, DHCP, VLANs, OSPF/RIP/BGP, 20 labs and 6 languages.",l:"TypeScript",c:"Simulators",t:["react","vite","networking","tailwind"],f:2.1,live:1},
+  {n:"Flipper Zero Workshop",u:"https://flipper.itgg.space",d:"Free browser-based Flipper Zero simulator: take it apart in 3D and learn how it works in 50 interactive lessons. Unofficial educational project.",l:"Three.js",c:"Simulators",t:["3d","education","flipper-zero","hardware"],f:2.2,live:1},
+  {n:"Raspberry Pi 5 Workshop",u:"https://rpi5.itgg.space",d:"Free browser-based Raspberry Pi 5 simulator: wire real parts to a 3D Pi 5, run real Python (gpiozero) and build 9 projects in 50 interactive lessons.",l:"Three.js",c:"Simulators",t:["3d","python","gpiozero","electronics"],f:2.3,live:1},
+  {n:"ESP32 Workshop",u:"https://esp32.itgg.space",d:"Interactive lessons on microcontrollers, circuits, sensors, displays, motors, wireless communication and IoT security. Each lesson pairs a 3D ESP32 workspace with a guide and an experiment.",l:"Three.js",c:"Simulators",t:["3d","iot","esp32","education"],f:2.4,live:1},
+  {n:"Material Atlas",u:"https://material.itgg.space",d:"Search classic Material Icons, selected Material Symbols, and original SVGs. Compare styles and download SVG or PNG.",l:"JavaScript",c:"Tools",t:["icons","svg","material-design","github-pages"],f:2.5,live:1},
   {n:"CyberForge",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py",p:"/projects/cyberforge.html",d:"1,100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring.",l:"Python",c:"Tools",t:["hash","forensics","single-file"],f:3},
   {n:"Recon Blade",u:"https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py",d:"All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.",l:"Python",c:"Red Team",t:["recon","scanning","osint"],f:4},
   {n:"GhostKit",u:"https://github.com/geevarghesekthomas84-sys/GhostKit",p:"/projects/ghostkit.html",d:"Portable cybersecurity suite for USB deployment — AI-assisted network auditing, web vulnerability scanning, packet analysis, and an offline AI Security Assistant.",l:"Python",c:"Red Team",t:["nmap","nuclei","usb","portable"],f:5},
@@ -171,8 +178,8 @@ const P=[
   {n:"Android AI Engineering",u:"https://github.com/geevarghesekthomas84-sys/android-ai-engineering-system",d:"14 AI engineering skills for Android development — UI/UX, frontend, testing, security, backend, DevOps, and AI integration.",l:"Kotlin",c:"AI",t:["android","engineering","compose"],f:18}
 ];
 
-const catColors={"Red Team":"red","Blue Team":"blue","AI":"purple","Tools":"orange"};
-const cats=["All","Red Team","Blue Team","AI","Tools"];
+const catColors={"Red Team":"red","Blue Team":"blue","AI":"purple","Tools":"orange","Simulators":"teal"};
+const cats=["All","Red Team","Blue Team","AI","Tools","Simulators"];
 let active="All";
 
 const grid=document.getElementById('grid');
@@ -202,7 +209,7 @@ function render(){
   });
   list.sort((a,b)=>a.f-b.f);
 
-  heroCount.innerHTML='Showing <b>'+list.length+'</b> of '+P.length+' open source projects';
+  heroCount.innerHTML='Showing <b>'+list.length+'</b> of '+P.length+' projects';
   clearBtn.classList.toggle('show',q.length>0);
 
   if(!list.length){
@@ -224,7 +231,7 @@ function render(){
       </div>
       <div class="card-desc">${hl(p.d,q)}</div>
       <div class="card-foot">
-        <div class="card-tags">${p.t.slice(0,3).map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
+        <div class="card-tags">${p.live?'<span class="tag live">live demo</span>':''}${p.t.slice(0,p.live?2:3).map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
         <span class="card-lang">${p.l}</span>
         <span class="card-arrow">→</span>
       </div>
