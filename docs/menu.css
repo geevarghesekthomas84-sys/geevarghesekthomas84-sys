@@ -1,0 +1,32 @@
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid #2a2f2b;background:transparent;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin-left:10px;padding:0;transition:border-color .2s,background .2s}
+.menu-btn:hover,.menu-btn:focus-visible{border-color:#c8ff4a;background:rgba(200,255,74,.06);outline:none}
+.menu-btn span,.mm-close span{display:block;width:18px;height:2px;background:#f2f4f1;border-radius:1px}
+@media(max-width:760px){
+.menu-btn{display:inline-flex;flex-shrink:0}
+.nav .pill,.nav .gh-link{margin-left:auto}
+}
+
+.mm{position:fixed;inset:0;z-index:1000;background:#0b0c0b;display:flex;flex-direction:column;padding:0 6vw 32px;overflow-y:auto;opacity:0;transform:translateY(-14px);transition:opacity .3s ease,transform .3s ease}
+.mm[hidden]{display:none}
+.mm.open{opacity:1;transform:none}
+.mm::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+.mm-top{height:78px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2a2f2b;position:relative}
+.mm-brand{color:#f2f4f1;font:900 22px Unbounded,'Arial Black',Impact,sans-serif;text-decoration:none;letter-spacing:-2px}
+.mm-brand span{color:#c8ff4a}
+.mm-close{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid #c8ff4a;background:transparent;cursor:pointer;padding:0}
+.mm-close span{position:absolute;left:50%;top:50%;width:18px;margin:-1px 0 0 -9px;background:#c8ff4a}
+.mm-close span:first-child{transform:rotate(45deg)}
+.mm-close span:last-child{transform:rotate(-45deg)}
+.mm-links{display:flex;flex-direction:column;margin-top:26px;flex:1;position:relative}
+.mm-links a{display:flex;align-items:baseline;gap:16px;font:900 clamp(34px,11vw,60px)/1.1 Unbounded,'Arial Black',Impact,sans-serif;text-transform:uppercase;letter-spacing:-.04em;color:#f2f4f1;text-decoration:none;padding:16px 0;border-bottom:1px solid #2a2f2b;opacity:0;transform:translateY(18px);transition:opacity .4s ease,transform .4s ease,color .2s;transition-delay:calc(var(--i)*60ms + 80ms)}
+.mm.open .mm-links a{opacity:1;transform:none}
+.mm-links a:hover,.mm-links a:focus-visible,.mm-links a.active{color:#c8ff4a;outline:none}
+.mm-links a small{font:500 11px 'DM Mono',monospace;letter-spacing:.1em;color:#ff2e63}
+.mm-foot{position:relative;margin-top:30px}
+.mm-hand{font:700 34px Caveat,'Comic Sans MS',cursive;color:#c8ff4a;transform:rotate(-4deg);display:inline-block;margin-bottom:14px}
+.mm-foot div{display:flex;gap:10px;flex-wrap:wrap}
+.mm-foot div a{font:500 11px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#f2f4f1;text-decoration:none;border:1px solid #2a2f2b;border-radius:999px;padding:11px 18px;transition:border-color .2s,color .2s}
+.mm-foot div a:hover{border-color:#c8ff4a;color:#c8ff4a}
+body.mm-lock{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.mm,.mm-links a{transition:none}}
+@media(min-width:761px){.mm{display:none!important}}
