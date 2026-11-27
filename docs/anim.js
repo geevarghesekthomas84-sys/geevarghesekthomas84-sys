@@ -19,35 +19,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(skip)skip.addEventListener('click',()=>{setP(1);endIntro()});
   } else{document.body.classList.add('ready');document.dispatchEvent(new Event('intro-done'))}
 
-  // ── HERO TERMINAL + RETICLE ──
-  const term=document.getElementById('heroTerm');
-  if(term){
-    const L=[["p","$ "],["w","whoami\n"],["","geevarghese k thomas  (gg)\n\n"],["p","$ "],["w","cat role.txt\n"],["","offensive security researcher\nred team ops · AI offense · builder\n\n"],["p","$ "],["w","ls ~/projects\n"],["","redpilot  gria-ai  cyberforge  ghostkit\nnetpulse  +6 more\n\n"],["p","$ "],["w","./redpilot --status\n"],["k","[+] "],["","access granted. welcome.\n"],["p","$ "]];
-    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-    let html='',li=0,ci=0;
-    const render=()=>{term.innerHTML=html+'<span class="cur"></span>'};
-    const step=()=>{
-      if(li>=L.length){render();return}
-      const [cls,txt]=L[li];
-      const slow=cls==='w';
-      const n=slow?1:Math.min(txt.length-ci,6);
-      const part=esc(txt.slice(ci,ci+n));ci+=n;
-      html+=cls?'<span class="'+cls+'">'+part+'</span>':part;
-      if(ci>=txt.length){li++;ci=0}
-      render();
-      setTimeout(step,slow?55+Math.random()*60:18);
-    };
-    if(reduce){L.forEach(([c,t])=>html+=c?'<span class="'+c+'">'+esc(t)+'</span>':esc(t));render()}
-    else{const go=()=>setTimeout(step,700);document.body.classList.contains('ready')?go():document.addEventListener('intro-done',go,{once:true})}
-  }
-  const hero=document.querySelector('.hero2'),ret=document.querySelector('.reticle');
-  if(hero&&ret){
-    let tx=0,ty=0,x=0,y=0,raf=0;
-    const loop=()=>{x+=(tx-x)*.18;y+=(ty-y)*.18;ret.style.transform='translate('+x+'px,'+y+'px)';raf=Math.abs(tx-x)+Math.abs(ty-y)>.3?requestAnimationFrame(loop):0};
-    hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;if(!raf)raf=requestAnimationFrame(loop)});
-  }
-
   // ── CUSTOM CURSOR ──
   const cross=document.querySelector('.cursor-cross');
   if(cross){
