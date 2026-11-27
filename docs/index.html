@@ -19,8 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=28" />
-  <link rel="stylesheet" href="/menu.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=31" />
+  <link rel="stylesheet" href="/menu.css?v=2" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,11 +51,21 @@
 </head>
 <body>
   <!-- PRELOADER -->
-  <div id="preloader">
+  <div id="preloader" role="status" aria-label="Loading">
+    <div class="pre-half pre-top"></div><div class="pre-half pre-bot"></div>
     <canvas id="pre-wolf" aria-hidden="true"></canvas>
-    <div class="pre-logo"><span>G</span>G.</div>
-    <div class="pre-bar"><div class="pre-fill"></div></div>
+    <svg class="pre-burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+    <div class="pre-center">
+      <svg class="pre-mark" viewBox="0 0 72 62" fill="none" stroke-linejoin="miter" stroke-linecap="butt" aria-hidden="true">
+        <path class="g1" pathLength="1" d="M42 14 L42 8 L36 4 L14 4 L6 12 L6 36 L14 44 L36 44 L42 38 L42 26 L26 26"/>
+        <g transform="translate(22 12)"><polygon class="cut" points="13,0 37,0 46,9 46,39 37,48 13,48 2,39 2,9"/><path class="g2" pathLength="1" d="M42 14 L42 8 L36 4 L14 4 L6 12 L6 36 L14 44 L36 44 L42 38 L42 26 L26 26"/></g>
+      </svg>
+      <p class="pre-tag">Geevarghese K Thomas</p>
+    </div>
+    <div class="pre-count" aria-hidden="true"><b id="preNum">000</b><span>%</span></div>
     <button class="pre-skip" type="button">skip intro</button>
+    <div class="pre-bar"><div class="pre-fill"></div></div>
+    <div class="pre-ticker" aria-hidden="true"><div class="pre-track"><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span><span>Red team ops<i></i>AI offense<i></i>Builder<i></i>2026<i></i></span></div></div>
   </div>
 
   <div class="noise"></div>
@@ -64,7 +74,7 @@
   <div class="cursor-cross"></div>
 
   <header class="nav">
-    <a class="brand" href="#top" aria-label="GG home"><span>G</span>G.</a>
+    <a class="brand" href="#top" aria-label="GG home"><img class="mark" src="/logo.svg" alt="" width="36" height="31"><span class="lock">Geevarghese<br>K Thomas</span></a>
     <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#work">Work</a><a href="library.html">Library</a><a href="#contact">Contact</a></nav>
     <a class="pill small" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
@@ -409,7 +419,7 @@ lesson ready</code></div>
     </section>
 
     <section id="contact" class="contact reveal">
-      <a class="c-logo" href="#top" aria-label="Back to top"><span>G</span>G.</a>
+      <a class="c-logo" href="#top" aria-label="Back to top"><img src="/logo.svg" alt="GG"></a>
       <svg class="c-burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
       <div class="c-title">
         <h2><span class="c1">Let's talk</span><span class="c2">make the web more resilient</span></h2>
@@ -432,12 +442,12 @@ lesson ready</code></div>
   <!-- BACK TO TOP -->
   <a class="back-top" href="#top" aria-label="Back to top">↑</a>
 
-  <script src="anim.js?v=15"></script>
+  <script src="anim.js?v=16"></script>
   <script src="grow-data.js?v=8"></script>
   <script src="grow.js?v=5"></script>
   <script src="portrait-data.js?v=1"></script>
   <script src="portrait.js?v=2"></script>
   <script src="art.js?v=6"></script>
-  <script src="/menu.js?v=1" defer></script>
+  <script src="/menu.js?v=2" defer></script>
 </body>
 </html>

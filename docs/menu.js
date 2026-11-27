@@ -16,7 +16,7 @@
   ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','Menu');
 
   var top=document.createElement('div');top.className='mm-top';
-  var brand=document.createElement('a');brand.className='mm-brand';brand.href='/';brand.innerHTML='<span>G</span>G.';
+  var brand=document.createElement('a');brand.className='mm-brand';brand.href='/';brand.innerHTML='<img class="mark" src="/logo.svg" alt=""><span class="lock">Geevarghese<br>K Thomas</span>';
   var close=document.createElement('button');close.className='mm-close';close.type='button';close.setAttribute('aria-label','Close menu');close.innerHTML='<span></span><span></span>';
   top.appendChild(brand);top.appendChild(close);
 

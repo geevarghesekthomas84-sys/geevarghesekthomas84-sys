@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="14" fill="#101312"/>
-<text x="32" y="44" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="34" letter-spacing="-3" fill="#c8ff4a">GG</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="18" fill="#0b0c0b"/>
+  <g transform="translate(14 17)" fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+    <path d="M42 14 L42 8 L36 4 L14 4 L6 12 L6 36 L14 44 L36 44 L42 38 L42 26 L26 26" stroke="#ffffff" stroke-width="8"/>
+    <g transform="translate(22 12)">
+      <polygon points="13,0 37,0 46,9 46,39 37,48 13,48 2,39 2,9" fill="#0b0c0b" stroke="#0b0c0b" stroke-width="8"/>
+      <path d="M42 14 L42 8 L36 4 L14 4 L6 12 L6 36 L14 44 L36 44 L42 38 L42 26 L26 26" stroke="#c8ff4a" stroke-width="8"/>
+    </g>
+  </g>
 </svg>

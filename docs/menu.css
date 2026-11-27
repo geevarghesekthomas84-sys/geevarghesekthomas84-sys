@@ -30,3 +30,12 @@
 body.mm-lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.mm,.mm-links a{transition:none}}
 @media(min-width:761px){.mm{display:none!important}}
+
+.brand{display:inline-flex;align-items:center;gap:11px}
+.brand .mark{height:30px;width:auto;display:block}
+.brand .lock,.mm-brand .lock{font:900 8.5px/1.15 Unbounded,'Arial Black',Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#f2f4f1;display:block;transition:color .2s}
+.brand:hover .lock,.mm-brand:hover .lock{color:#c8ff4a}
+.mm-brand{display:inline-flex;align-items:center;gap:11px;letter-spacing:0}
+.mm-brand .mark{height:30px;width:auto;display:block}
+.c-logo img{height:clamp(50px,5.4vw,76px);width:auto;display:block}
+@media(max-width:420px){.brand .lock{display:none}}
