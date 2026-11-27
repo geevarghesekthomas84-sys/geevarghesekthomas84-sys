@@ -10,7 +10,7 @@
 
   window.growChar=function(cv,o){
     const ctx=cv.getContext('2d');
-    const dur=o.dur||4200;
+    const dur=o.dur||4200,INK=o.ink||'200,255,74';
     let cw=1,chh=1,start=null,raf=0,last=-1;
 
     function size(){
@@ -25,12 +25,12 @@
 
     function draw(p){
       last=p;
-      ctx.clearRect(0,0,cv.width,cv.height);
+      ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.restore();
       for(const k of cells){
         if(p<k.t)continue;
-        let ch=k.c,a=0.6+k.d*0.045;
+        let ch=k.c,a=o.ink?0.78+k.d*0.025:0.6+k.d*0.045;
         if(p-k.t<0.07){ch=SCR[(Math.random()*SCR.length)|0];a=1}
-        ctx.fillStyle='rgba(200,255,74,'+Math.min(1,a)+')';
+        ctx.fillStyle='rgba('+INK+','+Math.min(1,a)+')';
         ctx.fillText(ch,k.x*cw,k.y*chh);
       }
     }
@@ -59,7 +59,7 @@
 
   const sec=document.getElementById('grow');
   if(sec){
-    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth-36,640)});
+    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth-28,640),ink:'17,17,17'});
     let played=false;
     new IntersectionObserver((es,ob)=>{
       es.forEach(e=>{if(e.isIntersecting&&!played){played=true;a.play();ob.disconnect()}})

@@ -38,7 +38,7 @@
   const back=t=>{const c=1.70158;return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2)};
 
   function draw(p){
-    ctx.clearRect(0,0,cv.width,cv.height);
+    ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.restore();
     for(let l=1;l<36;l++){
       const arr=byLevel[l];if(!arr.length)continue;
       ctx.fillStyle=COLORS[l];ctx.beginPath();

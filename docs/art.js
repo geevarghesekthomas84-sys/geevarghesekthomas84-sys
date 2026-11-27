@@ -1,16 +1,17 @@
 (function(){
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const RAMP=' .:-=+*#%@',ASPECT=1.75,COLS=64;
-  const ALPHA=Array.from({length:10},(_,i)=>'rgba(200,255,74,'+(0.3+0.7*i/9).toFixed(2)+')');
+  const alphaFor=ink=>Array.from({length:10},(_,i)=>'rgba('+ink+','+((ink==='17,17,17'?0.62:0.3)+(ink==='17,17,17'?0.38:0.7)*i/9).toFixed(2)+')');
   const hash=(c,r)=>((c*73856093)^(r*19349663))>>>0;
 
-  function stage(cv,frame){
+  function stage(cv,frame,ink){
+    const ALPHA=alphaFor(ink||'200,255,74');
     const ctx=cv.getContext('2d');
     const rows=Math.round(COLS/ASPECT);
     const R=Math.min(COLS/2,rows/2*ASPECT)-0.5;
     let cw=1,chh=1,raf=0,visible=false;
     function size(){
-      const w=Math.min(cv.parentElement.clientWidth-36||290,290),dpr=window.devicePixelRatio||1;
+      const w=Math.min(cv.parentElement.clientWidth-28||290,340),dpr=window.devicePixelRatio||1;
       cw=w/COLS;chh=cw*ASPECT;
       cv.style.width=w+'px';cv.style.height=chh*rows+'px';
       cv.width=Math.round(w*dpr);cv.height=Math.round(chh*rows*dpr);
@@ -21,7 +22,7 @@
     function render(t){
       const buf=new Float32Array(COLS*rows);
       frame(t,buf,COLS,rows,R,ASPECT);
-      ctx.clearRect(0,0,cv.width,cv.height);
+      ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.restore();
       for(let r=0;r<rows;r++)for(let c=0;c<COLS;c++){
         const v=buf[r*COLS+c];if(v<=0.04)continue;
         const i=Math.min(9,Math.round(v*9));if(i<1)continue;
@@ -116,6 +117,6 @@
   }
 
   const g=document.getElementById('globe'),rd=document.getElementById('radar');
-  if(g)stage(g,globe);
-  if(rd)stage(rd,radar);
+  if(g)stage(g,globe,'17,17,17');
+  if(rd)stage(rd,radar,'17,17,17');
 })();

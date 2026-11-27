@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=23" />
+  <link rel="stylesheet" href="style.css?v=24" />
   <link rel="stylesheet" href="/menu.css?v=1" />
   <script type="application/ld+json">
   {
@@ -335,27 +335,39 @@ lesson ready</code></div>
       </article>
     </section>
 
-    <section class="grow reveal" aria-label="Character art gallery">
-      <div class="grow-head">
-        <p class="section-label">// SIGNAL</p>
-        <h2>Always <em>watching.</em></h2>
-      </div>
-      <div class="grow-grid">
-        <article class="panel panel-wolf">
-          <header class="panel-bar"><i></i><i></i><i></i><span>wolf.ascii</span><button class="panel-replay" type="button">&#8635; replay</button></header>
-          <div class="panel-body"><canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas></div>
-          <footer class="panel-foot"><span>watch: <b>active</b></span><span>mode: <b>stealth</b></span></footer>
-        </article>
-        <article class="panel">
-          <header class="panel-bar"><i></i><i></i><i></i><span>threat-map.live</span></header>
-          <div class="panel-body"><canvas id="globe" role="img" aria-label="Rotating character-art globe with connections between cities"></canvas></div>
-          <footer class="panel-foot"><span>nodes: <b>12</b></span><span>links: <b>10</b></span><span>status: <b>live</b></span></footer>
-        </article>
-        <article class="panel">
-          <header class="panel-bar"><i></i><i></i><i></i><span>radar.scan</span></header>
-          <div class="panel-body"><canvas id="radar" role="img" aria-label="Character-art radar sweeping and detecting blips"></canvas></div>
-          <footer class="panel-foot"><span>contacts: <b>7</b></span><span>sweep: <b>360&deg;</b></span><span>status: <b>scanning</b></span></footer>
-        </article>
+    <section class="grow reveal" aria-label="Character art case study">
+      <div class="case">
+        <div class="case-top">
+          <button class="panel-replay cta-pill" type="button"><b>&#8635;</b> replay the wolf <em>*click*</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3 L5 19 L9.5 15 L12.5 21.5 L15 20.4 L12 14 L18 14Z"/></svg></button>
+          <div class="case-count"><b>03</b><span>signals</span><i></i></div>
+        </div>
+        <div class="case-grid">
+          <div class="case-text">
+            <p class="case-kicker">character art <svg class="spark k1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8Z"/></svg></p>
+            <h2>Always<br>watching</h2>
+            <svg class="spark s1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8Z"/></svg><svg class="spark s2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8Z"/></svg>
+            <span class="case-corner" aria-hidden="true"></span>
+            <p class="case-copy">Three pieces of art drawn entirely in code. A <b>wolf</b> cut out of an image and rebuilt from letters, a <b>globe</b> that spins with live city <b>connections</b>, and a <b>radar</b> that sweeps the dark for <b>blips</b>. Every glyph is painted on a canvas.</p>
+          </div>
+          <div class="collage">
+            <figure class="pg pg-wolf">
+              <span class="tape"></span>
+              <canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas>
+              <figcaption><b>fig. 01</b> wolf.ascii</figcaption>
+            </figure>
+            <figure class="pg pg-globe">
+              <canvas id="globe" role="img" aria-label="Rotating character-art globe with connections between cities"></canvas>
+              <figcaption><b>fig. 02</b> threat-map &middot; 12 nodes</figcaption>
+            </figure>
+            <figure class="pg pg-radar">
+              <span class="tape t2"></span>
+              <canvas id="radar" role="img" aria-label="Character-art radar sweeping and detecting blips"></canvas>
+              <figcaption><b>fig. 03</b> radar.scan &middot; 7 contacts</figcaption>
+            </figure>
+            <svg class="case-burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 62.3,78.4 56.7,98.0 46.4,80.4 35.4,92.1 31.8,72.7 12.9,76.1 20.8,59.7 2.0,50.0 20.8,40.3 12.9,23.9 31.8,27.3 35.4,7.9 46.4,19.6 56.7,2.0 62.3,21.6 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+            <svg class="spark s3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8Z"/></svg>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -377,10 +389,10 @@ lesson ready</code></div>
 
   <script src="anim.js?v=15"></script>
   <script src="grow-data.js?v=8"></script>
-  <script src="grow.js?v=3"></script>
+  <script src="grow.js?v=5"></script>
   <script src="portrait-data.js?v=1"></script>
-  <script src="portrait.js?v=1"></script>
-  <script src="art.js?v=4"></script>
+  <script src="portrait.js?v=2"></script>
+  <script src="art.js?v=6"></script>
   <script src="/menu.js?v=1" defer></script>
 </body>
 </html>
