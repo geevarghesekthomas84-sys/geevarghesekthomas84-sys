@@ -18,8 +18,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=21" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=23" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,54 +69,269 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-portrait"><img src="hero-portrait.webp" alt="Geevarghese K Thomas — halftone dot portrait" /><div class="glow"></div></div>
-      <div class="hero-text">
-        <div class="eyebrow"><i></i> RED TEAM OPS &amp; AI-DRIVEN OFFENSIVE SECURITY</div>
-        <p class="hero-kicker"><span class="typewriter"></span></p>
-        <h1><em>GG.</em></h1>
-        <p class="intro">Offensive security researcher building <strong>AI-orchestrated red team tooling</strong>, enterprise attack simulation platforms, and on-device AI systems. Creator of RedPilot and Gria-AI.</p>
-        <div class="hero-cta">
-          <a class="btn-primary" href="#work">View my work</a>
-          <a class="btn-outline" href="#contact">Get in touch</a>
+    <!-- TITLE SCREEN -->
+    <section class="hero2">
+      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="stampPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#stampPath">RED TEAM • AI OFFENSE • 2026 • </textPath></text></svg>
+      <div class="title">
+        <h1><span class="t-heavy">Cyber</span><span class="t-script">Security</span></h1>
+        <svg class="swoosh" viewBox="0 0 800 320" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="400" cy="165" rx="385" ry="118" transform="rotate(-7 400 165)"/></svg>
+      </div>
+      <p class="subline">Red team ops <b>•</b> AI-driven offensive security <b>•</b> Builder</p>
+      <p class="signature">Geevarghese K Thomas</p>
+      <span class="corner br" aria-hidden="true"></span>
+      <span class="scroll-cue">scroll ↓</span>
+    </section>
+
+    <!-- HI / ABOUT -->
+    <section id="about" class="hi">
+      <div class="hi-grid">
+        <figure class="polaroid reveal">
+          <div class="hero-portrait"><img src="hero-portrait.webp" alt="Geevarghese K Thomas — halftone dot portrait" /><div class="glow"></div></div>
+          <figcaption><span>GG · RED TEAM OPERATOR</span><b>2026</b></figcaption>
+          <span class="tape t1"></span><span class="tape t2"></span>
+          <svg class="doodle flame" viewBox="0 0 100 110" aria-hidden="true"><path d="M30 100 C6 72 34 58 26 28 C48 44 60 64 50 80 C66 72 70 54 62 40 C90 62 92 92 60 104 C48 108 38 106 30 100Z"/></svg>
+          <svg class="doodle smile" viewBox="0 0 80 60" aria-hidden="true"><path d="M8 10 l10 10 M18 10 l-10 10 M42 10 l10 10 M52 10 l-10 10 M12 38 q24 22 48 0"/></svg>
+          <svg class="burst b1" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </figure>
+        <div class="hi-text reveal">
+          <h2 class="hi-title">Hi!!!</h2>
+          <p class="who">I'm GG — Geevarghese K Thomas.</p>
+          <div class="hi-block"><b>Who I am</b><p>Offensive security researcher specializing in APT simulation, exploit development and evasion techniques. I architect enterprise-grade security tooling and push the boundary of AI-orchestrated offensive operations.</p></div>
+          <div class="hi-block"><b>What I make</b><p>Red team ops, Android on-device AI and zero-dependency tools that ship as single files. Creator of <strong>RedPilot</strong> and <strong>Gria-AI</strong>.</p></div>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#work">View my work</a>
+            <a class="btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <span class="corner br" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="tickets">
+        <div class="ticket a reveal">
+          <h4>Focus</h4>
+          <div class="trow"><b>01</b><span>Red team ops<small>APT simulation, exploit development and evasion</small></span></div>
+          <div class="trow"><b>02</b><span>AI + offensive security<small>AI-orchestrated recon and attack simulation</small></span></div>
+          <div class="trow"><b>03</b><span>On-device AI<small>Android, Kotlin and local LLMs</small></span></div>
+          <div class="trow"><b>04</b><span>Cloud + DFIR<small>Cloud security and digital forensics</small></span></div>
+          <div class="barcode"></div>
+        </div>
+        <div class="ticket b reveal">
+          <h4>By the numbers</h4>
+          <div class="stats">
+            <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-label">Tools Built</span></div>
+            <div class="stat"><span class="stat-num" data-target="1100">0</span><span class="stat-label">Lines in CyberForge</span></div>
+            <div class="stat"><span class="stat-num" data-target="40">0</span><span class="stat-label">tok/s On-Device AI</span></div>
+            <div class="stat"><span class="stat-num" data-target="50">0</span><span class="stat-label">Detection Rules</span></div>
+          </div>
+          <div class="barcode"></div>
+          <svg class="burst b2" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </div>
+
+      <div class="skills reveal">
+        <div>
+          <h5>Skills</h5>
+          <ul><li>Red Team Ops</li><li>APT Simulation</li><li>AI + Offensive Security</li><li>Exploit Development</li><li>Android AI</li><li>Cloud Security</li><li>DFIR</li></ul>
+        </div>
+        <div>
+          <h5>My tools</h5>
+          <div class="chips"><span>Python</span><span>Kotlin</span><span>Go</span><span>Rust</span></div>
+          <span class="corner br" aria-hidden="true"></span>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about split reveal">
-      <p class="section-label">01 — PROFILE</p>
-      <div><h2>Security is a craft.<br>Curiosity is my <em>engine.</em></h2>
-      <p class="bodycopy">I'm GG — an offensive security researcher specializing in APT simulation, exploit development, and evasion techniques. I architect enterprise-grade security tooling and push the boundary of AI-orchestrated offensive operations. My work spans red team ops, Android on-device AI, and building zero-dependency cybersecurity tools that ship as single files.</p>
-      <div class="tags reveal-stagger"><span>Red Team Ops</span><span>APT Simulation</span><span>AI + Offensive Security</span><span>Exploit Development</span><span>Android AI</span><span>Python / Kotlin / Go / Rust</span><span>Cloud Security</span><span>DFIR</span></div></div>
-      <aside class="profile-card"><img src="profile-dots.webp" alt="Geevarghese K Thomas" /><div><strong>GG</strong><small>Red Team Operator</small></div></aside>
-    </section>
+    <!-- PROJECTS MARQUEE -->
+    <div class="mq" aria-hidden="true">
+      <svg class="mq-burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+      <div class="mq-inner"><div class="mq-row"><div class="mq-track"><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span></div></div><div class="mq-row"><div class="mq-track"><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span></div></div><div class="mq-row"><div class="mq-track"><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span><span>Projects<i></i></span></div></div></div>
+    </div>
+    <div class="torn" style="clip-path:polygon(0% 100%,0.00% 36%,2.17% 63%,4.35% 43%,6.52% 62%,8.70% 67%,10.87% 57%,13.04% 37%,15.22% 36%,17.39% 40%,19.57% 62%,21.74% 45%,23.91% 20%,26.09% 19%,28.26% 59%,30.43% 40%,32.61% 38%,34.78% 48%,36.96% 47%,39.13% 58%,41.30% 19%,43.48% 14%,45.65% 36%,47.83% 27%,50.00% 17%,52.17% 13%,54.35% 42%,56.52% 59%,58.70% 64%,60.87% 52%,63.04% 48%,65.22% 10%,67.39% 46%,69.57% 70%,71.74% 33%,73.91% 69%,76.09% 36%,78.26% 49%,80.43% 55%,82.61% 47%,84.78% 49%,86.96% 18%,89.13% 47%,91.30% 8%,93.48% 61%,95.65% 41%,97.83% 12%,100.00% 11%,100% 100%)" aria-hidden="true"></div>
 
-    <!-- STATS BAR -->
-    <section class="stats reveal">
-      <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-label">Tools Built</span></div>
-      <div class="stat"><span class="stat-num" data-target="1100">0</span><span class="stat-label">Lines in CyberForge</span></div>
-      <div class="stat"><span class="stat-num" data-target="40">0</span><span class="stat-label">tok/s On-Device AI</span></div>
-      <div class="stat"><span class="stat-num" data-target="50">0</span><span class="stat-label">Detection Rules</span></div>
-    </section>
-
-    <section id="work" class="work">
-      <div class="work-head reveal"><p class="section-label">02 — SELECTED WORK</p><h2>Built to breach.<br>Made to <em>secure.</em></h2></div>
-      <a class="project featured reveal" href="https://github.com/geevarghesekthomas84-sys/redpilot" target="_blank" rel="noreferrer"><div><p class="num">01</p><h3>RedPilot<br><small style="font-size:14px;color:var(--lime);font-weight:400">AI-Orchestrated Offensive Security</small></h3><p>Point it at a target and it runs the engagement — the AI plans recon, RedPilot runs the tools on your box, and you get findings plus a written assessment. Staged pipeline: discovery, validation, remediation, report. Drivable from CLI, HTTP API, MCP, and dashboard.</p><span class="link">View on PyPI &amp; GitHub ↗</span></div><div class="code-window"><b>terminal</b><code>$ redpilot scan --target example.com<br><span>[*] AI planning recon phase...</span><br>[+] 3 critical findings<br><span>report generated</span></code></div></a>
-      <a class="project featured reveal" href="https://github.com/geevarghesekthomas84-sys/Gria-AI" target="_blank" rel="noreferrer" style="margin-top:2px"><div><p class="num">02</p><h3>Gria-AI<br><small style="font-size:14px;color:var(--lime);font-weight:400">On-Device Android AI Assistant</small></h3><p>100% private Android AI chat app delivering ChatGPT-grade conversations powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault, live hardware telemetry. Built with Kotlin, Jetpack Compose, and MediaPipe.</p><span class="link">View repository ↗</span></div><div class="code-window"><b>gria-ai</b><code>⚡ gemma-2b-it-gpu-int4<br><span>39.9 tok/s · on-device</span><br>🔒 biometric vault active<br><span>ready</span></code></div></a>
-      <div class="project-grid reveal-stagger">
-        <a class="grid-link" href="https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/cyberforge.py" target="_blank" rel="noreferrer"><article><p class="num">03</p><h3>CyberForge</h3><p>1100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis, and file integrity monitoring — all in one Python file.</p><span class="link">View source ↗</span></article></a>
-        <a class="grid-link" href="https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py" target="_blank" rel="noreferrer"><article><p class="num">04</p><h3>Recon Blade</h3><p>All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS, and tech fingerprinting with HTML report export.</p><span class="link">View source ↗</span></article></a>
-        <article><p class="num">05</p><h3>Insider Threat<br>SOC Lab</h3><p>Full-stack Blue Team environment simulating a privileged data breach. 50+ custom detection rules mapped to MITRE ATT&CK for real SOC training.</p></article>
-        <article><p class="num">06</p><h3>GhostKit<br>USB Suite</h3><p>Drop-and-run offensive toolkit for field operations. Automated recon via Nmap and Nuclei combined with an offline AI hacking assistant on a USB drive.</p></article>
-      </div>
-      <div class="work-head reveal live-head"><p class="section-label">LIVE DEMOS — TRY THEM IN YOUR BROWSER</p></div>
-      <div class="project-grid live reveal-stagger">
-        <a class="grid-link" href="https://netpulse.itgg.space" target="_blank" rel="noreferrer"><article><p class="num">07</p><h3>NetPulse<br>Network Simulator</h3><p>Interactive internet protocol visualizer and Packet Tracer-style simulator in the browser. 39 protocols, an IOS-style CLI, OSPF/RIP/BGP and 20 labs.</p><span class="link">Open live demo ↗</span></article></a>
-        <a class="grid-link" href="https://flipper.itgg.space" target="_blank" rel="noreferrer"><article><p class="num">08</p><h3>Flipper Zero<br>Workshop</h3><p>Browser-based Flipper Zero simulator. Take it apart in 3D and learn how it works through 50 interactive lessons.</p><span class="link">Open live demo ↗</span></article></a>
-        <a class="grid-link" href="https://rpi5.itgg.space" target="_blank" rel="noreferrer"><article><p class="num">09</p><h3>Raspberry Pi 5<br>Workshop</h3><p>Wire real parts to a 3D Pi 5, run real Python with gpiozero and build 9 projects across 50 interactive lessons.</p><span class="link">Open live demo ↗</span></article></a>
-        <a class="grid-link" href="https://esp32.itgg.space" target="_blank" rel="noreferrer"><article><p class="num">10</p><h3>ESP32<br>Workshop</h3><p>Learn microcontrollers, sensors, displays, motors, wireless and IoT security in a 3D ESP32 workspace with guided experiments.</p><span class="link">Open live demo ↗</span></article></a>
-        <a class="grid-link" href="https://material.itgg.space" target="_blank" rel="noreferrer"><article><p class="num">11</p><h3>Material Atlas</h3><p>Search Material Icons, Material Symbols and original SVGs, compare styles and download SVG or PNG.</p><span class="link">Open live demo ↗</span></article></a>
-      </div>
+    <section id="work" class="work2">
+      <article class="proj reveal" style="--c:#c8ff4a">
+        <div class="proj-body">
+          <span class="proj-num">01</span>
+          <p class="proj-cat">Red Team · Python</p>
+          <h3>RedPilot</h3>
+          <p class="desc">AI-orchestrated offensive security. Point it at a target and the AI plans recon, RedPilot runs the tools on your box, and you get findings plus a written assessment. Drivable from CLI, HTTP API, MCP and dashboard.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/redpilot.html">View project</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>$ redpilot scan --target example.com
+[*] AI planning recon phase...
+[+] 3 critical findings
+report generated</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#ff8a3d">
+        <div class="proj-body">
+          <span class="proj-num">02</span>
+          <p class="proj-cat">AI · Kotlin</p>
+          <h3>Gria-AI</h3>
+          <p class="desc">100% private Android AI chat app delivering ChatGPT-grade conversations powered by local LLMs. On-device Gemma inference at 40 tok/s, voice assistant, biometric vault and live hardware telemetry.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/gria-ai.html">View project</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>gemma-2b-it-gpu-int4
+39.9 tok/s · on-device
+biometric vault active
+ready</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#4aa8ff">
+        <div class="proj-body">
+          <span class="proj-num">03</span>
+          <p class="proj-cat">Tools · Python</p>
+          <h3>CyberForge</h3>
+          <p class="desc">1100-line zero-dependency cybersecurity Swiss army knife. Hash cracking, encoding, XOR cipher, password auditing, file forensics, log analysis and file integrity monitoring in one Python file.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/cyberforge.html">View project</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>$ python cyberforge.py
+[1] Hash cracker
+[2] Encoder / decoder
+[3] Log analyzer</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#ff3d7f">
+        <div class="proj-body">
+          <span class="proj-num">04</span>
+          <p class="proj-cat">Red Team · Python</p>
+          <h3>Recon Blade</h3>
+          <p class="desc">All-in-one offensive recon multi-tool. Port scanning, HTTP header auditing, subdomain enumeration, DNS records, WHOIS and tech fingerprinting with HTML report export.</p>
+          <div class="proj-cta"><a class="btn-primary" href="https://github.com/geevarghesekthomas84-sys/geevarghesekthomas84-sys/blob/main/gists/recon_blade.py" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>$ python recon_blade.py example.com
+[*] port scan
+[*] subdomain enum
+report.html exported</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#b07aff">
+        <div class="proj-body">
+          <span class="proj-num">05</span>
+          <p class="proj-cat">Blue Team · PowerShell</p>
+          <h3>Insider Threat SOC Lab</h3>
+          <p class="desc">Full-stack Blue Team environment simulating a privileged data breach. 50+ custom detection rules mapped to MITRE ATT&amp;CK for real SOC training.</p>
+          <div class="proj-cta"><a class="btn-primary" href="https://github.com/geevarghesekthomas84-sys/insider-threat-detection-lab" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>50+ detection rules
+mapped to MITRE ATT&amp;CK
+Wazuh · Splunk · ELK</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#3dffd0">
+        <div class="proj-body">
+          <span class="proj-num">06</span>
+          <p class="proj-cat">Red Team · Python</p>
+          <h3>GhostKit USB Suite</h3>
+          <p class="desc">Drop-and-run offensive toolkit for field operations. Automated recon via Nmap and Nuclei combined with an offline AI hacking assistant on a USB drive.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/ghostkit.html">View project</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>$ ghostkit audit --net 192.168.1.0/24
+[*] nmap sweep running
+[*] nuclei templates loaded
+assistant: offline</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#c8ff4a">
+        <div class="proj-body">
+          <span class="proj-num">07</span>
+          <p class="proj-cat">Simulator · TypeScript</p>
+          <h3>NetPulse</h3>
+          <p class="desc">Interactive internet protocol visualizer and Packet Tracer-style network simulator in the browser. 39 protocols, an IOS-style CLI, OSPF/RIP/BGP and 20 labs.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/netpulse.html">View project</a><a class="btn-outline" href="https://netpulse.itgg.space" target="_blank" rel="noreferrer">Live demo ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>Router&gt; enable
+Router# show ip route
+Router# show vlan brief
+lab 01 - ready</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#ff8a3d">
+        <div class="proj-body">
+          <span class="proj-num">08</span>
+          <p class="proj-cat">Simulator · Three.js</p>
+          <h3>Flipper Zero Workshop</h3>
+          <p class="desc">Browser-based Flipper Zero simulator. Take it apart in 3D and learn how it works through 50 interactive lessons.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/flipper-zero-workshop.html">View project</a><a class="btn-outline" href="https://flipper.itgg.space" target="_blank" rel="noreferrer">Live demo ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>flipper&gt; sub-ghz scan
+flipper&gt; nfc read
+lesson 01 / 50</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#4aa8ff">
+        <div class="proj-body">
+          <span class="proj-num">09</span>
+          <p class="proj-cat">Simulator · Three.js</p>
+          <h3>Raspberry Pi 5 Workshop</h3>
+          <p class="desc">Wire real parts to a 3D Pi 5, run real Python with gpiozero and build 9 projects across 50 interactive lessons.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/raspberry-pi-5-workshop.html">View project</a><a class="btn-outline" href="https://rpi5.itgg.space" target="_blank" rel="noreferrer">Live demo ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>from gpiozero import LED
+led = LED(17)
+led.blink()</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#ff3d7f">
+        <div class="proj-body">
+          <span class="proj-num">10</span>
+          <p class="proj-cat">Simulator · Interactive 3D</p>
+          <h3>ESP32 Workshop</h3>
+          <p class="desc">Learn microcontrollers, sensors, displays, motors, wireless and IoT security in a 3D ESP32 workspace with guided experiments.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/esp32-workshop.html">View project</a><a class="btn-outline" href="https://esp32.itgg.space" target="_blank" rel="noreferrer">Live demo ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>esp32&gt; gpio 2 high
+esp32&gt; wifi scan
+lesson ready</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
+      <article class="proj reveal" style="--c:#b07aff">
+        <div class="proj-body">
+          <span class="proj-num">11</span>
+          <p class="proj-cat">Tools · JavaScript</p>
+          <h3>Material Atlas</h3>
+          <p class="desc">Search Material Icons, Material Symbols and original SVGs, compare styles and download SVG or PNG.</p>
+          <div class="proj-cta"><a class="btn-primary" href="projects/material-atlas.html">View project</a><a class="btn-outline" href="https://material.itgg.space" target="_blank" rel="noreferrer">Live demo ↗</a></div>
+        </div>
+        <div class="proj-vis" aria-hidden="true">
+          <div class="vis-bg"></div>
+          <div class="vis-win"><div class="bar"><i></i><i></i><i></i></div><code>search: &quot;home&quot;
+  home.svg
+  home.png
+3 styles available</code></div>
+          <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+        </div>
+      </article>
     </section>
 
     <section class="grow reveal" aria-label="Character art gallery">
@@ -148,7 +363,9 @@
     </section>
 
     <section id="contact" class="contact reveal">
-      <p class="section-label">03 — CONTACT</p><h2>Let's make the web<br><em>more resilient.</em></h2>
+      <p class="sub">say hi</p>
+      <h2>Let's <em>talk.</em></h2>
+      <p class="contact-line">Let's make the web more resilient.</p>
       <div class="contact-links reveal-stagger"><a href="mailto:geevarghesekthomas84@gmail.com">Email <span>↗</span></a><a href="https://www.linkedin.com/in/geevarghese-k-thomas" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="https://pypi.org/project/redpilot/" target="_blank" rel="noreferrer">RedPilot on PyPI <span>↗</span></a></div>
     </section>
   </main>
