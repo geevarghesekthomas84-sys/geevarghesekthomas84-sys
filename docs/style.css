@@ -150,17 +150,19 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 .skills .corner.br{right:0;bottom:0}
 
 /* ── PROJECTS MARQUEE ── */
-.mq{position:relative;padding:110px 0 70px;overflow:hidden}
-.mq-inner{transform:rotate(-4deg);margin:0 -6vw}
-.mq-row{overflow:hidden;white-space:nowrap;line-height:1}
-.mq-track{display:inline-flex;animation:mq 30s linear infinite;will-change:transform}
-.mq-row:nth-child(even) .mq-track{animation-direction:reverse}
-.mq-track span{display:inline-block;font:900 clamp(54px,10vw,150px)/1.02 var(--display);text-transform:uppercase;color:#fff;transform:skewX(-10deg);padding-right:.3em}
-.mq-row:nth-child(2) .mq-track span{color:var(--bg);-webkit-text-stroke:4px #fff;paint-order:stroke fill}
-.mq-track i{display:inline-block;width:.26em;height:.26em;border-left:.08em solid var(--pink);border-bottom:.08em solid var(--pink);margin-left:.35em}
-@keyframes mq{to{transform:translateX(-50%)}}
-.mq-burst{position:absolute;left:-30px;top:44%;width:clamp(120px,15vw,200px);fill:var(--pink);z-index:3;animation:spin 20s linear infinite}
-.torn{height:30px;background:var(--paper);margin-top:-1px;position:relative;z-index:2}
+.tapes{position:relative;z-index:2;height:clamp(230px,24vw,340px);overflow:hidden;display:grid;place-items:center}
+.xtape{position:absolute;left:-10%;right:-10%;padding:clamp(12px,1.4vw,20px) 0;overflow:hidden;white-space:nowrap;box-shadow:0 14px 34px rgba(0,0,0,.55)}
+.xtape::before,.xtape::after{content:'';position:absolute;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,currentColor 0 14px,transparent 14px 26px);opacity:.9}
+.xtape::before{top:5px}.xtape::after{bottom:5px}
+.xtape.t-a{background:var(--lime);color:#0b0c0b;transform:rotate(-6deg);z-index:2}
+.xtape.t-b{background:#f2f4f1;color:#0b0c0b;transform:rotate(5deg);z-index:1}
+.xtape-track{display:inline-flex;align-items:center;animation:xtape 38s linear infinite;will-change:transform}
+.xtape.t-b .xtape-track{animation-direction:reverse;animation-duration:46s}
+.xtape-track span{font:900 clamp(26px,3.6vw,54px)/1.15 var(--display);text-transform:uppercase;letter-spacing:-.03em;padding:0 .45em}
+.xtape.t-b .xtape-track span{font-style:italic;transform:skewX(-8deg)}
+.xtape-track svg{width:clamp(18px,2vw,30px);height:clamp(18px,2vw,30px);fill:currentColor;flex-shrink:0;animation:spin 6s linear infinite}
+.tapes:hover .xtape-track{animation-play-state:paused}
+@keyframes xtape{to{transform:translateX(-33.333%)}}
 
 /* ── WORK (slides) ── */
 .work2{position:relative;z-index:2}
@@ -403,7 +405,7 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 .ticket.b.reveal.visible{transform:rotate(2.5deg) translate(-12px,56px)}
 .reveal-stagger>*{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .reveal-stagger>*.visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.mq-track,.stamp,.burst,.sticker,.mq-burst,.c-burst{animation:none}.mega-scrib path{transition:none;stroke-dashoffset:0}.swoosh ellipse{animation:none;stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.xtape-track,.xtape-track svg,.stamp,.burst,.sticker,.c-burst{animation:none}.mega-scrib path{transition:none;stroke-dashoffset:0}.swoosh ellipse{animation:none;stroke-dashoffset:0}}
 
 /* ── MOBILE ── */
 @media(max-width:900px){
