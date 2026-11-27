@@ -343,6 +343,13 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 .m-cap{font:400 clamp(34px,4.6vw,66px)/1 'Permanent Marker',cursive;color:#111;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
 .m-doodle{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;height:clamp(34px,4vw,56px);width:auto}
 .wolf-scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.m1 .m-art{aspect-ratio:5/4}
+.wolf-print{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block;transition:transform .6s ease}
+.mural:hover .wolf-print{transform:scale(1.04)}
+.wolf-fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wolf-fx .stars path{transform-box:fill-box;transform-origin:center;animation:twinkle 3s ease-in-out infinite}
+.wolf-fx .stars path:nth-child(2){animation-delay:1s}.wolf-fx .stars path:nth-child(3){animation-delay:2s}
+.m-art:has(.wolf-print)::before,.m-art:has(.wolf-print)::after{display:none}
 .m-art:has(.wolf-scene)::before,.m-art:has(.wolf-scene)::after{display:none}
 .wolf-scene .rays{transform-origin:215px 160px;animation:spin 90s linear infinite}
 .wolf-scene .moon-glow{transform-origin:215px 160px;animation:moonPulse 4s ease-in-out infinite}
@@ -354,7 +361,7 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 @keyframes moonPulse{50%{transform:scale(1.07);opacity:.2}}
 @keyframes howl{0%{opacity:0;transform:translate(6px,6px)}30%{opacity:1}100%{opacity:0;transform:translate(-8px,-8px)}}
 @keyframes twinkle{50%{transform:scale(.5);opacity:.5}}
-@media(prefers-reduced-motion:reduce){.wolf-scene *{animation:none!important}.wolf-scene .howl path{opacity:1}}
+@media(prefers-reduced-motion:reduce){.wolf-scene *,.wolf-fx *{animation:none!important}.wolf-scene .howl path{opacity:1}}
 .mural figcaption.no-cap{justify-content:space-between;padding:clamp(12px,1.4vw,18px) 8px}
 .m-tag{font:500 clamp(10px,.9vw,13px) 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#2a2a2a}
 /* ── STATEMENT ── */
