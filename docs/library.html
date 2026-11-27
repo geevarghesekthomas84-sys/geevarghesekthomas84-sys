@@ -46,6 +46,23 @@
     .hero-sub{color:var(--muted);font-size:16px;line-height:1.7;max-width:560px;margin:34px 0 30px}
     .signature{font:700 clamp(26px,3.2vw,42px) var(--hand);color:var(--lime);transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
 
+
+    /* MOSAIC (tilted wall of project tiles) */
+    .hero-top>*:not(.mosaic):not(.doodle):not(.burst){position:relative;z-index:2}
+    .mosaic{position:absolute;right:-7%;top:39%;width:min(46%,640px);display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:70px;gap:12px;transform:rotate(-13deg);pointer-events:none;z-index:1}
+    .tile{--c:#c8ff4a;--r:0deg;position:relative;background:var(--c);color:#0b0c0b;border-radius:3px;padding:8px 9px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transform:rotate(var(--r));box-shadow:6px 8px 0 rgba(0,0,0,.55);animation:tileIn .6s ease backwards}
+    .tile::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.22) 1.2px,transparent 1.4px);background-size:8px 8px;opacity:.7}
+    .tile b{position:relative;z-index:1;font:900 clamp(16px,1.9vw,26px)/1 var(--display);letter-spacing:-.05em}
+    .tile small{position:relative;z-index:1;font:500 9px 'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+    .tile.w2{grid-column:span 2}
+    .tile.h2{grid-row:span 2}
+    .tile.dark{background:#f2f0ea}
+    @keyframes tileIn{from{opacity:0;transform:translateY(30px) rotate(var(--r))}to{opacity:1;transform:translateY(0) rotate(var(--r))}}
+    .doodle{position:absolute;fill:none;stroke:#fff;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;pointer-events:none;z-index:3}
+    .doodle.d1{width:40px;right:41%;top:52%}
+    .doodle.d2{width:120px;right:33%;top:74%;stroke-width:2.5}
+    @media(max-width:900px){.mosaic,.doodle.d1,.doodle.d2{display:none}}
+
     /* SEARCH */
     .search-bar{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid #fff;border-radius:999px;padding:0 24px;width:100%;max-width:560px;transition:box-shadow .2s,border-color .2s}
     .search-bar:focus-within{border-color:var(--lime);box-shadow:5px 5px 0 var(--lime)}
@@ -138,6 +155,9 @@
   <main>
     <div class="hero">
       <div class="hero-top">
+        <div class="mosaic" id="mosaic" aria-hidden="true"></div>
+        <svg class="doodle d1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8Z"/></svg>
+        <svg class="doodle d2" viewBox="0 0 120 90" aria-hidden="true"><path d="M6 70 C20 20 50 10 62 40 C72 66 100 60 112 14"/></svg>
         <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
         <p class="eyebrow">// all builds</p>
         <h1><span class="t-heavy">Project</span><span class="t-script">Library</span></h1>
@@ -256,6 +276,18 @@ function hl(text,q){
 
 searchEl.addEventListener('input',render);
 clearBtn.addEventListener('click',()=>{searchEl.value='';render();searchEl.focus()});
+
+
+(function(){
+  const m=document.getElementById('mosaic');if(!m)return;
+  const order=[...P].sort((a,b)=>a.f-b.f).slice(0,20);
+  const rot=[-3,2,-1,3,-2,1,2,-3,1,-2];
+  m.innerHTML=order.map((p,i)=>{
+    const cls=[i%7===0?'h2':'',i%5===2?'w2':'',i%9===4?'dark':''].filter(Boolean).join(' ');
+    const ini=p.n.split(' ').map(w=>w[0]).join('').slice(0,2);
+    return '<div class="tile '+cls+'" style="--c:'+(ACC[p.c]||'#c8ff4a')+';--r:'+rot[i%rot.length]+'deg;animation-delay:'+(i*45)+'ms"><b>'+ini+'</b><small>'+p.c+'</small></div>';
+  }).join('');
+})();
 
 buildFilters();
 render();
