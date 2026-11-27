@@ -342,7 +342,21 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 .mural figcaption{display:flex;align-items:center;gap:clamp(14px,2vw,30px);padding:clamp(8px,1vw,14px) 6px clamp(10px,1.2vw,16px)}
 .m-cap{font:400 clamp(34px,4.6vw,66px)/1 'Permanent Marker',cursive;color:#111;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
 .m-doodle{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;height:clamp(34px,4vw,56px);width:auto}
-#grow{cursor:none}
+.wolf-scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.m-art:has(.wolf-scene)::before,.m-art:has(.wolf-scene)::after{display:none}
+.wolf-scene .rays{transform-origin:215px 160px;animation:spin 90s linear infinite}
+.wolf-scene .moon-glow{transform-origin:215px 160px;animation:moonPulse 4s ease-in-out infinite}
+.wolf-scene .howl path{opacity:0;animation:howl 2.4s ease-out infinite}
+.wolf-scene .howl path:nth-child(2){animation-delay:.25s}
+.wolf-scene .howl path:nth-child(3){animation-delay:.5s}
+.wolf-scene .stars path{transform-box:fill-box;transform-origin:center;animation:twinkle 3s ease-in-out infinite}
+.wolf-scene .stars path:nth-child(2){animation-delay:1s}.wolf-scene .stars path:nth-child(3){animation-delay:2s}
+@keyframes moonPulse{50%{transform:scale(1.07);opacity:.2}}
+@keyframes howl{0%{opacity:0;transform:translate(6px,6px)}30%{opacity:1}100%{opacity:0;transform:translate(-8px,-8px)}}
+@keyframes twinkle{50%{transform:scale(.5);opacity:.5}}
+@media(prefers-reduced-motion:reduce){.wolf-scene *{animation:none!important}.wolf-scene .howl path{opacity:1}}
+.mural figcaption.no-cap{justify-content:space-between;padding:clamp(12px,1.4vw,18px) 8px}
+.m-tag{font:500 clamp(10px,.9vw,13px) 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#2a2a2a}
 /* ── STATEMENT ── */
 .statement{padding:150px 7vw;background-color:#c8ff4a;color:#111;position:relative;z-index:2}
 .statement p{font-size:clamp(42px,7vw,100px);font-weight:800;line-height:.93;letter-spacing:-.06em;margin:0}

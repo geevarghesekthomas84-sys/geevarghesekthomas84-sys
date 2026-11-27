@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=38" />
+  <link rel="stylesheet" href="style.css?v=40" />
   <link rel="stylesheet" href="/menu.css?v=3" />
   <script type="application/ld+json">
   {
@@ -411,10 +411,25 @@ lesson ready</code></div>
         </svg>
         <figure class="mural m1">
           <div class="m-art">
-            <canvas id="grow" role="img" aria-label="Character-art wolf on a rock under the moon building up"></canvas>
-            <button class="panel-replay m-replay" type="button">&#8635; replay</button>
+            <svg class="wolf-scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wolf howling at a lime moon">
+              <defs>
+                <pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" fill="#0b0c0b"/></pattern>
+                <radialGradient id="htFade" cx="50%" cy="50%" r="50%"><stop offset="55%" stop-color="#fff" stop-opacity="0"/><stop offset="100%" stop-color="#fff" stop-opacity="1"/></radialGradient>
+                <mask id="htMask"><circle cx="215" cy="160" r="128" fill="url(#htFade)"/></mask>
+              </defs>
+              <rect width="400" height="300" fill="#0b0c0b"/>
+              <g class="rays" stroke="#c8ff4a" stroke-width="1.6" opacity=".55"><path d="M215 160 L735 160"/><path d="M215 160 L727 250"/><path d="M215 160 L704 338"/><path d="M215 160 L665 420"/><path d="M215 160 L613 494"/><path d="M215 160 L549 558"/><path d="M215 160 L475 610"/><path d="M215 160 L393 649"/><path d="M215 160 L305 672"/><path d="M215 160 L215 680"/><path d="M215 160 L125 672"/><path d="M215 160 L37 649"/><path d="M215 160 L-45 610"/><path d="M215 160 L-119 558"/><path d="M215 160 L-183 494"/><path d="M215 160 L-235 420"/><path d="M215 160 L-274 338"/><path d="M215 160 L-297 251"/><path d="M215 160 L-305 160"/><path d="M215 160 L-297 70"/><path d="M215 160 L-274 -18"/><path d="M215 160 L-236 -100"/><path d="M215 160 L-184 -174"/><path d="M215 160 L-120 -238"/><path d="M215 160 L-45 -290"/><path d="M215 160 L37 -328"/><path d="M215 160 L124 -352"/><path d="M215 160 L215 -360"/><path d="M215 160 L305 -352"/><path d="M215 160 L392 -329"/><path d="M215 160 L475 -291"/><path d="M215 160 L549 -239"/><path d="M215 160 L613 -175"/><path d="M215 160 L665 -100"/><path d="M215 160 L703 -18"/><path d="M215 160 L727 69"/></g>
+              <circle class="moon-glow" cx="215" cy="160" r="150" fill="#c8ff4a" opacity=".12"/>
+              <circle cx="215" cy="160" r="128" fill="#c8ff4a"/>
+              <circle cx="215" cy="160" r="128" fill="url(#ht)" mask="url(#htMask)"/>
+              <g class="howl" fill="none" stroke="#f2f4f1" stroke-width="3" stroke-linecap="round"><path d="M112 30 q-10 8 -6 20"/><path d="M98 20 q-16 14 -9 34"/><path d="M84 10 q-22 20 -12 48"/></g>
+              <g class="stars" fill="#f2f4f1"><path transform="translate(60 90) scale(1.3)" d="M0 -10 L2.2 -2.2 L10 0 L2.2 2.2 L0 10 L-2.2 2.2 L-10 0 L-2.2 -2.2Z"/><path transform="translate(340 50) scale(1)" d="M0 -10 L2.2 -2.2 L10 0 L2.2 2.2 L0 10 L-2.2 2.2 L-10 0 L-2.2 -2.2Z"/><path transform="translate(360 150) scale(0.7)" d="M0 -10 L2.2 -2.2 L10 0 L2.2 2.2 L0 10 L-2.2 2.2 L-10 0 L-2.2 -2.2Z"/><path transform="translate(36 170) scale(0.8)" d="M0 -10 L2.2 -2.2 L10 0 L2.2 2.2 L0 10 L-2.2 2.2 L-10 0 L-2.2 -2.2Z"/></g>
+              <path d="M126 38 L148 45 L168 50 L180 46 L194 16 L202 44 L214 22 L218 52 L226 62 L236 66 L232 74 L246 82 L240 88 L256 98 Q284 120 300 152 Q316 182 322 210 Q340 222 340 246 L356 244 L374 232 L388 212 L386 236 L398 232 L382 254 L360 264 L300 264 L296 250 L286 264 L262 264 Q260 236 252 222 L246 264 L228 264 L224 204 L216 264 L198 264 Q204 220 206 190 L196 176 L202 168 L190 156 L198 148 L186 136 L194 128 L182 114 L188 106 L176 94 L168 84 L154 72 L134 62 L132 58 L156 60 L166 58 L146 50 Z" fill="#0b0c0b" stroke="#c8ff4a" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M0 300 L0 268 C60 254 120 262 180 258 C250 254 320 262 400 266 L400 300Z" fill="#0b0c0b" stroke="#c8ff4a" stroke-width="2"/>
+              <g stroke="#c8ff4a" stroke-width="1.5" opacity=".5"><path d="M30 280 l18 -8 M70 284 l22 -10 M300 282 l20 -9 M346 286 l16 -7 M150 286 l14 -6"/></g>
+            </svg>
           </div>
-          <figcaption><span class="m-cap">The Wolf</span><svg class="m-doodle smile" viewBox="0 0 80 60" aria-hidden="true"><path d="M8 10 l12 12 M20 10 l-12 12 M44 8 l12 12 M56 8 l-12 12 M10 40 q26 20 54 -2"/></svg></figcaption>
+          <figcaption class="no-cap"><span class="m-tag">fig. 01 — howl at the moon</span><svg class="m-doodle smile" viewBox="0 0 80 60" aria-hidden="true"><path d="M8 10 l12 12 M20 10 l-12 12 M44 8 l12 12 M56 8 l-12 12 M10 40 q26 20 54 -2"/></svg></figcaption>
         </figure>
         <figure class="mural m2">
           <div class="m-wall">
