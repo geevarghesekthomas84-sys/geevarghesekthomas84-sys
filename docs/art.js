@@ -1,7 +1,7 @@
 (function(){
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const RAMP=' .:-=+*#%@',ASPECT=1.75,COLS=64;
-  const alphaFor=ink=>Array.from({length:10},(_,i)=>'rgba('+ink+','+((ink==='17,17,17'?0.62:0.3)+(ink==='17,17,17'?0.38:0.7)*i/9).toFixed(2)+')');
+  const alphaFor=ink=>Array.from({length:10},(_,i)=>'rgba('+ink+','+(0.55+0.45*i/9).toFixed(2)+')');
   const hash=(c,r)=>((c*73856093)^(r*19349663))>>>0;
 
   function stage(cv,frame,ink){
@@ -11,7 +11,7 @@
     const R=Math.min(COLS/2,rows/2*ASPECT)-0.5;
     let cw=1,chh=1,raf=0,visible=false;
     function size(){
-      const w=Math.min(cv.parentElement.clientWidth-28||290,340),dpr=window.devicePixelRatio||1;
+      const w=Math.min(cv.parentElement.clientWidth-16||200,340),dpr=window.devicePixelRatio||1;
       cw=w/COLS;chh=cw*ASPECT;
       cv.style.width=w+'px';cv.style.height=chh*rows+'px';
       cv.width=Math.round(w*dpr);cv.height=Math.round(chh*rows*dpr);
@@ -117,6 +117,6 @@
   }
 
   const g=document.getElementById('globe'),rd=document.getElementById('radar');
-  if(g)stage(g,globe,'17,17,17');
-  if(rd)stage(rd,radar,'17,17,17');
+  if(g)stage(g,globe,'200,255,74');
+  if(rd)stage(rd,radar,'200,255,74');
 })();

@@ -59,7 +59,7 @@
 
   const sec=document.getElementById('grow');
   if(sec){
-    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth-28,640),ink:'17,17,17'});
+    const a=window.growChar(sec,{width:()=>Math.min(sec.parentElement.clientWidth-40,620),ink:'200,255,74'});
     let played=false;
     new IntersectionObserver((es,ob)=>{
       es.forEach(e=>{if(e.isIntersecting&&!played){played=true;a.play();ob.disconnect()}})
