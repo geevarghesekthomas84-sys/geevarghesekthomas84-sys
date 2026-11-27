@@ -71,4 +71,5 @@
     }
   });
   window.addEventListener('resize',function(){if(window.innerWidth>760)shut(false)});
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>40)};window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
