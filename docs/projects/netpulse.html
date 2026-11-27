@@ -13,8 +13,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/project.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/project.css?v=2" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,27 +36,44 @@
   </script>
 </head>
 <body>
+  <div class="noise"></div>
   <header class="nav">
-    <a class="brand" href="/"><span>G</span>G.</a>
+    <a class="brand" href="/" aria-label="GG home"><span>G</span>G.</a>
     <nav><a href="/#about">About</a><a href="/#work">Work</a><a href="/library.html">Library</a><a href="/#contact">Contact</a></nav>
+    <a class="pill" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
-  <main class="proj">
+  <main class="proj" style="--c:#c8ff4a">
     <p class="crumbs"><a href="/library.html">Library</a> / Simulators / NetPulse</p>
-    <h1>NetPulse</h1>
-    <p class="tagline">Interactive network simulator in your browser</p>
+    <div class="head">
+      <span class="num">07</span>
+      <div>
+        <h1>NetPulse</h1>
+        <p class="tagline">Interactive network simulator in your browser</p>
+      </div>
+    </div>
     <div class="actions"><a class="btn-primary" href="https://netpulse.itgg.space" target="_blank" rel="noreferrer">Open live demo ↗</a><a class="btn-outline" href="https://github.com/geevarghesekthomas84-sys/NetPulse" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
     <div class="cols">
-      <div>
+      <div class="left">
         <p class="intro">An interactive internet protocol visualizer and Packet Tracer-style network simulator that runs entirely in the browser, so you can learn how networks behave without installing anything.</p>
-        <h2>What it does</h2>
-        <ul class="feats"><li>39 protocols visualized interactively</li><li>IOS-style command-line interface</li><li>DHCP, VLANs, and OSPF, RIP and BGP routing</li><li>20 guided labs</li><li>Available in 6 languages</li></ul>
-        <h2>Built with</h2>
+        <div class="ticket">
+          <h2>What it does</h2>
+          <ul class="feats"><li><b>01</b><span>39 protocols visualized interactively</span></li><li><b>02</b><span>IOS-style command-line interface</span></li><li><b>03</b><span>DHCP, VLANs, and OSPF, RIP and BGP routing</span></li><li><b>04</b><span>20 guided labs</span></li><li><b>05</b><span>Available in 6 languages</span></li></ul>
+          <div class="barcode"></div>
+        </div>
+        <h2 class="lbl">Built with</h2>
         <div class="tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span></div>
       </div>
-      <div class="code-window"><b>terminal</b><code>Router&gt; enable<br>Router# show ip route<br>Router# show vlan brief<br>lab 01 - ready</code></div>
+      <div class="vis" aria-hidden="true">
+        <div class="vis-bg"></div>
+        <div class="vis-win"><div class="bar"><i></i><i></i><i></i><span>terminal</span></div><code>Router&gt; enable
+Router# show ip route
+Router# show vlan brief
+lab 01 - ready</code></div>
+        <svg class="sticker" viewBox="0 0 100 100"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+      </div>
     </div>
-    <h2>More projects</h2>
-    <div class="related"><a href="raspberry-pi-5-workshop.html"><b>Raspberry Pi 5 Workshop</b><small>Wire real parts to a 3D Raspberry Pi 5 and run real Python</small></a><a href="esp32-workshop.html"><b>ESP32 Workshop</b><small>Learn microcontrollers and IoT security hands-on</small></a></div>
+    <h2 class="lbl more">More projects</h2>
+    <div class="related"><a href="raspberry-pi-5-workshop.html" style="--c:#4aa8ff"><em>09</em><b>Raspberry Pi 5 Workshop</b><small>Wire real parts to a 3D Raspberry Pi 5 and run real Python</small></a><a href="esp32-workshop.html" style="--c:#ff3d7f"><em>10</em><b>ESP32 Workshop</b><small>Learn microcontrollers and IoT security hands-on</small></a></div>
   </main>
   <footer><span>© 2026 Geevarghese K Thomas</span><span><a href="/library.html">GG / PROJECT LIBRARY</a></span></footer>
 </body>

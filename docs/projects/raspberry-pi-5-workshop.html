@@ -13,8 +13,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/project.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/project.css?v=2" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,27 +36,43 @@
   </script>
 </head>
 <body>
+  <div class="noise"></div>
   <header class="nav">
-    <a class="brand" href="/"><span>G</span>G.</a>
+    <a class="brand" href="/" aria-label="GG home"><span>G</span>G.</a>
     <nav><a href="/#about">About</a><a href="/#work">Work</a><a href="/library.html">Library</a><a href="/#contact">Contact</a></nav>
+    <a class="pill" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
-  <main class="proj">
+  <main class="proj" style="--c:#4aa8ff">
     <p class="crumbs"><a href="/library.html">Library</a> / Simulators / Raspberry Pi 5 Workshop</p>
-    <h1>Raspberry Pi 5 Workshop</h1>
-    <p class="tagline">Wire real parts to a 3D Raspberry Pi 5 and run real Python</p>
+    <div class="head">
+      <span class="num">09</span>
+      <div>
+        <h1>Raspberry Pi 5 Workshop</h1>
+        <p class="tagline">Wire real parts to a 3D Raspberry Pi 5 and run real Python</p>
+      </div>
+    </div>
     <div class="actions"><a class="btn-primary" href="https://rpi5.itgg.space" target="_blank" rel="noreferrer">Open live demo ↗</a><a class="btn-outline" href="https://github.com/geevarghesekthomas84-sys/raspberry-pi-5-workshop" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
     <div class="cols">
-      <div>
+      <div class="left">
         <p class="intro">A free, browser-based Raspberry Pi 5 simulator. Wire real components to a 3D Pi 5, write and run real Python, and work through hands-on projects. This is an unofficial educational project, shared as a showcase without source code.</p>
-        <h2>What it does</h2>
-        <ul class="feats"><li>3D Raspberry Pi 5 you can wire real parts to</li><li>Runs real Python using gpiozero</li><li>9 projects to build</li><li>50 interactive lessons</li></ul>
-        <h2>Built with</h2>
+        <div class="ticket">
+          <h2>What it does</h2>
+          <ul class="feats"><li><b>01</b><span>3D Raspberry Pi 5 you can wire real parts to</span></li><li><b>02</b><span>Runs real Python using gpiozero</span></li><li><b>03</b><span>9 projects to build</span></li><li><b>04</b><span>50 interactive lessons</span></li></ul>
+          <div class="barcode"></div>
+        </div>
+        <h2 class="lbl">Built with</h2>
         <div class="tech"><span>Three.js</span><span>Blender</span><span>Python</span><span>gpiozero</span></div>
       </div>
-      <div class="code-window"><b>terminal</b><code>from gpiozero import LED<br>led = LED(17)<br>led.blink()</code></div>
+      <div class="vis" aria-hidden="true">
+        <div class="vis-bg"></div>
+        <div class="vis-win"><div class="bar"><i></i><i></i><i></i><span>terminal</span></div><code>from gpiozero import LED
+led = LED(17)
+led.blink()</code></div>
+        <svg class="sticker" viewBox="0 0 100 100"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+      </div>
     </div>
-    <h2>More projects</h2>
-    <div class="related"><a href="esp32-workshop.html"><b>ESP32 Workshop</b><small>Learn microcontrollers and IoT security hands-on</small></a><a href="flipper-zero-workshop.html"><b>Flipper Zero Workshop</b><small>Take a Flipper Zero apart in 3D and learn how it works</small></a></div>
+    <h2 class="lbl more">More projects</h2>
+    <div class="related"><a href="esp32-workshop.html" style="--c:#ff3d7f"><em>10</em><b>ESP32 Workshop</b><small>Learn microcontrollers and IoT security hands-on</small></a><a href="flipper-zero-workshop.html" style="--c:#ff8a3d"><em>08</em><b>Flipper Zero Workshop</b><small>Take a Flipper Zero apart in 3D and learn how it works</small></a></div>
   </main>
   <footer><span>© 2026 Geevarghese K Thomas</span><span><a href="/library.html">GG / PROJECT LIBRARY</a></span></footer>
 </body>

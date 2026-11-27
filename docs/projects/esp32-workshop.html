@@ -13,8 +13,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/project.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/project.css?v=2" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,27 +36,43 @@
   </script>
 </head>
 <body>
+  <div class="noise"></div>
   <header class="nav">
-    <a class="brand" href="/"><span>G</span>G.</a>
+    <a class="brand" href="/" aria-label="GG home"><span>G</span>G.</a>
     <nav><a href="/#about">About</a><a href="/#work">Work</a><a href="/library.html">Library</a><a href="/#contact">Contact</a></nav>
+    <a class="pill" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
-  <main class="proj">
+  <main class="proj" style="--c:#ff3d7f">
     <p class="crumbs"><a href="/library.html">Library</a> / Simulators / ESP32 Workshop</p>
-    <h1>ESP32 Workshop</h1>
-    <p class="tagline">Learn microcontrollers and IoT security hands-on</p>
+    <div class="head">
+      <span class="num">10</span>
+      <div>
+        <h1>ESP32 Workshop</h1>
+        <p class="tagline">Learn microcontrollers and IoT security hands-on</p>
+      </div>
+    </div>
     <div class="actions"><a class="btn-primary" href="https://esp32.itgg.space" target="_blank" rel="noreferrer">Open live demo ↗</a><a class="btn-outline" href="https://github.com/geevarghesekthomas84-sys/esp32-workshop-lessons" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
     <div class="cols">
-      <div>
+      <div class="left">
         <p class="intro">An interactive learning experience for understanding microcontrollers and the Internet of Things. Each lesson pairs a 3D ESP32 workspace with a concise guide and an experiment to explore.</p>
-        <h2>What it does</h2>
-        <ul class="feats"><li>Microcontrollers and circuits</li><li>Sensors, displays and motors</li><li>Wireless communication</li><li>IoT security</li><li>A 3D ESP32 workspace, a guide and an experiment in every lesson</li></ul>
-        <h2>Built with</h2>
+        <div class="ticket">
+          <h2>What it does</h2>
+          <ul class="feats"><li><b>01</b><span>Microcontrollers and circuits</span></li><li><b>02</b><span>Sensors, displays and motors</span></li><li><b>03</b><span>Wireless communication</span></li><li><b>04</b><span>IoT security</span></li><li><b>05</b><span>A 3D ESP32 workspace, a guide and an experiment in every lesson</span></li></ul>
+          <div class="barcode"></div>
+        </div>
+        <h2 class="lbl">Built with</h2>
         <div class="tech"><span>ESP32</span><span>Interactive 3D</span><span>IoT</span></div>
       </div>
-      <div class="code-window"><b>terminal</b><code>esp32&gt; gpio 2 high<br>esp32&gt; wifi scan<br>lesson ready</code></div>
+      <div class="vis" aria-hidden="true">
+        <div class="vis-bg"></div>
+        <div class="vis-win"><div class="bar"><i></i><i></i><i></i><span>terminal</span></div><code>esp32&gt; gpio 2 high
+esp32&gt; wifi scan
+lesson ready</code></div>
+        <svg class="sticker" viewBox="0 0 100 100"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+      </div>
     </div>
-    <h2>More projects</h2>
-    <div class="related"><a href="raspberry-pi-5-workshop.html"><b>Raspberry Pi 5 Workshop</b><small>Wire real parts to a 3D Raspberry Pi 5 and run real Python</small></a><a href="netpulse.html"><b>NetPulse</b><small>Interactive network simulator in your browser</small></a></div>
+    <h2 class="lbl more">More projects</h2>
+    <div class="related"><a href="raspberry-pi-5-workshop.html" style="--c:#4aa8ff"><em>09</em><b>Raspberry Pi 5 Workshop</b><small>Wire real parts to a 3D Raspberry Pi 5 and run real Python</small></a><a href="netpulse.html" style="--c:#c8ff4a"><em>07</em><b>NetPulse</b><small>Interactive network simulator in your browser</small></a></div>
   </main>
   <footer><span>© 2026 Geevarghese K Thomas</span><span><a href="/library.html">GG / PROJECT LIBRARY</a></span></footer>
 </body>

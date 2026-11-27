@@ -13,8 +13,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/project.css?v=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/project.css?v=2" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,27 +33,44 @@
   </script>
 </head>
 <body>
+  <div class="noise"></div>
   <header class="nav">
-    <a class="brand" href="/"><span>G</span>G.</a>
+    <a class="brand" href="/" aria-label="GG home"><span>G</span>G.</a>
     <nav><a href="/#about">About</a><a href="/#work">Work</a><a href="/library.html">Library</a><a href="/#contact">Contact</a></nav>
+    <a class="pill" href="https://github.com/geevarghesekthomas84-sys" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
-  <main class="proj">
+  <main class="proj" style="--c:#ff8a3d">
     <p class="crumbs"><a href="/library.html">Library</a> / AI / Gria-AI</p>
-    <h1>Gria-AI</h1>
-    <p class="tagline">Private on-device Android AI assistant</p>
+    <div class="head">
+      <span class="num">02</span>
+      <div>
+        <h1>Gria-AI</h1>
+        <p class="tagline">Private on-device Android AI assistant</p>
+      </div>
+    </div>
     <div class="actions"><a class="btn-primary" href="https://github.com/geevarghesekthomas84-sys/Gria-AI" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
     <div class="cols">
-      <div>
+      <div class="left">
         <p class="intro">A premium ChatGPT-style Android chat app that keeps conversations private by running models locally instead of sending them to a cloud service.</p>
-        <h2>What it does</h2>
-        <ul class="feats"><li>Local LLM inference, including on-device Gemma at around 40 tokens per second</li><li>Quiet Luxury UI with SSE streaming responses</li><li>Voice speech-to-text input</li><li>Biometric vault and live hardware telemetry</li><li>Syntax highlighting and switchable personas</li></ul>
-        <h2>Built with</h2>
+        <div class="ticket">
+          <h2>What it does</h2>
+          <ul class="feats"><li><b>01</b><span>Local LLM inference, including on-device Gemma at around 40 tokens per second</span></li><li><b>02</b><span>Quiet Luxury UI with SSE streaming responses</span></li><li><b>03</b><span>Voice speech-to-text input</span></li><li><b>04</b><span>Biometric vault and live hardware telemetry</span></li><li><b>05</b><span>Syntax highlighting and switchable personas</span></li></ul>
+          <div class="barcode"></div>
+        </div>
+        <h2 class="lbl">Built with</h2>
         <div class="tech"><span>Kotlin</span><span>Jetpack Compose</span><span>MediaPipe</span><span>LM Studio</span><span>Android</span></div>
       </div>
-      <div class="code-window"><b>terminal</b><code>gemma-2b-it-gpu-int4<br>39.9 tok/s - on-device<br>biometric vault active<br>ready</code></div>
+      <div class="vis" aria-hidden="true">
+        <div class="vis-bg"></div>
+        <div class="vis-win"><div class="bar"><i></i><i></i><i></i><span>terminal</span></div><code>gemma-2b-it-gpu-int4
+39.9 tok/s - on-device
+biometric vault active
+ready</code></div>
+        <svg class="sticker" viewBox="0 0 100 100"><polygon points="98.0,50.0 79.2,56.7 93.2,70.8 73.5,68.7 79.9,87.5 63.0,77.0 60.7,96.8 50.0,80.0 39.3,96.8 37.0,77.0 20.1,87.5 26.5,68.7 6.8,70.8 20.8,56.7 2.0,50.0 20.8,43.3 6.8,29.2 26.5,31.3 20.1,12.5 37.0,23.0 39.3,3.2 50.0,20.0 60.7,3.2 63.0,23.0 79.9,12.5 73.5,31.3 93.2,29.2 79.2,43.3"/></svg>
+      </div>
     </div>
-    <h2>More projects</h2>
-    <div class="related"><a href="redpilot.html"><b>RedPilot</b><small>AI-orchestrated offensive security framework</small></a><a href="ghostkit.html"><b>GhostKit</b><small>Portable offensive security suite for USB</small></a></div>
+    <h2 class="lbl more">More projects</h2>
+    <div class="related"><a href="redpilot.html" style="--c:#c8ff4a"><em>01</em><b>RedPilot</b><small>AI-orchestrated offensive security framework</small></a><a href="ghostkit.html" style="--c:#3dffd0"><em>06</em><b>GhostKit</b><small>Portable offensive security suite for USB</small></a></div>
   </main>
   <footer><span>© 2026 Geevarghese K Thomas</span><span><a href="/library.html">GG / PROJECT LIBRARY</a></span></footer>
 </body>
