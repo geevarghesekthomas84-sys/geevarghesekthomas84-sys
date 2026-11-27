@@ -71,28 +71,45 @@ body.cursor-hover .cursor-cross::before,body.cursor-hover .cursor-cross::after{b
 h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform:none}
 
 /* ── TITLE SCREEN ── */
-.hero2{min-height:calc(100vh - 78px);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 6vw 90px;overflow:hidden}
-.title{position:relative;display:inline-block;padding:3vw 4vw}
-.hero2 h1{line-height:.86;margin:0}
-.t-heavy{display:block;font:900 clamp(60px,15.5vw,230px)/.86 var(--display);letter-spacing:-.04em;text-transform:uppercase;color:#fff}
-.t-script{display:block;font:700 clamp(34px,9.2vw,138px)/1 var(--display);letter-spacing:-.03em;text-transform:uppercase;color:var(--bg);-webkit-text-stroke:4px #fff;paint-order:stroke fill;transform:skewX(-13deg);margin:-.05em 0 0 14%}
-.swoosh{position:absolute;inset:-4% -2%;width:104%;height:108%;pointer-events:none;overflow:visible}
-.swoosh ellipse{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.4s ease .5s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.subline{font:700 clamp(10px,1.25vw,15px) var(--display);letter-spacing:.2em;text-transform:uppercase;margin-top:34px;color:#fff}
-.subline b{color:var(--pink);margin:0 .6em}
-.signature{font:700 clamp(30px,4.4vw,62px) var(--hand);color:var(--lime);transform:rotate(-5deg);margin-top:18px;line-height:1}
-.stamp{position:absolute;top:7%;left:6%;width:clamp(80px,9vw,130px);animation:spin 22s linear infinite}
-.stamp text{font:700 9.5px 'DM Mono',monospace;letter-spacing:2px;fill:#fff;text-transform:uppercase}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero2 .corner.br{right:6vw;bottom:70px}
-.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font:11px 'DM Mono',monospace;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
-.hero2 .title,.hero2 .subline,.hero2 .signature{opacity:0;animation:fadeUp .9s ease forwards}
-.hero2 .title{animation-delay:.1s}.hero2 .subline{animation-delay:.55s}.hero2 .signature{animation-delay:.8s}
+.hero2{min-height:calc(100vh - 92px);position:relative;display:flex;flex-direction:column;justify-content:center;padding:60px 6vw 90px;overflow:hidden;cursor:none}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 45%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000 30%,transparent 78%);pointer-events:none}
+.reticle{position:absolute;left:0;top:0;width:120px;height:120px;margin:-60px 0 0 -60px;border:2px solid var(--lime);border-radius:50%;pointer-events:none;z-index:1;opacity:0;transition:opacity .3s;will-change:transform}
+.hero2:hover .reticle{opacity:.9}
+.reticle::before,.reticle::after{content:'';position:absolute;background:var(--lime)}
+.reticle::before{left:50%;top:-18px;bottom:-18px;width:2px;margin-left:-1px}
+.reticle::after{top:50%;left:-18px;right:-18px;height:2px;margin-top:-1px}
+.reticle i{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:#ff2e63}
+.rt-label{position:absolute;left:100%;top:-6px;margin-left:14px;white-space:nowrap;font:500 10px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.h-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .85fr;gap:clamp(30px,5vw,80px);align-items:center;max-width:1320px;margin:0 auto;width:100%}
+.h-status{display:inline-flex;align-items:center;gap:10px;font:500 11px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid #3a403c;border-radius:999px;padding:8px 14px;margin-bottom:26px}
+.h-status i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(200,255,74,.6);animation:pulse 2s infinite}
+.h-title{margin:0;white-space:nowrap;font:900 clamp(38px,5.6vw,96px)/.95 var(--display);text-transform:uppercase;letter-spacing:-.055em}
+.h-title span{display:block}
+.h-title .l2{color:#0b0c0b;padding:.02em 0}
+.h-title .hl{position:relative;display:inline-block;padding:0 .12em;z-index:0}
+.h-title .hl::before{content:'';position:absolute;left:-.04em;right:-.04em;top:.08em;bottom:.02em;background:var(--lime);z-index:-1;transform:skewX(-8deg) scaleX(0);transform-origin:left;animation:hlSwipe .7s cubic-bezier(.7,0,.2,1) .9s forwards}
+@keyframes hlSwipe{to{transform:skewX(-8deg) scaleX(1)}}
+.h-title .l3{color:var(--bg);-webkit-text-stroke:3px #fff;paint-order:stroke fill}
+.h-sub{max-width:560px;color:var(--muted);font-size:clamp(15px,1.3vw,18px);line-height:1.65;margin:28px 0 30px}
+.h-sub b{color:#fff}
+.h-gg{font:700 1.5em var(--hand);color:var(--lime)}
+.h-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.h-term{position:relative;background:#070908;border:2px solid #f2f4f1;border-radius:10px;box-shadow:10px 10px 0 var(--lime);transform:rotate(2deg);overflow:visible}
+.ht-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid #263027;font:500 11px 'DM Mono',monospace;color:#6b746d}
+.ht-bar i{width:10px;height:10px;border-radius:50%;background:#ff2e63}.ht-bar i:nth-child(2){background:#ffb06b}.ht-bar i:nth-child(3){background:var(--lime)}
+.ht-bar span{margin-left:8px}
+.ht-body{margin:0;padding:20px 20px 26px;min-height:300px;font:500 clamp(12px,1vw,14px)/1.85 'DM Mono',monospace;color:#c7d1c9;white-space:pre-wrap;word-break:break-word}
+.ht-body .p{color:var(--lime)}.ht-body .k{color:#ff2e63}.ht-body .w{color:#fff;font-weight:500}
+.ht-body .cur{display:inline-block;width:.6em;height:1.1em;background:var(--lime);vertical-align:-2px;animation:blink 1s step-end infinite}
+.ht-sticker{position:absolute;right:-22px;top:-26px;width:76px;height:76px;border-radius:50%;background:#ff2e63;color:#fff;display:grid;place-items:center;text-align:center;font:900 11px/1.05 var(--display);text-transform:uppercase;letter-spacing:.04em;transform:rotate(14deg);box-shadow:3px 3px 0 #0b0c0b}
+.h-foot{position:absolute;left:6vw;right:6vw;bottom:24px;display:flex;justify-content:space-between;align-items:center;font:500 10px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);z-index:2}
+.scroll-cue{position:static;transform:none}
+.hero2 .h-left>*,.hero2 .h-term{opacity:0;animation:fadeUp .8s ease forwards}
+.hero2 .h-status{animation-delay:.05s}.hero2 .h-title{animation-delay:.15s}.hero2 .h-sub{animation-delay:.35s}.hero2 .h-cta{animation-delay:.5s}.hero2 .h-term{animation-delay:.3s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.hero2 .signature{--r:-5deg}
-@keyframes sigIn{from{opacity:0;transform:translateY(20px) rotate(-5deg)}to{opacity:1;transform:translateY(0) rotate(-5deg)}}
-.hero2 .signature{animation-name:sigIn}
+.hero2 .h-term{animation-name:termIn}
+@keyframes termIn{from{opacity:0;transform:translateY(30px) rotate(2deg)}to{opacity:1;transform:rotate(2deg)}}
+@media(prefers-reduced-motion:reduce){.h-title .hl::before{animation:none;transform:skewX(-8deg)}.reticle{display:none}}
 
 /* ── HI / ABOUT ── */
 .hi{padding:clamp(60px,9vw,130px) 6vw 20px;position:relative;overflow-x:clip}
@@ -494,10 +511,15 @@ footer{padding:25px 7vw;border-top:1px solid var(--line);display:flex;justify-co
 body,a,button,.pill,.btn-primary,.btn-outline,.back-top,.panel-replay,.cta-pill,.pre-skip,#grow,.portrait-canvas{cursor:auto}
 .nav{padding:0 5vw}
 .nav nav{display:none}
-.hero2{padding:50px 5vw 90px}
-.title{padding:6vw 3vw}
-.stamp{top:3%;left:3%;width:74px}
-.hero2 .corner.br{display:none}
+.hero2{padding:40px 5vw 80px;min-height:auto;cursor:auto}
+.h-wrap{grid-template-columns:1fr}
+.h-title{font-size:clamp(34px,11vw,60px)}
+.reticle{display:none}
+.h-term{transform:rotate(1deg);margin-right:10px}
+.ht-body{min-height:220px}
+.ht-sticker{right:-6px;width:62px;height:62px;font-size:9px}
+.h-foot span:first-child,.h-foot span:last-child{display:none}
+.h-foot{justify-content:center}
 .hi{padding:50px 6vw 10px}
 .polaroid{max-width:340px}
 .contact-links{grid-template-columns:1fr}

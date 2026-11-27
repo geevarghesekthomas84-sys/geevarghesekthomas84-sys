@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=51" />
+  <link rel="stylesheet" href="style.css?v=53" />
   <link rel="stylesheet" href="/menu.css?v=3" />
   <script type="application/ld+json">
   {
@@ -80,15 +80,29 @@
   <main id="top">
     <!-- TITLE SCREEN -->
     <section class="hero2">
-      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="stampPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#stampPath">RED TEAM • AI OFFENSE • 2026 • </textPath></text></svg>
-      <div class="title">
-        <h1><span class="t-heavy">Cyber</span><span class="t-script">Security</span></h1>
-        <svg class="swoosh" viewBox="0 0 800 320" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="400" cy="165" rx="385" ry="118" transform="rotate(-7 400 165)"/></svg>
+      <div class="h-grid" aria-hidden="true"></div>
+      <div class="reticle" aria-hidden="true"><i></i><span class="rt-label">target: you</span></div>
+      <div class="h-wrap">
+        <div class="h-left">
+          <p class="h-status"><i></i> open to red team & security work</p>
+          <h1 class="h-title">
+            <span class="l1">Break in.</span>
+            <span class="l2"><span class="hl">Lock down.</span></span>
+            <span class="l3">Ship tools.</span>
+          </h1>
+          <p class="h-sub">I'm <b>Geevarghese K Thomas</b> — <span class="h-gg">GG</span>. Offensive security researcher building AI-orchestrated red team tooling and on-device AI.</p>
+          <div class="h-cta">
+            <a class="click-pill solid" href="#work">see the work <em>*click*</em><svg class="hand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.8c-.9 0-1.6.7-1.6 1.6v8l-1.3-1.1c-.7-.6-1.6-.5-2.1.1-.5.7-.4 1.5.2 2l4.4 4.6c1 1 2.2 1.6 3.6 1.6h3.4c2.5 0 4.5-2 4.5-4.5V10.5c0-.9-.7-1.6-1.6-1.6s-1.6.7-1.6 1.6V9.6c0-.9-.7-1.6-1.6-1.6s-1.6.7-1.6 1.6V8.6c0-.9-.7-1.6-1.6-1.6-.4 0-.8.1-1.1.4V4.4c0-.9-.7-1.6-1.6-1.6z"/></svg></a>
+            <a class="click-pill" href="#contact">say hi</a>
+          </div>
+        </div>
+        <div class="h-term" aria-label="Terminal introduction">
+          <div class="ht-bar"><i></i><i></i><i></i><span>gg@itgg.space — zsh</span></div>
+          <pre class="ht-body" id="heroTerm"></pre>
+          <span class="ht-sticker">live<br>shell</span>
+        </div>
       </div>
-      <p class="subline">Red team ops <b>•</b> AI-driven offensive security <b>•</b> Builder</p>
-      <p class="signature">Geevarghese K Thomas</p>
-      <span class="corner br" aria-hidden="true"></span>
-      <span class="scroll-cue">scroll ↓</span>
+      <div class="h-foot"><span>itgg.space · est. 2026</span><span class="scroll-cue">scroll ↓</span><span>Red team · AI · Builder</span></div>
     </section>
 
     <!-- HI / ABOUT -->
@@ -480,7 +494,7 @@ lesson ready</code></div>
   <!-- BACK TO TOP -->
   <a class="back-top" href="#top" aria-label="Back to top">↑</a>
 
-  <script src="anim.js?v=17"></script>
+  <script src="anim.js?v=18"></script>
   <script src="portrait-data.js?v=1"></script>
   <script src="portrait.js?v=2"></script>
   <script src="/menu.js?v=3" defer></script>
