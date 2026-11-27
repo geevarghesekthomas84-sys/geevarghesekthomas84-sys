@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://itgg.space/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://itgg.space/library.html</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -30,6 +30,31 @@
   <url>
     <loc>https://itgg.space/projects/ghostkit.html</loc>
     <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/netpulse.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/flipper-zero-workshop.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/raspberry-pi-5-workshop.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/esp32-workshop.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itgg.space/projects/material-atlas.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
