@@ -9,7 +9,13 @@
   btn.className='menu-btn';btn.type='button';
   btn.setAttribute('aria-label','Open menu');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','mobile-menu');
   btn.innerHTML='<span></span><span></span>';
-  nav.appendChild(btn);
+  var right=document.createElement('div');right.className='nav-r';
+  var cta=document.createElement('a');cta.className='nav-cta';cta.textContent="Let's talk";
+  var contact=links.filter(function(l){return /contact/i.test(l.textContent)})[0];
+  cta.href=contact?contact.getAttribute('href'):'/#contact';
+  if(gh){gh.setAttribute('aria-label','GitHub');gh.parentNode.removeChild(gh);}
+  right.appendChild(cta);if(gh)right.appendChild(gh);right.appendChild(btn);
+  nav.appendChild(right);
 
   var ov=document.createElement('div');
   ov.id='mobile-menu';ov.className='mm';ov.hidden=true;
