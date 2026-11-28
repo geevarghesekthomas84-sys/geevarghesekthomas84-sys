@@ -171,6 +171,7 @@ Search Material Icons, Material Symbols and original SVGs, compare styles and do
 |:-:|:--|:--|:--|:--|
 | 🟦 | **Certified Blue Team Fundamentals (BTF)** | CyberWarFare Labs | Nov 2026 | `BTF-6b0a5d9748939fd2c6c0017b` |
 | 🟩 | **Certified Cyber Security Analyst (C3SA)** | CyberWarFare Labs | Nov 2026 | `C3SA-6b0a652fdfe42933ae7378cc` |
+| 🟨 | **Certified Cloud Security Fundamentals (CSF)** | CyberWarFare Labs | Nov 2026 | `CSF-6b0a6c0fdfe42933ae738269` |
 | 🟩 | **Advent of Cyber 2022** | TryHackMe | Dec 2024 | [`THM-S1MSB41YDW` ↗](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-S1MSB41YDW.pdf) |
 | 🟥 | **Linux 100: Fundamentals** | TCM Security | Nov 2024 | `cert_fnvbhsx9` |
 | 🟪 | **Full Ethical Hacking Course** | Udemy | Jun 2023 | Kali Linux · Network Security |
