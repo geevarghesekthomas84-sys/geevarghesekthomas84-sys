@@ -169,6 +169,7 @@ Search Material Icons, Material Symbols and original SVGs, compare styles and do
 
 | | Credential | Issuer | Issued | |
 |:-:|:--|:--|:--|:--|
+| 🟦 | **Certified Blue Team Fundamentals (BTF)** | CyberWarFare Labs | Nov 2026 | `BTF-6b0a5d9748939fd2c6c0017b` |
 | 🟩 | **Advent of Cyber 2022** | TryHackMe | Dec 2024 | [`THM-S1MSB41YDW` ↗](https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-S1MSB41YDW.pdf) |
 | 🟥 | **Linux 100: Fundamentals** | TCM Security | Nov 2024 | `cert_fnvbhsx9` |
 | 🟪 | **Full Ethical Hacking Course** | Udemy | Jun 2023 | Kali Linux · Network Security |

@@ -184,7 +184,7 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 /* ── CERTS (access passes) ── */
 .certs{max-width:1180px;margin:clamp(90px,10vw,140px) auto 0;padding-bottom:40px}
 .cert-count{margin-left:auto;font:500 11px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.cpasses{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);padding-top:14px}
+.cpasses{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,40px);padding-top:14px}
 .cpass{--c:#c8ff4a;--r:0deg;position:relative;display:flex;flex-direction:column;gap:14px;background:#f2f0ea;color:#0b0c0b;text-decoration:none;border-radius:14px;padding:38px 22px 20px;border-top:14px solid var(--c);box-shadow:0 24px 50px rgba(0,0,0,.55),6px 6px 0 var(--c);overflow:hidden}
 .cpass.reveal,.cpass.reveal.visible{transform:rotate(var(--r))}
 .cpass{transition:transform .3s,box-shadow .3s,opacity .7s}
@@ -200,10 +200,11 @@ h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);text-transform
 .cp-id{font:500 12px 'DM Mono',monospace;border-top:2px dashed rgba(0,0,0,.35);padding-top:12px;display:flex;flex-direction:column;gap:3px;word-break:break-all}
 .cp-id small{font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
 .cp-bar{height:30px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 5px,transparent 5px 9px,#111 9px 12px,transparent 12px 14px,#111 14px 15px,transparent 15px 18px)}
-.cp-stamp{position:absolute;right:14px;top:52px;font:900 11px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#1c8a3c;border:3px solid #1c8a3c;border-radius:6px;padding:4px 8px;transform:rotate(14deg);opacity:.8;mix-blend-mode:multiply}
+.cp-stamp{position:absolute;right:16px;bottom:24px;font:900 11px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#1c8a3c;border:3px solid #1c8a3c;border-radius:6px;padding:4px 8px;transform:rotate(14deg);opacity:.8;mix-blend-mode:multiply}
 .cp-link{align-self:flex-start;font:700 13px Manrope,sans-serif;border:2px solid #0b0c0b;border-radius:999px;padding:8px 16px;transition:background .2s,color .2s}
 .cpass:hover .cp-link{background:#0b0c0b;color:var(--c)}
-@media(max-width:900px){.cpasses{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
+@media(min-width:1280px){.certs{max-width:1300px}.cpasses{grid-template-columns:repeat(4,1fr)}.cp-title{font-size:clamp(15px,1.3vw,19px);overflow-wrap:anywhere}.cp-iss{font-size:12px}}
+@media(max-width:760px){.cpasses{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
 
 /* ── PROJECTS MARQUEE ── */
 .tapes{position:relative;z-index:2;height:clamp(230px,24vw,340px);overflow:hidden;display:grid;place-items:center}
